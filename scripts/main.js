@@ -2,7 +2,7 @@ let myHeading = document.querySelector('#paragrah1');
 	myHeading.textContent = 'Comming Soon! Click here for more information.';
 	
 	myHeading = document.querySelector('#paragrah2');
-	myHeading.textContent = 'Revision 30JUL2019';
+	myHeading.textContent = 'Revision 30JUL2019 - Click for info.';
 	
 	myImage = document.querySelector('img');
 	
@@ -39,4 +39,8 @@ if(!localStorage.getItem('name')) {
 }
 myButton.onclick = function() {
   setUserName();
+}
+// Revision Date click for alert informaion.
+paragrah2.onclick = function () {
+	alert('Rising Thunder Alfa Test is in the works for 2020!');	
 }

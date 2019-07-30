@@ -1,0 +1,65 @@
+html {
+  font-size: 16px; /* px means "pixels": the base font size is now 16 pixels high  */
+  font-family: 'Roboto', sans-serif; /* this should be the rest of the output you got from Google fonts */
+  letter-spacing: .2px;
+  background-color: #264A25;
+}
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #99C7EF;
+	padding: 0 20px 20px 20px;
+	border: 2px solid black;
+}
+h1 {
+  margin: 0;
+  padding: 8px 0 4px 0;
+  font-size: 52px;
+  text-align: center;
+  color: red;
+  text-shadow: 2px 2px 2px black;
+}
+h2 {
+  margin: 0;
+  padding: 0 0 14px 0;
+  text-align: center;
+  color: blue;
+  text-shadow: 1px 1px 1px black;
+}
+h3 {
+  color: green;
+}
+ h5 {
+	margin: 0;
+	color: green;
+	font-size: 18px;
+	padding: 24px 0 0 0;
+ }
+p, li {
+  width: 1000px;
+  line-height: 1.2;
+  letter-spacing: .2px;
+}
+#welcomecallsign {
+	color: blue;
+	text-align: center;
+}
+#paragrah1 {
+	border: 1px solid blue;
+	width: 360px;
+	padding: 0 0 0 6px;
+}
+#paragrah2 {
+  font-size: 14px;
+  color: red;
+  text-align: right;
+}
+img {
+	width: 1000px;
+	display: block;
+	margin: 0 auto;
+}
+#ulborder {
+	width: 220px;
+	border: 1px solid black;
+}

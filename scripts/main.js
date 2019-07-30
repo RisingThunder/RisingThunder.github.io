@@ -29,13 +29,13 @@ myImage.onclick = function() {
 function setUserName() {
   let myName = prompt('Please enter your Callsign');
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Welcome to Rising Thunder ' + myName;
+  myHeading.textContent = 'Welcome to Rising Thunder, ' + myName;
 }
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Welcome Back to Rising Thunder ' + storedName;
+  myHeading.textContent = 'Welcome Back to Rising Thunder, ' + storedName;
 }
 myButton.onclick = function() {
   setUserName();

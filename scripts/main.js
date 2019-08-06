@@ -2,7 +2,7 @@ let myHeading = document.querySelector('#paragrah1');
 	myHeading.textContent = 'Comming Soon! Click here for more information.';
 	
 	myHeading = document.querySelector('#paragrah2');
-	myHeading.textContent = 'Revision 30JUL2019 - Click for info.';
+	myHeading.textContent = 'Revision 06AUG2019 - Click for info.';
 	
 	myImage = document.querySelector('img');
 	
@@ -12,7 +12,7 @@ let myHeading = document.querySelector('#paragrah1');
 alert('Rising Thunder Alfa Test is in the works for 2020!');
 
 document.querySelector('#paragrah1').onclick = function() {
-    alert('Mission Map Times are my "next up" item to do. If you can help with how to export the mission time data from DCS, and import this data into a website please contact me, via the DCS forums, user "DigitalEngine". Currently Im in the proccess of studying the JavasScript language for this project. Thanks!');
+    alert('Mission Map Times are my "next up" item to do. If you can help with how to export the mission time data from DCS, and import this data into a website please contact me, via the DCS forums, user "DigitalEngine". Currently I\'m in the proccess of studying the JavasScript language for this project. Thanks!');
 }
 
 //Image Rotation code

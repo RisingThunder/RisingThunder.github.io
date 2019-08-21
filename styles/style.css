@@ -8,7 +8,7 @@ body {
 	width: 1000px;
 	margin: 0 auto;
 	background-color: #99C7EF;
-	padding: 0 20px 20px 20px;
+	padding: 0 20px 40px 20px;
 	border: 2px solid black;
 }
 h1 {
@@ -64,6 +64,13 @@ img {
 	width: 1000px;
 	display: block;
 	margin: 0 auto;
+}
+#dcsimage {
+	width: 60px;
+	display: block;
+	margin: 0 auto;
+	float: right;
+    -- position:relative;
 }
 #ulborder {
 	width: 220px;

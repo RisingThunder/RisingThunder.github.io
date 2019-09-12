@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+	 <meta charset="utf-8">
+	 <meta name="author" content="George Warren Jr">
+	 <meta name="description" content="This is the code repository html page for the Rising Thunder Servers">
+	 <title>Rising Thunder Alfa Test</title>
+	 <link href="../styles/style.css" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	 <link rel="shortcut icon" href="../images/rtfavicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+	<header>
+	  <h1>Rising Thunder Alfa Test</h1>
+	  <h2>A "Career Level" DCS World Server Series</h2>
+	</header>
+		
+	<nav>
+	  <ul>
+	   <li><a href="../index.html">Home Page</a></li>
+	   <li><a href="../statistics/statistics.html">Statistics</a></li>
+	   <li><a href="../pdfs/documents.html">Documents Page</a></li>
+	   <li><a href="../contacts.html">Contacts Page</a></li>
+	   <li>Code Repository</li>
+	   <li><a href="../blogs/news.html">News & Blogs</a></li>
+	  </ul>
+	  <hr>
+	</nav>
+    
+	<main>
+	  <section>
+	  <h5>Code Repository</h5>
+	  
+	    <p>This is the lua. function to export the mission time &lt; <code>local TIME = LoGetModelTime()</code> &gt;.</p>
+	
+	<pre><code>
+	local log_file = nil
+
+	function LuaExportStart()
+		log_file = io.open("C:/Users/DigitalEngine/Saved Games/DCS/Logs/Data.txt", "w")
+	end
+
+	function LuaExportBeforeNextFrame()
+	end
+
+	function LuaExportAfterNextFrame()
+		local TIME = LoGetModelTime()
+		log_file:write(string.format("TIME: %.2f \n",TIME))
+	end
+
+	function LuaExportStop()
+		log_file:write(string.format("exit"))
+		if log_file then
+			log_file:close()
+			log_file = nil
+		end
+	end
+
+	function LuaExportActivityNextEvent(t)
+	end
+	</code></pre>
+	
+	    <p>The code in the function "<var>function LuaExportStart ()</var>" will be executed when the mission starts</p>
+	
+	    <p>Copy code with <kbd>Ctrl</kbd> + <kbd>C</kbd>, paste to export.lua file in the saved games folder to export, as follows.</p>
+	  
+	<pre><samp>
+	<var>C:\Users\DigitalEngine\Saved Games\DCS\Logs\data.txt</var>
+	
+	TIME: 0.00 
+	TIME: 0.02 
+	TIME: 0.04
+	TIME: 32.14 
+	TIME: 32.16 
+	exit
+	</samp></pre>
+	  <hr>
+	  </section>
+	  
+	  <section>
+	  <h5>Time Formats</h5>
+	    <!-- The below is machine readable time pratice, using August 7th as a example jump off date for Rising Thunder Alfa Test to go limited available -->
+		<p>Projected Rising Thunder Execute Date & Time for limited Alfa Test availability in differing formats.</p>
+		<!-- Standard simple date -->
+		<time datetime="2020-08-07">07 August 2020 /</time>
+		<!-- Just year and month -->
+		<time datetime="2016-08">August 2020 /</time>
+		<!-- Just month and day -->
+		<time datetime="08-07">07 August</time><br>
+		<!-- Just time, hours and munutes -->
+		<time datetime="06:00">06:00 /</time>
+		<!-- You can do seconds and milliseconds too! -->
+		<time datetime="06:00:00.000">06:00:00.000</time><br>
+		<!-- Date and time -->
+		<time datetime="2020-08-07T06:00">07 August 2020 0600</time><br>
+		<!-- Date and time with timezone offset -->
+		<time datetime="2020-08-07T03:00+03:00">UTC 07 AUGUST 2020 0300, or 0600 Moscow time,</time>
+		<!-- Calling out a specific week number -->
+		<time datetime="2020-W32"> the 32<sup>nd</sup> week of 2020.</time>
+	  </section>
+	</main>
+	
+	<footer>
+	  <!-- Why the below revision date javascript function does not work as IT does on the index page is unknown to me at this time -->
+      <p id="paragrah2">Revision Date, see the Javascript file</p>
+    </footer>
+    
+	<script src="../scripts/main.js"></script>
+  </body>
+</html>

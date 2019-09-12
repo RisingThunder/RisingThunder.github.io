@@ -29,16 +29,43 @@ h2 {
 h3 {
   color: green;
 }
- h5 {
+h5 {
 	margin: 0;
 	color: green;
 	font-size: 18px;
-	padding: 24px 0 0 0;
+ }
+hr {
+	 color: blue;
  }
 p, li {
   width: 1000px;
   line-height: 1.2;
   letter-spacing: .2px;
+}
+aside {
+	width: 20%;
+	margin-top: 1.2rem;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+aside > p {
+	width: 100%;
+	margin: .5rem;
+}
+article p {
+	// margin-top: 0;
+}
+#contact-image {
+	width: 33%;
+    padding-left: .5rem;
+    margin-top: 1;
+	margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
 }
 #welcomecallsign {
 	color: blue;
@@ -48,6 +75,7 @@ p, li {
 	border: 1px solid blue;
 	width: 360px;
 	padding: 0 0 0 6px;
+	margin-bottom: 32px;
 }
 #paragrah2 {
   font-size: 14px;
@@ -61,7 +89,7 @@ p, li {
     -- position:relative;
 }
 img {
-	width: 1000px;
+	width: 100%;
 	display: block;
 	margin: 0 auto;
 }
@@ -75,4 +103,36 @@ img {
 #ulborder {
 	width: 220px;
 	border: 1px solid black;
+}
+#dlborder {
+	border: 1px solid green;
+	padding: 12px;
+}
+span.bluetext {
+	color: blue;
+}
+span.greentext {
+	color: green;
+}
+span.centext {
+	text-align: center;
+}
+span.greytext {
+	color: grey;
+}
+.warning {
+	border: 4px ridge red;
+	background-color: yellow;
+	padding: .5rem;
+	display: flex;
+	flex-direction: column;
+}
+.warning img {
+	width: 100%;
+	border: .5px solid red;
+}
+.warning p {
+	font: small-caps bold 1.4rem sans-serif;	
+	text-align: center;
+	color: red;
 }

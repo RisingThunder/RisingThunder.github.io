@@ -1,2 +1,2 @@
 # RisingThunder.github.io
-Test for Rising Thunder Website
+Test site for Rising Thunder Website

@@ -19,7 +19,7 @@ document.querySelector('#paragrah1').onclick = function() {
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/su25t.jpg') {
-      myImage.setAttribute ('src','images/su25t1.jpg');
+      myImage.setAttribute ('src','images/a10c.jpg');
     } else {
       myImage.setAttribute ('src','images/su25t.jpg');
     }

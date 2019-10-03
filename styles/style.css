@@ -70,7 +70,7 @@ figure {
    Set the width using the with attribute in the html image element*/
 img { 
 	// width: 100%;
-	display: block;
+	// display: block; /* removed as interfering with responsive images globally */
 	margin: 0 auto;
 }
 #contact-image {
@@ -128,6 +128,10 @@ span.centext {
 }
 span.greytext {
 	color: grey;
+}
+.center {
+	display: block; /* centers this item  */
+	margin: 0 auto;
 }
 .warning {
 	border: 4px ridge red;

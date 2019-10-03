@@ -34,8 +34,9 @@ h5 {
 	color: green;
 	font-size: 18px;
  }
+ /* hr is for the horizontal rule, duh... */
 hr {
-	 color: blue;
+  color: blue;	
  }
 p, li {
   width: 1000px;
@@ -52,12 +53,25 @@ aside {
     font-style: italic;
     color: #29627e;
 }
-aside > p {
+/* with out the comma between aside & p, limits this attrbute
+	to only the paragrah inside the aside element, I think, anyway.. */
+ aside p { 
 	width: 100%;
 	margin: .5rem;
 }
-article p {
-	// margin-top: 0;
+ article img {
+	width: 100%;
+}
+figure {
+	margin: .5rem;
+}
+/* Removing Image width css attribute as a site wide funtion for now,
+   as it was interfering with the native inset of svg images.
+   Set the width using the with attribute in the html image element*/
+img { 
+	// width: 100%;
+	display: block;
+	margin: 0 auto;
 }
 #contact-image {
 	width: 33%;
@@ -87,11 +101,6 @@ article p {
   width: 24%; 
     float: right;
     -- position:relative;
-}
-img {
-	width: 100%;
-	display: block;
-	margin: 0 auto;
 }
 #dcsimage {
 	width: 60px;

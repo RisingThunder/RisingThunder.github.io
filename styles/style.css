@@ -109,6 +109,10 @@ img {
 	float: right;
     -- position:relative;
 }
+#firetruckimg {
+	display:block;
+	width:320px
+}
 #ulborder {
 	width: 220px;
 	border: 1px solid black;

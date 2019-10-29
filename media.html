@@ -9,6 +9,7 @@
   <link href="styles/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/rtfavicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width-device-width">
 </head>
 
 <body>
@@ -42,9 +43,11 @@
 	<section>
 	  <h5>Favorite Images</h5>
 	  <figure>
-	    <img srcset="images/f14-600.jpg 600w, images/f14-1000.jpg 1000w"
-		 sizes="(max-width: 600px) 580px, 1000px"
-		 src="images/f14-1000.jpg" alt="F-14 taking off from an aircraft carrier">
+	    <img srcset="images/f14-600.jpg 600w,
+					 images/f14-1000.jpg 1000w"
+			 sizes="(max-width: 600px) 580px,
+					1000px"
+		     src="images/f14-1000.jpg" alt="F-14 taking off from an aircraft carrier">
 		<!-- When using resolution switching images, width & height attributes cannot be used -->
 		<figcaption>A Heatblur F-14 Taking Off</figcaption>
 	  </figure>

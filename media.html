@@ -43,14 +43,30 @@
 	<section>
 	  <h5>Favorite Images</h5>
 	  <figure>
-	    <img srcset="images/f14-600.jpg 600w,
+		<!-- This is an example of Resolution switching: Different sizes. -->
+		<!-- When checking images via the Responsive Design Mode, input resolution in width box for correct result. -->
+	    <img srcset="images/f14-320.jpg 320w,
+					 images/f14-480.jpg 480w,
+					 images/f14-600.jpg 600w,
+					 images/f14-800.jpg 800w,
 					 images/f14-1000.jpg 1000w"
-			 sizes="(max-width: 600px) 560px,
+			 sizes="(max-width: 360px) 280px,
+					(max-width: 520px) 440px,
+			        (max-width: 660px) 560px,
+					(max-width: 880px) 760px,
 					1000px"
 		     src="images/f14-1000.jpg" alt="F-14 taking off from an aircraft carrier">
 		<!-- When using resolution switching images, width & height attributes cannot be used -->
-		<figcaption>A Heatblur F-14 Taking Off</figcaption>
+		<figcaption>A Heatblur F-14 Taking Off.</figcaption>
 	  </figure>
+	  
+	  <!-- In this example CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels -->
+	  <img srcset="images/fire-truck-320w.png 2x,
+			       images/fire-truck-480w.png 1.5x,
+			       images/fire-truck-640w.png"
+		   src="images/fire-truck-640w.png" alt=" Image of a URAL 4320 fire truck AA-8.0" id="firetruckimg" >
+	  <!-- I changed the CSS width to 640px and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
+	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
 	  <hr>
 	</section>
 	

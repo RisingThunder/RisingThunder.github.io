@@ -41,7 +41,7 @@
 	</section>
 	
 	<section>
-	  <h5>Favorite Images</h5>
+	  <h5>Responsive Media</h5>
 	  <figure>
 		<!-- This is an example of Resolution switching: Different sizes. -->
 		<!-- When checking images via the Responsive Design Mode, input resolution in width box for correct result. -->
@@ -65,8 +65,14 @@
 			       images/fire-truck-480w.png 1.5x,
 			       images/fire-truck-640w.png"
 		   src="images/fire-truck-640w.png" alt=" Image of a URAL 4320 fire truck AA-8.0" id="firetruckimg" >
-	  <!-- I changed the CSS width to 640px and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
+	  <!-- I set the CSS width to 640px and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
 	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
+	  
+	  <picture>
+	    <source media="(max-width: 799px)" srcset="images/f14-crew-crop.jpg">
+		<source media="(min-width: 800px)" srcset="images/f14-crew.jpg"> <!-- This element is really unnecessary & redundent -->
+		<img src="images/f14-crew.jpg" alt="an F14 crew lightinh the fires">
+	  </picture>
 	  <hr>
 	</section>
 	

@@ -45,26 +45,29 @@
 	  <figure>
 		<!-- This is an example of Resolution switching: Different sizes. -->
 		<!-- When checking images via the Responsive Design Mode, input resolution in width box for correct result. -->
-	    <img srcset="images/f14-320.jpg 320w,
-					 images/f14-480.jpg 480w,
-					 images/f14-600.jpg 600w,
+	    <img srcset="images/f14-480.jpg 480w,
 					 images/f14-800.jpg 800w,
 					 images/f14-1000.jpg 1000w"
-			 sizes="(max-width: 360px) 280px,
-					(max-width: 520px) 440px,
-			        (max-width: 660px) 560px,
+			 sizes="(max-width: 520px) 440px,
 					(max-width: 880px) 760px,
 					1000px"
 		     src="images/f14-1000.jpg" alt="F-14 taking off from an aircraft carrier">
 		<!-- When using resolution switching images, width & height attributes cannot be used -->
 		<figcaption>A Heatblur F-14 Taking Off.</figcaption>
 	  </figure>
+	  <br>
+	  
+	  <figure>
+	    <img src="/images/yak52-1000.jpg" width="1000" height="306" alt="A Yak-52 taking off">
+		<figcaption>A DCS Yak-52</figcaption>
+	  </figure>
+	  <br>
 	  
 	  <!-- In this example CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels -->
 	  <img srcset="images/fire-truck-320w.png 2x,
 			       images/fire-truck-480w.png 1.5x,
 			       images/fire-truck-640w.png"
-		   src="images/fire-truck-640w.png" alt=" Image of a URAL 4320 fire truck AA-8.0" id="firetruckimg" >
+		   src="images/fire-truck-640w.png" alt=" Image of a URAL 4320 fire truck AA-8.0" id="firetruckimg"><br>
 	  <!-- I set the CSS width to 640px and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
 	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
 	  
@@ -78,21 +81,21 @@
 	
 	<section>
 	  <h5>Favorite DCS Videos</h5>
-	
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/732Y62VZIGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	  
-	  <video controls width="480" height="360"
-			  autoplay loop muted>
-	    <source src="images/engine-start.webm" type="video/webm">
-		<source src="images/engine-start.mp4" type="video/mp4">
-	    <p>Your browser doesn't support HTML5 video. Here is a <a href="images/engine-start.webm">link to the video</a> instead.  Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
-	  </video>
-		
-	  <video controls width="480" height="360" poster="images/deck-crew-poster.png">
+
+	  <video controls loop width="330" height="270" poster="images/deck-crew-poster.png">
 	    <source src="images/deck-crew.webm" type="video/webm">
-		<track kind="captions" src="images/deck-crew.vtt" default srclang="en"> <!-- The default attribure must be included, or captions/subtiltes will not work. -->
-		<p>Your browser doesn't support HTML5 video. Here is a <a href="images/deck-crew.webm"> link to the video</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
-	  </video>	  
+		<p>Your browser doesn't support HTML video. Here is a <a href="images/deck-crew.webm">link to the video </a>instead</p>
+		<track kind="subtitles" src="images/deck-crew.vtt" default srclang="en">
+	  </video>
+	  
+	  <video controls autoplay loop muted width="330" height="270">
+	    <source src="images/engine-start.webm" type="video/webm">
+	    <source src="images/engine-start.mp4" type="video/mp4">
+	    <p>Your browser doesn't support HTML video. Here is a <a href="images/engine-start.mp4">link to the video</a>instead</p>
+	  </video>
+	  
+	  <iframe width="330" height="228" src="https://www.youtube.com/embed/732Y62VZIGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  
 	  <hr>
 	</section>
 	
@@ -100,6 +103,7 @@
 	  <h5>Maps</h5>
 	  <!-- You may adjust width and height attribures within the ifame element as desired. -->
 	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1436826.7672685129!2d33.43927477946804!3d45.30231912897546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40eac2a37171b3f7%3A0x2a6f09e02affbaeb!2sCrimean%20Peninsula!5e0!3m2!1sen!2sus!4v1572304107754!5m2!1sen!2sus" width="1000" height="280" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7725.426931605761!2d-115.81173599726586!3d37.238123399834144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1573599646026!5m2!1sen!2sus" width="1000" height="280" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 	  <hr>
 	</section>
 	
@@ -113,16 +117,27 @@
 		<text x="32%" y="32" font-size="36" fill="yellow">Rising Thunder Servers</text>
 		<!-- to do, replace lightning bolts with svg polygon's, see https://wiki.developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon -->
 	  </svg>
+	  
 	  <img src="images/construction.svg" width="80" alt="a construction sign" class="center" />
+	  
+	  <svg width="1000" height="40">
+	    <rect width="100%" height="100%" fill="green" />
+		<text x="32%" y="32" font-size="36" fill="yellow">~Comming Eventually~</text>
+	  </svg>
 	  <hr>
 	</section>
 	
 	<section>
 	  <h5>Audio</h5>
 	  <p>Turn off the thunder if your frightened :-) .</p>
-	  <audio controls autoplay>
-	    <source src="images/thunderstorm-audio.webm">
-		<p>Your browser doesn't support HTML5 video. Here is a <a href="images/deck-crew.webm"> link to the video</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
+	  <audio controls autoplay loop>
+	    <source src="images/thunderstorm-audio.webm" type="audio/webm">
+		<p>Your browser doesn't support HTML5 audio. Here is a <a href="images/deck-crew.webm"> link to the audio</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
+	  </audio>
+	  
+	  <audio controls autoplay loop>
+	    <source src="images/rain-on-roof.mp3" type="audio/ogg">
+	    <p>Your browser doesn't support HTML audio. Here is a <a href="images/musicintro.ogg">link to the audio</a> instead</p>
 	  </audio>
 	</section>
 	

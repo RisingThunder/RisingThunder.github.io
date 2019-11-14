@@ -36,7 +36,7 @@
 	  <h5>Media</h5>
 	  <p>The purpose of this page is soley for my personal learning exercises in using multmedia assests within html,
 	  <br>hence the shamless ripping, although resized and/or croped, images from the DCS webpages.
-	  <br>Hopfully ED will view this as free advertizng and not get too bent up...</p>
+	  <br>Hopfully ED will view this as free advertising and not get too bent up...</p>
 	  <hr>
 	</section>
 	
@@ -63,13 +63,17 @@
 	  </figure>
 	  <br>
 	  
-	  <!-- In this example CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels -->
+	  <!-- In this example CSS is applied to the image so that it will have a width of 640px pixels on the screen (also called CSS pixels) -->
+	  <!-- I set the CSS width to 640px, and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
+	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
 	  <img srcset="images/fire-truck-320w.png 2x,
 			       images/fire-truck-480w.png 1.5x,
 			       images/fire-truck-640w.png"
 		   src="images/fire-truck-640w.png" alt=" Image of a URAL 4320 fire truck AA-8.0" id="firetruckimg"><br>
-	  <!-- I set the CSS width to 640px and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
-	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
+	  
+	  <img srcset="images/fire-truck-320.png 2x,
+				   images/fire-truck-640.png"
+	       src="images/firet-truck-320" alt="Image of a URAL 4320 fire truck AA-08" id="firetruckimg"><br>
 	  
 	  <picture>
 	    <source media="(max-width: 799px)" srcset="images/f14-crew-crop.jpg">

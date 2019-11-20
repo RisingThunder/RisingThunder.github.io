@@ -62,9 +62,6 @@ aside {
  article img {
 	width: 100%;
 }
-figure {
-	margin: .5rem;
-}
 /* Removing Image width css attribute as a site wide funtion for now,
    as it was interfering with the native inset of svg images.
    Set the width using the with attribute in the html image element*/
@@ -73,11 +70,15 @@ img {
 	// display: block; /* removed as interfering with responsive images globally */
 	margin: 0 auto;
 }
+figure {
+	margin: 0 auto;
+}
 #contact-image {
-	width: 33%;
-    padding-left: .5rem;
-    margin-top: 1;
-	margin-left: .5rem;
+	width: 34%;
+    padding-top: 5px;
+	padding-left: 1rem;
+    margin-top: .5rem;
+	margin-left: 5;
     float: right;
     box-shadow: inset 5px 0 5px -5px #29627e;
 }

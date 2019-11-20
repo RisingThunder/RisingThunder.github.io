@@ -42,7 +42,7 @@
 	
 	<section>
 	  <h5>Responsive Media</h5>
-	  <h4>(Resolution switching: Different sizes)</h4>
+	  <h6>(Resolution switching: Different sizes)</h6>
 	  <figure>
 		<!-- This is an example of Resolution switching: Different sizes. -->
 		<!-- When checking images via the Responsive Design Mode, input resolution in width box for correct result. -->
@@ -64,7 +64,7 @@
 	  </figure>
 	  <br>
 	  
-	  <h4>(Resolution switching: Same size, different resolutions)</h4>
+	  <h6>(Resolution switching: Same size, different resolutions)</h6>
 	  <!-- In this example CSS is applied to the image so that it will have a width of 640px pixels on the screen (also called CSS pixels) -->
 	  <!-- I set the CSS width to 640px, and set the fire-truck-320w.png to 2x, and the fire-truck-640w.png to 1x by leaving it blank,
 	  basically opposite of what the given example html is showing at https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Same_size_different_resolutions . -->
@@ -77,11 +77,18 @@
 				   images/fire-truck-640.png"
 		   src="images/fire-truck-640.png" alt="Image of a URAL 4320 fire truck AA-08 why" id="firetruckimg"><br>
 	  
-	  <h4>(Art direction)</h4>
+	  <h6>(Art direction)</h6>
 	  <picture>
 	    <source media="(max-width: 799px)" srcset="images/f14-crew-crop.jpg">
 		<source media="(min-width: 800px)" srcset="images/f14-crew.jpg"> <!-- This element is really unnecessary & redundent -->
-		<img src="images/f14-crew.jpg" alt="an F14 crew lightinh the fires">
+		<img src="images/f14-crew.jpg" alt="an F14 crew lighting the fires">
+	  </picture><br>
+	  
+	  <picture>
+	    <source media="(max-width: 799px)" srcset="images/yak-52-crew-crop.jpg">
+		<source media="(min-width: 800px)" srcset="images/yak-52-crew.jpg">
+		<img src="images/yak-52-crew.jpg" alt="Yak-52 Instructor and student">
+		<!-- The width attribute does not seem to work with the srcset attribute, which means that the images cannot be resized and must be the correct size nativitally -->
 	  </picture>
 	  <hr>
 	</section>

@@ -10,7 +10,6 @@
 	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	 <link rel="shortcut icon" href="images/rtfavicon.ico" type="image/x-icon">
 	 <!-- imbed thunderstorm sounds & lighting effect into website -->
-	 
   </head>
  
   <body>
@@ -112,13 +111,20 @@
   
          <!-- text input boxes for only testing -->
          <p><input type="text" disabled="disabled"> <input type="text"> (These two input boxes are for <strong>testing</strong> only)</p>
-         <button>Change Your Callsign</button>
+         <button>Change Your Callsign</button><br><br>
 		 
-		 <p><audio controls
-		   autoplay loop>
-		   <source src="images/thunderstorm-audio.webm" type="audio/webm">
-		 </audio></p>
+		<section>
+		  <audio controls autoplay loop>
+	        <source src="images/thunderstorm-audio.webm" type="audio/webm">
+		    <p>Your browser doesn't support HTML5 audio. Here is a <a href="images/deck-crew.webm"> link to the audio</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
+	      </audio>
 	  
+	      <audio controls autoplay loop>
+	        <source src="images/rain-on-roof.mp3" type="audio/ogg">
+	        <p>Your browser doesn't support HTML audio. Here is a <a href="images/musicintro.ogg">link to the audio</a> instead</p>
+	      </audio>
+	    </section>
+		
 	    <nav>
          <!-- more or less for internal path exercicing -->
          <p>Rising Thunder Statistics Page (<a href="statistics/statistics.html" title="Statistics place holder page">place holder only</a>).</p>

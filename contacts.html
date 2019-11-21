@@ -6,6 +6,7 @@
 	 <meta name="description" content="This is the contacts html page for the Rising Thunder Server series.">
 	 <title>Rising Thunder Alpha Test</title>
 	 <link href="styles/style.css" rel="stylesheet">
+	 <link href="styles/contacts.css" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	 <link rel="shortcut icon" href="images/rtfavicon.ico" type="image/x-icon">
   </head>
@@ -40,7 +41,7 @@
 				 title="Contact MiG-29" 
 				 width="330" 
 				 height="185">
-			<figcaption>A DCS MiG-29</figcaption>
+			<figcaption>Contact!</figcaption>
 		  </figure>
         </aside>
         <p><b>For best results</b>, please send a message to "<a href="https://forums.eagle.ru/member.php?u=113063" target="_blank" title="Didgital Engines DCS Profile Page">DigitalEngine</a>" at the DCS World forums.</p>
@@ -56,12 +57,31 @@
 		    <li>Email: <a href="mailto:rising.thunder.servers@gmail.com">rising.thunder.servers@gmail.com</a>
 	      </ul>
         </address>
+		
+		<form action="/my handling-form-page" method="post">
+		  <p style="color: red; padding-left: 110px;">This messaging form is for internal testing only</p>
+		  <div>
+		    <label for="name">Your Callsign:</label>
+			<input type="text" id="name" name="user_name">
+		  </div>
+		  <div>
+		    <label for="email">Your E-mail:</label>
+			<input type="email" id="mail" name="user_mail">
+		  </div>
+		  <div>
+		    <label for="msg" name="user_message">Your Message:</label>
+			<textarea id="msg" name="user_message"></textarea>
+		  </div>
+		  <div class="button">
+		    <button type="submit">Send Your Message</button>
+		    <button type="reset">Reset</button>
+		  </div>
+		</form>
 	  </section>
 	  
     </main>
 	
-	<footer>
-	  
+	<footer> 
 	  <p id="paragrah2">Revision Date, see the Javascript file</p>
 	</footer>
 	

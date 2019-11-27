@@ -9,6 +9,7 @@
 	<link href="../styles/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="../images/rtfavicon.ico" type="image/x-icon">
+	<link href="forms.css" rel="stylesheet">
   </head>
   
   <body>
@@ -20,13 +21,23 @@
 	<nav>
 	  <ul>
 	    <li><a href="../index.html">Home Page</a></li>
+		<li><a href="../statistics/statistics.html">Statistics</a></li>
+		<li><a href="../pdfs/documents.html">Documents Page</a></li>
+		<li><a href="../contacts.html">Contacts Page</a></li>
+		<li><a href="../code/code.html">Code Repository</a></li>
+		<li><a href="../blogs/news.html">News & Blogs</a></li>
+		<li><a href="../media.html">Media</a></li>
+		<li>Registration & Donations</li>
 	  </ul>
 	  <hr>
 	</nav>
 	
 	<main>
-	  <section>
 	    <form>
+		  <p style="color: red;">This Page is for <strong>Testing Only</strong> at this time.<br>Please <strong>DO NOT</strong> enter any information as of yet.</p>
+		  <p><i>Will update when this page is active for public use, hopefully sometime in 2020. Thanks!</i></p>
+		  
+		  <h3>Registration Form</h3>
 		  <fieldset>
 		    <legend>Requirments</legend>
 		    <div>
@@ -37,11 +48,12 @@
 			  <input type="checkbox" id="read_manual" name="read_manual" value="manual">
 			  <label for="read_manual">Have you read the Rising Thunder Alpha Test Discription & Operation</label>
 			</dir>
+			<div>
+			  <input type="checkbox" id="reserved" name="reserved" value="reserved" checked>
+			</div>
 		  </fieldset>
 	    </form>
-	  <section>
 		
-	  </section>
 	    <form>
 		  <fieldset>
 		    <legend>Choose Your Coalition</legend>
@@ -62,17 +74,193 @@
 			</div>
 		  </fieldset>
 		</form>
-	  </section>
 	  
-	  <section>
 	    <form>
 		  <p>Required fields are marked by <abbr title="required">*</abbr></p>
 		  <div>
 		    <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
 			<input id="username" type="text" name="username">
 		  </div>
+		 
+		</form><hr>
+		
+		<form>
+		<h3>Experminting with Differing Form Widgets</h3>
+		 
+		  <p>Your Callsign: <input type="text" id="comment" name="comment" value="I'm a text field"></p>
+		  <p>Your email here: <input type="email" id="email" name="email" multiple></p>
+		  <p>Password: <input type="password" id="pwd" name="pwd"></p>
+		  <p>Phone Number: <input type="tel" id="tel" name="tel"></p>
+		  <p>Your Website: <input type="url" id="url" name="url"></p>
+		  <p><textarea cols="122" rows="6">This is a "fixed" text field. This could possibly be used for the MOG MMB.</textarea></p>
+		    
+			<div>
+			 <select id="simple" name="simple">
+			   <option>TF-51D</option>
+			   <option>A-10A</option>
+			   <option>F-15C</option>
+			 </select>
+			 
+			 <select id="groups" name="groups">
+			   <optgroup label="Training Fields">
+			     <option>Mina Airport</option>
+				 <option>TBD 2</option>
+				 <option>TBD 3</option>
+			   </optgroup>
+			   <optgroup label="Air Bases">
+			     <option>Nellis AFB</option>
+			     <option>TBD 2 AFB</option>
+				 <option>TBD 3 AFB</option>
+			   </optgroup>
+			 </select>
+			 
+			 <select id="multi" name="multi" multiple>
+			   <option>Test Pilot 001</option>
+			   <option>Test Pilot 002</option>
+			   <option>Test Pilot 003</option>
+			   <option>Test Pilot 004</option>
+			   <option>Test Pilot 005</option>
+			 </select>
+			</div>
+
+			<p>
+			  <label for="myModule">What's your favorite DCS Module?</label>
+			  <input type="text" name="myModule" id="myModule" list="mySuggestion">
+			  
+			  <datalist id="mySuggestion">
+			    <label for="suggestion">or pick a module</label>
+				<select id="suggestion" name="altModule">
+			      <option>F-15C Viper</option>
+				  <option>Fw 190 A-8</option>
+				  <option>I-16</option>
+				  <option>MiG-19P Farmer</option>
+				  <option>Christen Eagle II</option>
+				  <option>MiG-29</option>
+				  <option>F-14 Tomcat</option>
+				  <option>Yak-52</option>
+				</select>
+			  </datalist>
+			</p>
+			
+			<fieldset>
+			  <legend>What is your favorite DCS Map?</legend>
+			  <ul>
+			    <li>
+				  <label for="caucasus">Caucasus</label>
+				  <input type="radio" id="caucasus" name="map" value="caucasus" checked>
+				</li>
+				<li>
+				  <label for="nttr">NTTR</label>
+				  <input type="radio" id="nttr" name="map" value="nttr">
+				</li>
+				<li>
+				  <label for="normandy">Normandy 1944</label>
+				  <input type="radio" id="normandy" name="map" value="nomandy">
+				  <li>
+				    <label for="persianGulf">Persian Gulf</label>
+					<input type="radio" id="persianGulf" name="map" value="persianGulf">
+				  </li>
+				</li>
+			  <ul>
+			</fieldset>
+			
+			<button type="submit">
+			  This is a <br><strong>Submit Button</strong>
+			</button>
+			<input type="submit" value="This is a submit button">
+			
+			<button type="reset">
+			  This is a <br><strong>Reset Button</strong>
+			</button>
+			<input type="reset" value="This is a reset button">
+			
+			<button type="button">
+			  This is an <br><strong>Anonymous Button</strong>
+			</button>
+			<input type="button" value="This is an Anonymous Button">
+			
+		</form><hr>
+		
+		<form>
+		  <h3>Donations Form</h3>
+		  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+	
+		  
+		  <section>
+		    <h4>Contact Information</h4>
+			<fieldset>
+			  <legend>Title</legend>
+			  <ul>
+			    <li>
+				  <label for="title_1">
+				    <input type="radio" id="title_1" name="title" value="M.">
+					Mister
+				  </label>
+				</li>
+				<li>
+				  <label for="title_2">
+				    <input type="radio" id="title_2" name="title" value="Ms.">
+					Miss
+				  </label>
+				</li>
+			  </ul>
+			</fieldset>
+			<p>
+			  <label for="name">
+			    <span>Name: </span>
+				<string><abbr title="required">*</abbr></strong>
+			  </label>
+			  <input type="text" id="name" name="username">
+			</p>
+			<p>
+			  <label for="mail">
+			    <span>E-mail: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			  </label>
+			  <input type="email" id="mail" name="usermail">
+			</p>
+			<p>
+			  <label for="pwd">
+			    <span>Password: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			  </label>
+			  <input type="password" id="pwd" name="password">
+			</p>
+		  </section>
+		  
+		  <section>
+		    <h4>Payment Information</h4>
+			<p>
+			  <label for="card">
+			    <span>Card Type:</span>
+			  </label>
+			  <select>
+			    <option value="Visa">Visa</option>
+				<option value="mc">Mastercard</option>
+				<option value="amex">American Express</option>
+			  </select>
+			</p>
+			<p>
+			  <label for="number">
+			    <span>Card Number:</span>
+				<strong><abbr title="required">*</abbr></strong>
+			  </label>
+			  <input type="tel" id="number" name="cardnumber">
+			</p>
+			<p>
+			  <label for="date">
+			     <span>Expiration Date:</span>
+				 <strong><abbr title="required">*</abbr></strong>
+				 <em>Formatted as mm/yy</em>
+			  </label>
+			  <input type="date" id="date" name="expiration">
+			</p>
+		  </section>
+		  <p><button type="submit">Validate the Payment</button></p>
+		
 		</form>
-	  </section>
+	
+	
 	
 	</main>
 	

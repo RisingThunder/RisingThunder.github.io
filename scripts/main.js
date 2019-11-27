@@ -2,7 +2,7 @@ let myHeading = document.querySelector('#paragrah1');
 	myHeading.textContent = 'Comming Soon! Click here for more information.';
 	
 	myHeading = document.querySelector('#paragrah2');
-	myHeading.textContent = 'Revision 20NOV2019 - Click for info.';
+	myHeading.textContent = 'Revision 26NOV2019 - Click for info.';
 	
 	myImage = document.querySelector('img');
 	

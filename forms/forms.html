@@ -47,14 +47,12 @@
 			<div>
 			  <input type="checkbox" id="read_manual" name="read_manual" value="manual">
 			  <label for="read_manual">Have you read the Rising Thunder Alpha Test Discription & Operation</label>
-			</dir>
+			</div>
 			<div>
 			  <input type="checkbox" id="reserved" name="reserved" value="reserved" checked>
 			</div>
 		  </fieldset>
-	    </form>
-		
-	    <form>
+	   
 		  <fieldset>
 		    <legend>Choose Your Coalition</legend>
 			
@@ -73,19 +71,25 @@
 			  <label for="coalition_observer">Observer</label>
 			</div>
 		  </fieldset>
-		</form>
-	  
-	    <form>
+		  
 		  <p>Required fields are marked by <abbr title="required">*</abbr></p>
 		  <div>
 		    <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
 			<input id="username" type="text" name="username">
 		  </div>
+		  
+		  <p>Upload your avitars:
+		  <input type="file" name="file" id="file" accept="image/*;capture=camera" multiple>
+		  </p>
+		 
+		 <div>
+		   <input type="hidden" id="timestamp" name="timestamp" value=1286705410>
+		 </div>
 		 
 		</form><hr>
 		
 		<form>
-		<h3>Experminting with Differing Form Widgets</h3>
+		<h3>Experimenting with Differing Form Widgets</h3>
 		 
 		  <p>Your Callsign: <input type="text" id="comment" name="comment" value="I'm a text field"></p>
 		  <p>Your email here: <input type="email" id="email" name="email" multiple></p>
@@ -122,7 +126,8 @@
 			   <option>Test Pilot 005</option>
 			 </select>
 			</div>
-
+			
+			<div>
 			<p>
 			  <label for="myModule">What's your favorite DCS Module?</label>
 			  <input type="text" name="myModule" id="myModule" list="mySuggestion">
@@ -141,7 +146,9 @@
 				</select>
 			  </datalist>
 			</p>
+			</div>
 			
+			<div>
 			<fieldset>
 			  <legend>What is your favorite DCS Map?</legend>
 			  <ul>
@@ -163,21 +170,60 @@
 				</li>
 			  <ul>
 			</fieldset>
+			</div>
 			
-			<button type="submit">
-			  This is a <br><strong>Submit Button</strong>
-			</button>
-			<input type="submit" value="This is a submit button">
+			<div>
+			  <button type="submit">
+			    This is a <br><strong>Submit Button</strong>
+			  </button>
+			  <input type="submit" value="This is a submit button">
 			
-			<button type="reset">
-			  This is a <br><strong>Reset Button</strong>
-			</button>
-			<input type="reset" value="This is a reset button">
+			  <button type="reset">
+			    This is a <br><strong>Reset Button</strong>
+			  </button>
+			  <input type="reset" value="This is a reset button">
 			
-			<button type="button">
-			  This is an <br><strong>Anonymous Button</strong>
-			</button>
-			<input type="button" value="This is an Anonymous Button">
+			  <button type="button">
+			    This is an <br><strong>Anonymous Button</strong>
+			  </button>
+			  <input type="button" value="This is an anonymous button">
+			</div>
+			
+			<div>
+			  <p>A number widget whose value is restricted to any value between 0 and 0.99 inclusive, and whose increase and decrease buttons change its value by 0.01.<br>
+			  <input type="number" name="cents" id="pennies" min="0" max="0.99" step="0.01" value="0.00"></p>
+			</div>
+			
+			<div></p>
+			  <label for="userfavTimeinput">What is your favorite time of day to logon to DCS (Zulu)?</label>
+			  <input type="range" name="userfavTimeinput" id="userfavTimeinput" min="0" max="23" step="1"> 
+			  <output style="color: red;" class="favoriteTimeoutput">:00</output>:00</p>
+			  
+			  <script>
+			  var userfavTime = document.querySelector('#userfavTimeinput');
+			  var favTime = document.querySelector('.favoriteTimeoutput');
+			  
+			  favTime.textContent = userfavTimeinput.value;
+			  
+			  userfavTimeinput.oninput = function() {
+			    favTime.textContent = userfavTimeinput.value;
+			  }
+			  </script>			
+			</div>
+			
+			<div>
+			  <h4>Date & Time selectors</h4>
+			    <p><input type="date" name="datetime" id="datetime"> <input type="time" name="time" id="time"></p>
+				<p>Constrained date selector:<label for="myDate"> Summer Dates: 2020 </label><input type="date" name="MyDate" min="2020-06-01" max="2020-08-31" id="mDate"></p>
+			    <p><input type="color" name="color" id="color"></p> 
+			</div>
+			
+			<div>
+			  <p>Image Button 
+			  <input type="image" alt="Click me!" src="../images/su25t.jpg" width="80"></p>
+			  <p>Progress Bar: <progress max="100" value="50">50/100</progress> (This could be used with the Current Map Time indication)</p>
+			  <p>Meter Bar: <meter min="0" max="100" value="80" low="33" high="66" optimum="15">75</meter></p>
+			</div>
 			
 		</form><hr>
 		
@@ -230,9 +276,12 @@
 		  
 		  <section>
 		    <h4>Payment Information</h4>
+			<p><label for="amount">Donation Amount in US$: </label>
+			  <input type="number" name="amount" id="age" min="2" max="12" step="2" value=6>
+			</p>
 			<p>
 			  <label for="card">
-			    <span>Card Type:</span>
+			    <span>Card Type: </span>
 			  </label>
 			  <select>
 			    <option value="Visa">Visa</option>
@@ -242,7 +291,7 @@
 			</p>
 			<p>
 			  <label for="number">
-			    <span>Card Number:</span>
+			    <span>Card Number: </span>
 				<strong><abbr title="required">*</abbr></strong>
 			  </label>
 			  <input type="tel" id="number" name="cardnumber">
@@ -265,6 +314,10 @@
 	</main>
 	
 	<footer>
+	  <!-- To keep padding under the revision date paragraph (the text in the blue field), adjust the body bottom padding in the css file. As to why this must be done is unknown to me for now -->
+      <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file</p>
 	</footer>
+	
+	<script src="../scripts/revision.js"></script>
 	
   </body>

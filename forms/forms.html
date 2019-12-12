@@ -27,7 +27,7 @@
 		<li><a href="../code/code.html">Code Repository</a></li>
 		<li><a href="../blogs/news.html">News & Blogs</a></li>
 		<li><a href="../media.html">Media</a></li>
-		<li>Registration & Donations</li>
+		<li>Input Forms</li>
 	  </ul>
 	  <hr>
 	</nav>
@@ -306,10 +306,72 @@
 			</p>
 		  </section>
 		  <p><button type="submit">Validate the Payment</button></p>
+		</form><hr>
+	
+		<h3>Where does the data go?</h3>
+		<form action="http://localhost:6900/">
+		    <!-- Other examples I've tested could be,
+			https://risingthunder.github.io/
+			https://github.com/RisingThunder/RisingThunder.github.io
+			https://github.com/RisingThunder/RisingThunder.github.io/tree/master/data -->
+		  <p>In this example, the data is sent to an absolute URL — http://localhost:6900/.<br>
+	          (The local host :6900 must be up and running)</p>
+	      <p>Your Email: <input type="email" id="mail" name="usermail"></p>
+	      <div>
+	        <button type="submit"><strong>Submit Email</strong></button>
+	      </div>
+	    </form>
+	    
+		<form action="/data">
+	      <p>Here, we use a relative URL — the data is sent to a different URL on the server: /data/<br>
+	         (the directory or file must exist)</p>
+	      <p>Your Email: <input type="email" name="usermail"></p>
+	      <div>
+	        <button type="submit"><strong>Submit Email</strong></button>
+	      </div>
+	    </form>
 		
+		<form>
+		  <p>When specified with no attributes, as below, the <form> data is sent to the same page that the form is present on:</p>
+		  <p>Your Email: <input type="email" id="email" name="usermail"></p>
+		  <div>
+		    <button type="submit"><strong>Submit Email</strong></button>
+		  </div>
 		</form>
-	
-	
+		
+		<form action="http://localhost:6900" method="get">
+		  <!-- Since the GET method has been used, you'll see the URL http://localhost:6900/?say=Merry+Christmas+DCS+World&to=The+Eagle+Dynamics+Team appear in the browser address bar when you submit the form. -->
+		  <h4>The GET method</h4>
+		  <div>
+		    <label for="say">What greeting do you want to say?</label>
+			<input name="say" id="say" value="Merry Christmas DCS World">
+		  </div>
+		  <div>
+		    <label for="to">Who do you want to say it to?</label>
+			<input name="to" id="to" value="The Eagle Dynamics Team">
+		  </div>
+		  <div>
+		    <button>Send my greetings</button>
+		  </div>
+		  <p>The data will be appended to the the URL as a series of name/value pairs, as seen in the browsers URL (address bar). If a localhost:6900 is running on the clients machine, the browser will open that local host's root directory.</p>
+		</form>
+		
+		<form action="php-example.php" method="post">
+		  <h4>The POST method - Raw PHP</h4>
+		  <p style="color: darkred;">Note to me: For this example to work, the website must be hosted through a PHP server of some kind.</p>
+		  <div>
+		   <label>What greeting do you want to say</label>
+		   <input name="say" id="say" value="Merry Christmas DCS World">
+		  </div>
+		  <div>
+		    <label>Who do you want to say it to?</label>
+			<input name="to" id="to" value="All the 3rd party developers">
+		  </div>
+		  <div>
+		    <button>Send my greetings</button>
+		  </div>
+		  <p>When submitted, the form data is sent to a php-example.php file, which contains the PHP code. When this code is executed, the browser will display the submitted data (greettings).</p>
+		</form>
 	
 	</main>
 	

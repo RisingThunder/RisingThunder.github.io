@@ -340,12 +340,12 @@
 		  </div>
 		</form>
 		
+		<h4>The GET method</h4>
 		<form action="http://localhost:6900" method="get">
 		  <!-- Since the GET method has been used, you'll see the URL http://localhost:6900/?say=Merry+Christmas+DCS+World&to=The+Eagle+Dynamics+Team appear in the browser address bar when you submit the form. -->
-		  <h4>The GET method</h4>
 		  <div>
 		    <label for="say">What greeting do you want to say?</label>
-			<input name="say" id="say" value="Merry Christmas DCS World">
+			<input name="say" id="say" value="Happy 2020!">
 		  </div>
 		  <div>
 		    <label for="to">Who do you want to say it to?</label>
@@ -357,12 +357,13 @@
 		  <p>The data will be appended to the the URL as a series of name/value pairs, as seen in the browsers URL (address bar). If a localhost:6900 is running on the clients machine, the browser will open that local host's root directory.</p>
 		</form>
 		
+		<h4>The POST method - Example: Raw PHP</h4>
 		<form action="php-example.php" method="post">
-		  <h4>The POST method - Raw PHP</h4>
-		  <p style="color: darkred;">Note to me: For this example to work, the website must be hosted through a PHP server of some kind. It is not allowed on the GitHub server (405).</p>
+		  <p style="color: darkred;">Note to me: For this example to work, the website (Rising Thunder Alpha Test) must be hosted through a PHP server of some kind. It is not allowed on the GitHub server (405).</p>
+		  <!-- For this example I'm using Wampserver, with the data sent to the local "php-example.php file" -->
 		  <div>
 		   <label for="say">What greeting do you want to say</label>
-		   <input name="say" id="say" value="Merry Christmas DCS World">
+		   <input name="say" id="say" value="May 2020 be a Good Year!">
 		  </div>
 		  <div>
 		    <label>Who do you want to say it to?</label>
@@ -374,12 +375,19 @@
 		  <p>When submitted, the form data is sent to a php-example.php file, which contains the PHP code. When this code is executed, the browser will display the submitted data (greettings).</p>
 		</form>
 		
-		<form>
-		  <h4>Raw PHP - The GET method</h4>
+		<h4>Example: Python</h4>
+		<form action="{{ url_for('hello') }}" method="POST">
 		  <div>
-		    <label></label>
+		    <label for="say">What greeting do you want to say?</label>
+			<input name="say" id="say" value="Happy New Year 2020">
 		  </div>
-		  
+		  <div>
+		    <label for="to">Who do you want to say it to?</label>
+			<input name="to" id="to" value="The World of DCS">
+		  </div>
+		  <div>
+		    <button>Send my greetings</button>
+		  </div>
 		</form>
 	
 	</main>

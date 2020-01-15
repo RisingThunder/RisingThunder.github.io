@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link href="javanoapi.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <nav>
+    <ul>
+	  <li><a href="forms.html">Input Forms</a></li>
+	</ul><hr>
+  </nav>
+  
+  <h2>Validating forms using JavaScript</h2>
+  <h3>An example that doesn't use the constraint validation API</h3>
+  <form>
+    <p>
+	  <label for="mail">
+	  <span>Please enter an email address:</span>
+	  <input type="text" class="mail" id="mail" name="mail">
+	  <span class="error" aria-live="polite"></span>
+	  </label>
+	</p>
+	<!-- Some legacy brousers need to have the 'type' attribute
+		 explicitly set to 'submit' on the 'button' element -->
+	<button type="submit">Submit</button>
+  </form>
+  
+  <h4><a href="javaforms.html">Example using the constraint validation API</a><h4>
+  
+  <script src="javanoapi.js"></script>
+</body>
+

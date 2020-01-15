@@ -7,9 +7,9 @@
 	<meta name="discription" content="The DCS World Rising Thunder Alfa Test servers are career level, persistent 24/7, client and AI servers utilizing the DCS Caucasus and NTTR maps.">
 	<title>Rising Thunder Alpha Test</title>
 	<link href="../styles/style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="../images/rtfavicon.ico" type="image/x-icon">
-	<link href="forms.css" rel="stylesheet">
   </head>
   
   <body>
@@ -28,6 +28,7 @@
 		<li><a href="../blogs/news.html">News & Blogs</a></li>
 		<li><a href="../media.html">Media</a></li>
 		<li>Input Forms</li>
+		<li><a href="javaforms.html">Java Forms</a></li>
 	  </ul>
 	  <hr>
 	</nav>
@@ -96,7 +97,7 @@
 		  <p>Password: <input type="password" id="pwd" name="pwd"></p>
 		  <p>Phone Number: <input type="tel" id="tel" name="tel"></p>
 		  <p>Your Website: <input type="url" id="url" name="url"></p>
-		  <p><textarea cols="122" rows="6">This is a "fixed" text field. This could possibly be used for the MOG MMB.</textarea></p>
+		  <p><textarea cols="118" rows="6">This is a "fixed" text field. This could possibly be used for the MOG MMB.</textarea></p>
 		    
 			<div>
 			 <select id="simple" name="simple">
@@ -176,17 +177,17 @@
 			  <button type="submit">
 			    This is a <br><strong>Submit Button</strong>
 			  </button>
-			  <input type="submit" value="This is a submit button">
+			  <input type="submit" value="This is a submit button" style="width:180px;">
 			
 			  <button type="reset">
 			    This is a <br><strong>Reset Button</strong>
 			  </button>
-			  <input type="reset" value="This is a reset button">
+			  <input type="reset" value="This is a reset button" style="width:168px;">
 			
 			  <button type="button">
 			    This is an <br><strong>Anonymous Button</strong>
 			  </button>
-			  <input type="button" value="This is an anonymous button">
+			  <input type="button" value="This is an anonymous button" style="width:200px;">
 			</div>
 			
 			<div>
@@ -197,18 +198,7 @@
 			<div></p>
 			  <label for="userfavTimeinput">What is your favorite time of day to logon to DCS (Zulu)?</label>
 			  <input type="range" name="userfavTimeinput" id="userfavTimeinput" min="0" max="23" step="1"> 
-			  <output style="color: red;" class="favoriteTimeoutput">:00</output>:00</p>
-			  
-			  <script>
-			  var userfavTime = document.querySelector('#userfavTimeinput');
-			  var favTime = document.querySelector('.favoriteTimeoutput');
-			  
-			  favTime.textContent = userfavTimeinput.value;
-			  
-			  userfavTimeinput.oninput = function() {
-			    favTime.textContent = userfavTimeinput.value;
-			  }
-			  </script>			
+			  <output style="color: red;" class="favoriteTimeoutput">:00</output>:00</p>		
 			</div>
 			
 			<div>
@@ -220,7 +210,7 @@
 			
 			<div>
 			  <p>Image Button 
-			  <input type="image" alt="Click me!" src="../images/su25t.jpg" width="80"></p>
+			  <input type="image" alt="Click me!" src="../images/su25t.jpg" style="width:90px; border: 1px solid green"></p>
 			  <p>Progress Bar: <progress max="100" value="50">50/100</progress> (This could be used with the Current Map Time indication)</p>
 			  <p>Meter Bar: <meter min="0" max="100" value="80" low="33" high="66" optimum="15">75</meter></p>
 			</div>
@@ -338,7 +328,7 @@
 		  <div>
 		    <button type="submit"><strong>Submit Email</strong></button>
 		  </div>
-		</form>
+		</form><hr style="color:lightgreen;">
 		
 		<h4>The GET method</h4>
 		<form action="http://localhost:6900" method="get">
@@ -355,7 +345,7 @@
 		    <button>Send my greetings</button>
 		  </div>
 		  <p>The data will be appended to the the URL as a series of name/value pairs, as seen in the browsers URL (address bar). If a localhost:6900 is running on the clients machine, the browser will open that local host's root directory.</p>
-		</form>
+		</form><hr style="color:lightgreen;">
 		
 		<h4>The POST method - Example: Raw PHP</h4>
 		<form action="php-example.php" method="post">
@@ -373,10 +363,14 @@
 		    <button>Send my greetings</button>
 		  </div>
 		  <p>When submitted, the form data is sent to a php-example.php file, which contains the PHP code. When this code is executed, the browser will display the submitted data (greettings).</p>
-		</form>
+		</form><hr style="color:lightgreen;">
 		
 		<h4>Example: Python</h4>
-		<form action="{{ url_for('hello') }}" method="POST">
+		  <p>For this conflageration of an example to work, a local (server side) Python <a href="https://www.palletsprojects.com/p/flask/" target="_blank">Flask<a/> server must be installed, up, and running. As such, it's not going to work on a github server, but does on my local test server. See comments in html code.<br></p>
+		  <!-- This action calls to the Python code that is running the web server contained in curly braces (localhost:5000/hello). url_for('hello') is basically saying "redirect to /hello when the form is submitted".)
+		  This uses the Flask framework for rendering the templates, handling the form data submission, etc (python-example.py).
+		  Run or start the python flask server by executing the python-example.py file in this folder, by double clicking, or from a python flask command prompt, or by right click/open. -->
+		<form method="POST" action="http://localhost:5000/hello">		  
 		  <div>
 		    <label for="say">What greeting do you want to say?</label>
 			<input name="say" id="say" value="Happy New Year 2020">
@@ -388,15 +382,130 @@
 		  <div>
 		    <button>Send my greetings</button>
 		  </div>
+		</form><hr>
+		
+		<h3>A special case: sending files</h3>
+		<form method="POST" action="http://localhost:6900/" enctype="multipart/form-data">
+		  <div>
+		    <label for="file">Choose a file</label>
+			<input type="file" id="file" name="myFile">
+		  </div>
+		  <div>
+		    <button>Send the file</button>
+		  </div>
+		  <p>This form is set to send the file to a localhost:6900. The localhost server must be configured to handle the files uploaded, or an Error responce will be generated, as is the case here, for now.</p>
+		</form><hr>
+		
+		<h3>Using Built-in Form Validation</h3>
+		<form id="validation">
+		  <div>
+		    <label for="choose">Would you prefer a Hornet or Viper? (REQUIRED)</label>
+		    <input id="choose" name="i_like" required pattern="Hornet|Viper">
+	      </div>
+		  <div>
+		    <label for="choose">Would you prefer rockets or a missile?</label>
+			<input type="text" id="choose" name="with" required minlength="7" maxlength="7">
+		  </div>
+		  <div>
+		    <label for="number">How many would you like?</label>
+			<input type="number" id="number" name="amount" value="2" min="2" max="10">
+		  </div>
+		  <div>
+		    <button>Submit</button>
+		  </div>	
+		</form><hr>
+		
+		<h3>Full Example</h3>
+		<form id="fullExample">
+		  <p>
+		    <fieldset>
+			  <legend>Do you have a DCS Account? <abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+			  <!-- While only one radio button in a same-named group can be selected at a time,
+			       and therefore only one radio button in a same-named group having the "required"
+			       attribute suffices in making a requirment -->
+			  <input type="radio" required name="client" id="r1" value="yes"><label for="r1">Yes</label>
+			  <input type="radio" required name="client" id="r2" value="no"><label for="r2">No</label>
+			</fieldset>
+		  </p>
+		  <p>
+		    <label for="n1">How old are you?</label>
+			<!-- The pattern attribute can act as a fallback for browsers which
+			     don't implement the number input type but support the pattern attribute.
+			     Please note that browsers that support the pattern attribute will make it
+			     fail silently when used with a number field
+			     Its usage here acts only as a fallback -->
+			<input type="number" min="15" max="969" step="1" id="n1" name="age" value="15"
+				   pattern="\d+">
+		  </p>
+		  <p>
+		    <label>What is your favorite DCS aircraft? <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+			<input type="text" id="t1" name="aircraft" list="l1" required
+			       pattern="[Hh]ornet|[Vv]iper|[Ff]ishbed|[Ff]lanker|[Ww]arthog|[Gg]rach">
+			<datalist id="l1">
+			  <option>Hornet</option>
+			  <option>Viper</option>
+			  <option>Fishbed</option>
+			  <option>Flanker</option>
+			  <option>Warthog</option>
+			  <option>Grach</option>
+			</datalist>
+		  </p>
+		  <p>
+		    <label for="t2">What's your e-mail address?</label>
+			<input type="email" id="t2" name="email">
+		  </p>
+		  <p>
+		    <label for="t3">Leave a short message</label>
+			<textarea id="3" name="msg" maxlength="140" rows="5">Nothing to say?</textarea>
+		  </p>
+		  <p>
+		    <button>Submit</button>
+		  </p>
+		</form><hr>
+		
+		
+		
+		<h3>Custom Error Messages</h3>
+		<form>
+		  <label for="mail">I would like you to provide me an e-mail</label>
+		  <input type="email" id="cmail" name="mail">
+		  <button>Submit</button>
 		</form>
-	
+		
+
 	</main>
 	
 	<footer>
 	  <!-- To keep padding under the revision date paragraph (the text in the blue field), adjust the body bottom padding in the css file. As to why this must be done is unknown to me for now -->
-      <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file</p>
+      <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file.</p>
 	</footer>
 	
+	<script>
+			  var userfavTime = document.querySelector('#userfavTimeinput');
+			  var favTime = document.querySelector('.favoriteTimeoutput');
+			  
+			  favTime.textContent = userfavTimeinput.value;
+			  
+			  userfavTimeinput.oninput = function() {
+			    favTime.textContent = userfavTimeinput.value;
+			  }
+			  
+			  /* The below is for the Custom Errer Messages email form. To get it to work I had to set a unique id (cmail) for this form.
+			  I suspect his because of conflicts with some of the other email inputs on this page*/
+			  const email = document.getElementById("cmail");
+
+			  email.addEventListener("input", function (event) {
+				if (email.validity.typeMismatch) {
+				  email.setCustomValidity("I am expecting an e-mail nugget!");
+				} else {
+				  email.setCustomValidity("");
+				}
+			  });
+			  /* end of custom email script */
+			
+	</script>	
+	
 	<script src="../scripts/revision.js"></script>
+	
 	
   </body>

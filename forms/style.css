@@ -1,0 +1,95 @@
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 0em;
+}
+form {
+	margin: 0 auto; 
+}
+textarea {
+	resize: none;
+}
+
+fieldset {
+	border-color: lightgreen;
+	/* position: relative; */
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 90%;
+}
+
+input, textareas, select, button {
+	width : 140px;
+	padding: 0;
+	margin: 0 0 2px 0;
+	box-sizing: border-box;
+}
+
+#validation div {
+	margin-bottom: 10px;
+}
+
+#validation input:invalid {
+	border: 2px dashed red;
+}
+
+#validation input:invalid:required {
+	background-image: linear-gradient(to right, yellow, lightgreen);
+}
+
+#validation input:valid {
+	border: 2px solid black;
+}
+
+#fullExample {
+	max-width: 800px;
+	/* do not use "form" afte the #fullExample tag, do not know how to center the form to the left, properly.
+	The way this is done does not make sence. Suspect the form placement is affect by a atribut in the main css file.
+	form form css attrbutes suspect I should create a seperate css file for each seperate website page. */
+}
+
+#fullExample p > label {
+	display: block;
+}
+
+#fullExample input[type="text"] {
+	width: 320px;
+	border: 2px solid blue;
+}
+
+#fullExample input[type="email"] {
+	width: 320px;
+	border: 2px solid blue;
+}
+
+#fullExample input[type="number"] {
+	width: 320px;
+	border: 2px solid blue;
+}
+#fullExample input[type="radio"] {
+	width: 40px;
+}
+
+#fullExample textarea {
+	width: 320px;
+	border: 2px solid blue;
+	/* box-sizing: border-box; */
+	/* The box sizing is not working, again, suspect from as above, however css is not the objactective of this lession, so will bypass, and move on. */	
+}
+
+#fullExample fieldset {
+	width:320px;
+	postition:relative;
+}
+
+/* These two css atributes also seem to be not working, bypassing and moving on. */
+input:invalid {
+	box-shadow: 0 0 5px 1 px red;
+}
+
+input:focus:invalid {
+	box-shadow: red;
+}

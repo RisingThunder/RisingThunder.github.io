@@ -1,5 +1,4 @@
 ul {
-	list-style: none;
 	margin: 0;
 	padding: 0;
 	width: 0em;
@@ -13,7 +12,7 @@ textarea {
 
 fieldset {
 	border-color: lightgreen;
-	/* position: relative; */
+	padding-left: 32px;
 }
 
 button, input, select, textarea {
@@ -26,6 +25,29 @@ input, textareas, select, button {
 	padding: 0;
 	margin: 0 0 2px 0;
 	box-sizing: border-box;
+}
+
+#placement fieldset {
+	position: relative;
+}
+
+#placement legend {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0 6px 6px 0;
+}
+
+#placement input {
+	width: 0;
+}
+
+#paymentform ul {
+	list-style: none;
+}
+
+#nodotdiv ul {
+	list-style: none;
 }
 
 #validation div {

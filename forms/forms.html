@@ -27,18 +27,22 @@
 		<li><a href="../code/code.html">Code Repository</a></li>
 		<li><a href="../blogs/news.html">News & Blogs</a></li>
 		<li><a href="../media.html">Media</a></li>
-		<li>Input Forms</li>
-		<li><a href="javaforms.html">Java Forms</a></li>
+		<li style="width: 200px;">Input Forms
+		  <ul style="padding-left: 18px;">
+		    <li><a href="javaforms.html">Java Forms</a></li>
+			<li><a href="postcard.html">Postcard Form</a></li>
+		  </ul>
+		</li>
 	  </ul>
 	  <hr>
 	</nav>
 	
 	<main>
-	    <form>
 		  <p style="color: red;">This Page is for <strong>Testing Only</strong> at this time.<br>Please <strong>DO NOT</strong> enter any information as of yet.</p>
 		  <p><i>Will update when this page is active for public use, hopefully sometime in 2020. Thanks!</i></p>
-		  
 		  <h3>Registration Form</h3>
+		  
+		  <form>
 		  <fieldset>
 		    <legend>Requirments</legend>
 		    <div>
@@ -149,7 +153,7 @@
 			</p>
 			</div>
 			
-			<div>
+			<div id="nodotdiv">
 			<fieldset>
 			  <legend>What is your favorite DCS Map?</legend>
 			  <ul>
@@ -217,11 +221,10 @@
 			
 		</form><hr>
 		
-		<form>
 		  <h3>Donations Form</h3>
 		  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
 	
-		  
+		<form id="paymentform">  
 		  <section>
 		    <h4>Contact Information</h4>
 			<fieldset>
@@ -463,13 +466,70 @@
 		  </p>
 		</form><hr>
 		
-		
-		
 		<h3>Custom Error Messages</h3>
 		<form>
 		  <label for="mail">I would like you to provide me an e-mail</label>
 		  <input type="email" id="cmail" name="mail">
 		  <button>Submit</button>
+		</form><hr>
+		
+		<h3>Legend placement</h3>
+		<form id="placement">
+		  <fieldset>
+		  <legend><span style="background-color: lightgreen; border: 1px solid lightgrey;">Select the DCS modules you have</span></legend>
+		    <ul>
+			  <li>
+			    <label for="hornet">Hornet</label>
+				<input type="checkbox" id="hornet" name="aircraft" value="hornet">
+			  </li>
+			  <li>
+			    <label for="viper">Viper</label>
+				<input type="checkbox" id="viper" name="aircraft" value="viper">
+			  </li>
+			  <li>
+			    <label for="flanker">Flanker</label>
+				<input type="checkbox" id="flanker" name="aircraft" value="flanker">
+			  </li>
+			  <li>
+			    <label for="fulcrum">Fulcrum</label>
+				<input type="checkbox" id="fulcrum" name="aircraft" value="fulcrum">
+			  </li>
+			  <li>
+			    <label for="warthog">Warthog</label>
+				<input type="checkbox" id="warthog" name="aircraft" value="warthog">
+			  </li>
+		    </ul>
+			<button>Submit</button>
+		  </fieldset>
+		</form><br>
+		
+		<form id="placement">
+		  <fieldset>
+		  <legend><span style="background-color: lightgreen; border: 1px solid lightgrey;">Your favorite DCS map?</span></legend>
+		    <ul>
+			  <li>
+			    <label for="caucasus">Caucasus</label>
+				<input type="radio" id="caucasus" name="map" value="caucasus">
+			  </li>
+			  <li>
+			    <label for="nttr">Nevada Test & Training Range</label>
+				<input type="radio" id="nttr" name="map" value="nttr">
+			  </li>
+			  <li>
+			    <label for="persiangulf">Persian Gulf</label>
+				<input type="radio" id="persiangulf" name="map" value="persiangulf">
+			  </li>
+			  <li>
+			    <label for="marianas">Marianas</label>
+				<input type="radio" id="marianas" name="map" value="marianas">
+			  </li>
+			  <li>
+			    <label for="syria">Syria</label>
+				<input type="radio" id="marianas" name="map" value="marianas">
+			  </li>
+		    </ul>
+			<button>Submit</button>
+		  </fieldset>
 		</form>
 		
 

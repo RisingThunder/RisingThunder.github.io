@@ -1,0 +1,164 @@
+input {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input[type="checkbox"] {
+	border: 1px solid red;
+	width: 1.2em;
+	height:1.2em;
+	vertical-align: -4px;
+	color: green;
+	position: relative;
+}
+
+input[type="checkbox"]::before {
+	content: "✔";
+	position: absolute;
+	font-size: 1.4em;
+	top: -0.3em;
+	visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+	visibility: visible;
+}
+
+input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: 2px solid green;
+	vertical-align: -2px;
+	outline: none;
+}
+
+input[type="radio"]::before {
+	display: block;
+	content: " ";
+	width: 10px;
+	height: 10px;
+	border-radius: 6px;
+	background-color: red;
+	font-size: 1.2em;
+	visibility: hidden;
+	transform: translate(3px, 3px) scale(0);
+	transform-origin: center;
+	transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+	transform: translate(3px, 3px) scale(1);
+	transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+	visibility: visible;
+}
+
+/* Below is for the Toggle switch example
+I had to modify some to work in this page, namely the checkbox :before with the visibility: visible,
+and, the size and placement of the :before elements.  */
+
+ * {
+	box-sizing: border-box;
+}
+
+/* Flexbox fu to make the control and label line up */
+
+li {
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+
+/* size the label, and make the on and off parts sit on top of one another using positioning */
+div label {
+	width: 20px;
+	height: 20px;
+	line-height: 30px;
+	position: relative;
+	font-size: 24px;
+}
+
+label span {
+	position: absolute;
+}
+
+/* remove the default styling of he checkbox using appearance and create the outer toggle area */
+
+div input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 88px;
+	height: 24px;
+	border-radius: 12px;
+	border: 2px solid black;
+	background: #eee;
+	transition: all 0.5s;
+}
+
+/* style the ::before content to look like the inner toggle switch - the bit the moves */
+
+div input[type="checkbox"]::before {
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 9px;
+	background-color: blue;
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 4%;
+	transition: all 0.5s;
+	visibility: visible;
+}
+
+/* change the outer background color and move the inner goggle switch
+when the checkbox is checked; us transition for smooth animation */
+
+div input[type="checkbox"]:checked {
+	background-color: #ffaa00;
+	transition: all 0.5s;
+}
+
+div input[type="checkbox"]:checked::before {
+	left: 78%;
+	transition: all 0.5s;
+}
+
+/* cause the On and Off parts of the label to be visible when the checkbox is
+checked and unchecked, respectively */
+
+div input[type="checkbox"] ~ label .on, input[type="checkbox"]:checked ~ label .off {
+	opacity: 0;
+}
+
+div input [type="checkbox"] ~ label .off, input[type="checkbox"]:checked ~ label .on {
+	opacity: 1;
+}
+
+/* make the focus outline a more subtle on Chrome, rather than the default heavy blue outline */
+
+input:focus {
+	outline: 1px dotted lightgreen;
+}
+
+.on {
+	color: green;
+}
+
+.off {
+	color: red;
+}
+
+
+
+
+
+
+

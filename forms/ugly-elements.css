@@ -1,0 +1,102 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 20px auto;
+	max-width: 400px;
+}
+
+form > div {
+	margin-bottom: 20px;
+}
+
+select {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.select-wrapper {
+	position: relative;
+}
+
+.select-wrapper::after {
+	content: "▼";
+	font-size: 1rem;
+	top: 6px;
+	right: 10px;
+	position: absolute;
+}
+
+button, label, input, select, progress, meter {
+	display: block;
+	font-family: inherit;
+	font-size: 100%;
+	Padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px;
+	height: 30px;
+}
+
+input[type="text"], input[type="datetime-local"], input[type="color"], select {
+	box-shadow: inset 1px 1px 3px #ccc;
+	border-radius: 5px;
+}
+
+input[type="range"] {
+	appearance: none;
+	-webkit-appearance: none;
+	background: red;
+	height: 8px;
+	padding: 0;
+	outline: 1px solid transparent;
+	border: 1px solid blue;
+	border-radius: .5em;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid blue;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: lightgreen;
+  cursor: pointer;
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+button {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#colornb input[type="color"] {
+	border: 0;
+	padding: 0;
+	height: 18px;
+}
+
+#filec input[type="file"] {
+	height: 0;
+	padding: 0;
+	opacity: 0;
+}
+
+#filec label[for="file"] {
+	box-shadow: 1px 1px 3px #ccc;
+	background: linear-gradient(to bottom, #eee, #ccc);
+	border: 1px solid rgb(169, 169, 169);
+	border-radius: 5px;
+	text-align: center;
+	line-height: 1.5;
+}
+
+#filec label[for="file"]:hover {
+	background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+#filec label[for="file"]:active {
+	box-shadow: inset 1px 1px 3px #ccc;
+}

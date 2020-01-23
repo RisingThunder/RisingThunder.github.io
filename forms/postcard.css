@@ -25,10 +25,11 @@ form {
 	position : relative;
 	width  : 740px;
 	height : 498px;
-	margin : 0 auto;
+	margin : 16px auto;
 	padding: 1em;
 	box-sizing: border-box;
 	background : #FFF url(background.jpg);
+	border-radius: 2px;
 	
 	/* we create our grid */
 	display  : grid;

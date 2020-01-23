@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>OS-level Styling</title>
+  <link href="os-level.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <form>
+  <fieldset>
+    <legend>Choose one</legend>
+    <p>
+	  <label for="search">search: </label>
+	  <input id="search" name="search" type="search">
+	</p>
+	<p>
+	  <label for="text">text: </label>
+	  <input id="text" name="text" type="text">
+	</p>
+	<p>
+	  <label for="date">date: </label>
+	  <input id="date" name="date" type="datetime-local">
+	</p>
+	<p>
+	  <label for="radio">
+	    <input type="radio" name="side" value="blue">
+		Blue
+      </label>
+	</p>
+	<p>
+	  <label for="radio">
+	    <input type="radio" name="side" value="red">
+	    Red
+	  </label>
+	</p>
+	<p>
+	  <label for="checkbox">checkbox: </label>
+	  <input id="checkbox" name="checkbox" type="checkbox">
+	</p>
+	<p><input type="submit" value="submit"></p>
+	<p><input type="button" value="button"></p>
+	<button>Submit</button>
+  </fieldset>
+  </form>
+  
+	<div>
+	  <ul>
+	    <input type="checkbox" name="power" id="power">
+		<label id="powerlabel" for="power"><span class="on">ON</span> <span class="off">OFF</span></label>
+	  </ul>
+	</div><hr>
+	
+    <p><b><a href="forms.html">Back to Input Forms</a></b></p>
+  
+ 
+</body>

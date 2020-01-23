@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ugly Controls Basic Styling</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="ugly-elements.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <nav><a href="forms.html">Back to Input Forms</a></nav>
+  <hr>
+  
+  <header>
+    <h3>What can be done about the "ugly" elements</h3>
+  </header>
+  
+  <form>
+    <div>
+	  <label for="select">Select Box:</label>
+	  <div class="select-wrapper"><select id="select" name="select">
+	    <option>Blue</option>
+		<option>Red</option>
+		<option>Observer</option>
+	  </select></div>
+	</div>
+	<div>
+	  <label for="myAircraft">"Favorite aircraft?" datalist:</label>
+	  <input type="text" name="myAircraft" id="myAircraft" list="mySuggestion">
+	  <datalist id="mySuggestion">
+	    <option>Fulcrum</option>
+		<option>Flanker</option>
+		<option>Hornet</option>
+		<option>Viper</option>
+		<option>Warthog</option>
+		<option>Grach</option>
+		<option>Hind</option>
+		<option>Cobra</option>
+	  </datalist>
+	</div>
+	<div>
+	  <label for="date1">Datetime local: </label>
+	  <input id="date1" name="date1" type="datetime-local">
+	</div>
+	<div>
+	  <label for="range">Range: </label>
+	  <input id="range" name="range" type="range">
+	</div>
+	<div>
+	  <label for="color">Color: </label>
+	  <input id="color" name="color" type="color">
+	</div>
+	<div id="colornb">
+	  <label for="color">Color: </label>
+	  <input in="color" name="color" type="color">
+	</div>
+	<div>
+	  <label for="file">File picker: </label>
+	  <input id="file" name="file" type="file" multiple>
+	  <ul id="file-list">
+	  
+	  </ul>
+	</div>
+	<div id="filec">
+	  <label for="file">File Picker: </label>
+	  <input id="file" name="file" type="file" multiple>
+	  <ul value="file-list">
+	  
+	  </ul>
+	</div>
+	<div>
+	  <label for="progress">Progress: </label>
+	  <progress max="100" value="75" id="progress">75/100</progress>
+	</div>
+	<div>
+	  <label for="meter">Meter: </label>
+	  <meter id="meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+	</div>
+	<div><button>Submit?</button></div>
+  </form>
+  
+  <script>
+    const fileInput = document.querySelector('#file');
+	const fileList = document.querySelector('#file-list');
+	
+	fileInput.addEventListener('change', updateFileList);
+	
+	function updateFileList() {
+	  while(fileList.firstChild) {
+	   fileList.removeChild(fileList.firstChild);
+	   }
+	   
+	   let curFiles = fileInput.files;
+	   
+	   if(!(curFiles.length === 0)) {
+	     console.log('test');
+		 for(let i = 0; i < curFiles.length; i++) {
+		   const listItem = document.createElement('li');
+		   listItem.textContent = 'File name: ' + curFiles[i].name + '; file size ' + returnFileSize(curFiles[i].size) + '.';
+		   fileList.appendChild(listItem);
+	     }
+	   }
+	 }
+	 
+	 function returnFileSize(number) {
+	   if(number < 1024) {
+	     return number + 'bytes';
+	   } else if(number >= 1024 && number < 1048576) {
+	     return (number/1024).toFixed(1) + 'KB';
+	   } else if(number >= 1048576) {
+	     return (number/1048576).toFixed(1) + 'MB';
+	   }
+	 }
+  </script>
+ 
+</body>
+
+
+
+

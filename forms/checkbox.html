@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type="checkbox"] {
+	  -webkit-appearance: none;
+	  appearance: none;
+	}
+	
+	input[type="checkbox"] {
+	  position: relative;
+	  width: 1em;
+	  height: 1em;
+	  border: 1px solid gray;
+	  /* Adjust the position of the checkboxes on the text baseline */
+	  vertical-align: -2px;
+	  /* Set here so that Windows' Hight-Contrast Mode can override */
+	  color: red;
+	}
+	
+	input[type="checkbox"]::before {
+	  content: "✔";
+	  position: absolute;
+	  font-size: 1.2em;
+	  right: -1px;
+	  top: -0.3em;
+	  visibility: hidden;
+	}
+	
+	input[type="checkbox"]:checked::before {
+	  /* Use `visibility` instead of `display` to avoid recalculating layout */
+	  visibility: visible;
+	}
+	
+	input[type="checkbox"]:disabled {
+	border-color: black;
+	background: #ddd;
+	color: grey;
+	}
+	
+  </style>
+</head>
+
+<body>
+ <form>
+    <fieldset>
+	  <legend>Coalition preferences: </legend>
+	  
+	  <p>
+	    <label>
+		  <input type="checkbox" name="side-1" value="blue">
+		  I'll sign up with the Blue Alliance.
+		</label>
+	  </p>
+	  <p>
+	    <label>
+		  <input type="checkbox" name="side-2" value="black" disabled>
+		  I'll sail under the Jolly Rogers (that would be a pirate, mate).
+		</label>
+	  </p>
+	  <p>
+	    <label>
+		  <input type="checkbox" name="side-3" value="red">
+		  I'll sign up with the Red Alliance.
+		</label>
+	  </p>
+	</fieldset>
+  </form>
+  <p><b><a href="forms.html">Back to Input Forms</a></b></p>
+</body>

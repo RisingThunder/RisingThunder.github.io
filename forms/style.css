@@ -107,6 +107,21 @@ input, textareas, select, button {
 	postition:relative;
 }
 
+#os-level input[type="search"] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+#os-level span {
+	display: inline-block;
+	background: red;
+}
+
+#os-level input[type="checkbox"] {
+	width: 100px;
+	height: 100px;
+}
+
 /* These two css atributes also seem to be not working, bypassing and moving on. */
 input:invalid {
 	box-shadow: 0 0 5px 1 px red;
@@ -115,3 +130,4 @@ input:invalid {
 input:focus:invalid {
 	box-shadow: red;
 }
+

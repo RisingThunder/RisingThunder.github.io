@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+	  font-family: 'Josefin Sans', sans-serif;
+	  margin: 20px auto;
+	  max-width: 460px;
+	}
+	
+	fieldset {
+	  padding: 10px 30px 0;
+	  margin-top: 10px;
+	}
+	
+	legend {
+	  color: white;
+	  background: black;
+	  padding: 5px 10px;
+	}
+	
+	fieldset > div {
+	  margin-bottom: 20px;
+	}
+	
+	button, label, input[type="text"], input[type="email"] {
+	  display: block;
+	  font-family: inherit;
+	  font-size: 100%;
+	  padding: 0;
+	  margin: 0;
+	  box-sizing: border-box;
+	  width: 100%;
+	  height: 30px;
+	}
+	
+	input {
+	  box-shadow: inset 1px 1px 3px #ccc;
+	  border-radius: 5px;
+	}
+	
+	input + span {
+	  position: relative;
+	}
+	
+	button {
+	  width: 60%;
+	  margin: 10px auto;
+	}
+	
+	input:required {
+	  border: 1px solid black;
+	}
+	
+	input:optional {
+	  border: 1px solid silver;
+	}
+	
+	input[type="radio"] {
+	  -webkit-appearance: none;
+	  appearance: none;
+	}
+	
+	input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: 2px solid gray;
+	/* Adjust the position of the checkboxes on the text baseline */
+	vertical-align: -2px;
+	outline: none;
+	}
+	
+	input[type="radio"]::before {
+	display: block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 6px;
+	background-color: red;
+	font-size: 1.2em;
+	transform: translate(3px, 3px) scale(0);
+	transform-origin: center;
+	transition: all 0.3s ease-in;
+	}
+	
+	input[type="radio"]:checked::before {
+	  transform: translate(3px, 3px) scale(1);
+	  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+	}
+	
+  </style>
+</head>
+
+<body>
+  <nav><a href="forms.html">Back to Input Forms</a></nav><hr>
+  <form>
+    <fieldset>
+	  <legend>Feedback Form</legend>
+	  <div>
+	    <label for="fname">First Name: </label>
+		<input id="fname" name="fname" type="text" required>
+	  </div>
+	  <div>
+	    <label for="lname">Last name: </label>
+		<input id="lname" name="lname" type="text" required>
+	  </div>
+	  <div>
+	    <label for="email">Email address (include if you want a responce): </label>
+		<input id="email" name="email" type="email">
+	  </div>	  
+	</fieldset>
+	
+    <fieldset>
+	  <legend>Choose your Coalition</legend>
+	  
+	  <p>
+	    <label>
+		  <input type="radio" name="side" value="blue">
+		  Blue Alliance
+		</label>
+	  </p>
+	  <p>
+	    <label>
+		  <input type="radio" name="side" value="red">
+		  Red Coalition
+	    </label>
+	  </p>
+	  <p>
+	    <label>
+		  <input type="radio" name="side" value="observer">
+		  Civilian Observer
+		</label>
+	  </p>
+	</fieldset>
+    <div><button>Submit</button></div>
+  </form>
+</body>

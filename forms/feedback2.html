@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <title>Rising Thunder Feedback Form 2</title>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -10,6 +11,142 @@
 	  margin: 20px auto;
 	  max-width: 460px;
 	}
+	
+	fieldset {
+		padding: 10px 30px 0;
+		margin-bottom: 20px;
+	}
+	
+	legend {
+		color: white;
+		background: black;
+		padding: 5px 10px;
+	}
+	
+	fieldset > div {
+		margin-bottom: 20px;
+		display: flex;
+		flex-flow: row wrap;
+	}
+	
+	button, label, input[type="text"], input[type="number"], input[type="email"] {
+		display: block;
+		font-family: inherit;
+		font-size: 100%;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+		height: 30px;
+	}
+	
+	input {
+		box-shadow: inset 1px 1px 3px #ccc;
+		border-radius: 5px;
+	}
+	
+	input:hover, input:focus {
+		background-color: #eee;
+	}
+	
+	input + span {
+		position: relative;
+	}
+
+	input[type="text"]:required + span::after {
+		font-size: 0.7rem;
+		position: absolute;
+		content: "required";
+		color: white;
+		background-color: black;
+		padding: 5px 10px;
+		top: -26px;
+		left: -70px;
+	}
+	
+	input[type="number"]:required + span::after {
+		font-size: 0.7rem;
+		position: absolute;
+		content: "required";
+		color: white;
+		background-color: black;
+		padding: 5px 10px;
+		top: -26px;
+		left: -70px;
+	}
+	
+	<!-- To add the required marker "span" fields will need to continue seperation out the text, number
+	and radio element into their own css span:after entries, in order to add the required box to the 
+	radio fieldset -->
+	
+	input:out-of-range + span::after {
+		color: white;
+		background-color: red;
+		width: 155px;
+		content: "Outside allowable value range";
+		left: -182px;
+	}
+	
+	input + span::before {
+		position: absolute;
+		right: -20px;
+		top: 5px;
+	}
+	
+	input:invalid {
+		border: 2px solid red;
+	}
+	
+	input[type="radio"]:invalid {
+	border: 2px solid red
+	}
+	
+	input:invalid + span::before {
+	content: '✖';
+	color: red;
+	}
+	
+	input:valid + span::before {
+		content: '✓';
+		color: green;
+	}
+
+	button {
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	input[type="radio"] {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		border: 2px solid grey;
+		/* Adjusts the position of the checkboxes on the text baseline */
+		vertical-align: -4px;
+		outline: none;
+	}
+		
+	input[type="radio"]::before {
+		display: block;
+		content: " ";
+		width: 10px;
+		height: 10px;
+		border-radius: 6px;
+		background-color: green;
+		font-size: 1.2em;
+		transform: translate(3px, 3px) scale(0);
+		transform-origin: center;
+		trasition: all 0.3s ease-in;
+	}
+	
+	input[type="radio"]:checked::before {
+		transform: translate(3px, 3px) scale(1);
+		transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+	}
+	
   </style>
 </head>
 
@@ -19,22 +156,53 @@
   
   <form>
     <fieldset>
-	  <legend>Feedback form</legend>
+	  <legend>Feedback form 2</legend>
+	  
+	  <p>Required fields are labelled with "required".</p>
 	  <div>
 	    <label for="fname">First name: </label>
 		<input id="fname" name="fname" type="text" required>
+		<span></span>
 	  </div>
 	  <div>
 	    <label for="lname">Last name: </label>
 		<input id="lname" name="lname" type="text" required>
+		<span></span>
+	  </div>
+	  <div>
+	    <label for="age">Age (must be 15+): </label>
+		<input id="age" name="age" type="number" min="15" max="969" required>
+		<span></span>
 	  </div>
 	  <div>
 	    <label for="email">Email address (include if you want a responce): </label>
 		<input id="email" name="email" type="email">
+		<span></span>
 	  </div>
+	</fieldset>
+	
+	<fieldset>
+	  <legend>Choose your coalition</legend> <!-- stop/start -->
+	  <div>
+	    <label for="coalition">
+		 <input type="radio" name="coalition" value="blue" required> <!-- <span></span> to go here, see above -->
+		 Blue Coalition</label>
+	  </div>
+	  <div>
+	    <label for="coalition">
+		<input type="radio" name="coalition" value="red">
+		Red Coalition</label>
+	  </div>
+	  <div>
+	    <label for="coalition">
+		  <input type="radio" name="coalition" value="obsever">
+		  Civilian Observer</label>
+	  </div>
+	  
 	  <div><button>Submit</button></div>
 	</fieldset>
   </form>
+  
 
 
 </body>

@@ -53,6 +53,11 @@
 	input + span {
 		position: relative;
 	}
+	
+	/* To add the "required" marker "span" fields, it is needed to seperation out the text, number
+	and radio css attributes into their own css span:after entries, in order to add the required box to the 
+	text/number fieldset and radio fieldset, as the the absolute placement location differes from the text/number
+	fieldsets compared  to the radio fieldset */
 
 	input[type="text"]:required + span::after {
 		font-size: 0.7rem;
@@ -76,9 +81,16 @@
 		left: -70px;
 	}
 	
-	<!-- To add the required marker "span" fields will need to continue seperation out the text, number
-	and radio element into their own css span:after entries, in order to add the required box to the 
-	radio fieldset -->
+	input[type="radio"]:required + span::after { 
+		font-size: 0.7rem;
+		position: absolute;
+		content: "required";
+		color: white;
+		background-color: black;
+		padding: 5px 10px;
+		top: -30px;
+		left: 280px;
+	} 
 	
 	input:out-of-range + span::after {
 		color: white;
@@ -99,15 +111,35 @@
 	}
 	
 	input[type="radio"]:invalid {
-	border: 2px solid red
+	border: 2px solid red;
 	}
 	
-	input:invalid + span::before {
-	content: '✖';
-	color: red;
+	/* As it is not wanted for the red X and green ✓ check markes showing up in the radio text fieldset, therefor
+	it is necessary to make seperate "input:invalid(or valid) + span::before" css attributes for [text], [number] and email
+	input types. Otherwise the "span" attribute will cause these markers to display in the radio fieldset as a global
+	attribute to the page */
+	
+	input[type="text"]:invalid + span::before {
+		content: '✖';
+		color: red;
 	}
 	
-	input:valid + span::before {
+	input[type="number"]:invalid + span::before {
+		content: '✖';
+		color: red;
+	}
+	
+	input[type="text"]:valid + span::before {
+		content: '✓';
+		color: green;
+	}
+	
+	input[type="number"]:valid + span::before {
+		content: '✓';
+		color: green;
+	}
+	
+	input[type="email"]:valid + span::before {
 		content: '✓';
 		color: green;
 	}
@@ -185,7 +217,7 @@
 	  <legend>Choose your coalition</legend> <!-- stop/start -->
 	  <div>
 	    <label for="coalition">
-		 <input type="radio" name="coalition" value="blue" required> <!-- <span></span> to go here, see above -->
+		 <input type="radio" name="coalition" value="blue" required> <span></span>
 		 Blue Coalition</label>
 	  </div>
 	  <div>
@@ -198,9 +230,8 @@
 		  <input type="radio" name="coalition" value="obsever">
 		  Civilian Observer</label>
 	  </div>
-	  
-	  <div><button>Submit</button></div>
 	</fieldset>
+	  <div><button>Submit</button></div>
   </form>
   
 

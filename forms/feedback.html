@@ -42,9 +42,6 @@
 	  border-radius: 5px;
 	}
 	
-	input + span {
-	  position: relative;
-	}
 	
 	button {
 	  width: 60%;
@@ -69,10 +66,10 @@
 	height: 20px;
 	border-radius: 10px;
 	border: 2px solid gray;
-	/* Adjust the position of the checkboxes on the text baseline */
-	vertical-align: -2px;
+	vertical-align: -4px;
 	outline: none;
 	}
+
 	
 	input[type="radio"]::before {
 	display: block;
@@ -90,6 +87,21 @@
 	input[type="radio"]:checked::before {
 	  transform: translate(3px, 3px) scale(1);
 	  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+	}
+	
+	input ~ span {
+		position: relative;
+	}
+	
+	input:default ~ span::after {
+		font-size: 0.7rem;
+		position: absolute;
+		content: "Default";
+		color: white;
+		background-color: black;
+		padding: 5px 10px;
+		right: -200px;
+		top: -4px;
 	}
 	
   </style>
@@ -114,14 +126,20 @@
 	  </div>	  
 	</fieldset>
 	
+	<!-- In reference to the radio button default marker ("input:default ~ span::after"),
+	the default <span></span> as shown in MDN web docs wil not work if the <input> element is inside the <label>
+	element even using the general sibling combinator (~). In this case the span must be after the input tag,
+	as the example just below demonstrates.
+	See the next, or following example (choose a map) with the span located after the label as shown on MDN web docs.
+	In both cases it appears that the <span> must be adjacent to the default, or checked radio element to work. -->
+	
     <fieldset>
 	  <legend>Choose your Coalition</legend>
-	  
 	  <p>
-	    <label>
-		  <input type="radio" name="side" value="blue">
-		  Blue Alliance
-		</label>
+	  <label>
+		 <input type="radio" name="side" value="blue">
+		 Blue Alliance</label>
+		
 	  </p>
 	  <p>
 	    <label>
@@ -131,11 +149,30 @@
 	  </p>
 	  <p>
 	    <label>
-		  <input type="radio" name="side" value="observer">
+		  <input type="radio" name="side" value="observer" checked><span></span>
 		  Civilian Observer
 		</label>
 	  </p>
 	</fieldset>
-    <div><button>Submit</button></div>
+	
+	<!-- START HERE - Create a map radio selection fieldset here to demonstrate the <span> after the label element -->
+    
+	<fieldset id="mapfieldset">
+	  <legend>Choose a Map</legend>
+	    <p>
+		  <input type="radio" name="map" value="caucasus">
+		  <label for="map">Caucasus</label>
+		</p>
+		<p>
+		  <input type="radio" name="map" value="nttr">
+		  <label for="map">NTTR</label>
+		</p>
+		<p>
+		  <input type="radio" name="map" value="marianas">
+		  <label for="map">Mariana Islands</label>
+		</p>
+	</fieldset>
+	
+	  <div><button>Submit</button></div>
   </form>
 </body>

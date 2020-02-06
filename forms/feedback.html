@@ -104,6 +104,47 @@
 		top: -4px;
 	}
 	
+	/* The below #mapfieldset css lines are need to line up the choose a map labels, and default marker */
+	#mapfieldset label {
+		position: relative;
+		left: 34px;
+		top: -20px;
+		height: 6px;
+	}
+	
+	#mapfieldset input:default ~ span::after {
+		right: -228px;
+		top: -16px;
+	}
+	
+	/* style's the indeterminate radio buttons (have you read...) with the following CSS: */
+	
+	input[type="radio"]:indeterminate {
+		border: 2px solid red;
+		animation: 0.4s linear infinite alternate border-pulse;
+	}
+	
+	@keyframes border-pulse {
+		from {
+			border: 2 px solid red;
+		}
+		
+		to {
+			border: 6px solid red;
+		}
+	}
+	
+	/* for the required marker*/	
+	input:required + span::after {
+		font-size: 0.7rem;
+		position :absolute;
+		content: "required";
+		color: white;
+		background-color: black;
+		padding: 5px 10px;
+		top: -4px;
+		left: 200px;
+	}
   </style>
 </head>
 
@@ -155,21 +196,46 @@
 	  </p>
 	</fieldset>
 	
-	<!-- START HERE - Create a map radio selection fieldset here to demonstrate the <span> after the label element -->
+	<!-- Map radio selection fieldset here to demonstrate the <span> after the label element -->
     
 	<fieldset id="mapfieldset">
 	  <legend>Choose a Map</legend>
 	    <p>
-		  <input type="radio" name="map" value="caucasus">
-		  <label for="map">Caucasus</label>
+		  <input type="radio" name="map" value="caucasus" checked>
+		  <label for="map">Caucasus</label><span></span>
 		</p>
 		<p>
 		  <input type="radio" name="map" value="nttr">
-		  <label for="map">NTTR</label>
+		  <label for="map">NTTR</label><span></span>
 		</p>
 		<p>
 		  <input type="radio" name="map" value="marianas">
-		  <label for="map">Mariana Islands</label>
+		  <label for="map">Mariana Islands</label><span></span>
+		</p>
+	</fieldset>
+	
+	<!-- For the :indeterminate example below, we've got no default selected radio button — this is important
+	— if there was, then there would be no indeterminate state to style  -->
+	
+	<fieldset>
+	  <legend>I have read the Rising Thunder Alpha Test D & O</legend>
+	    <p>
+		  <label>
+		    <input type="radio" name="read" value="yes" required><span></span>
+			YES! I'm ready to sign up!
+		  </label>
+	    </p>
+		<p>
+		  <label>
+		    <input type="radio" name="read" value="no">
+			No, going there now ...
+		  </label>
+		</p>
+		<p>
+		  <label>
+		   <input type="radio" name="read" value="reading">
+		   I'm working on it!
+		  </label>
 		</p>
 	</fieldset>
 	

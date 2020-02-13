@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<nav><a href="forms.html">Back to Forms</a></nav>
+<h2>Building an XMLHttpRequest manually</h2>
+<p>XMLHttpRequest is the safest and most reliable way to make HTTP requests.<br>
+To send form data with XMLHttpRequest, prepare the data by URL-encoding it, and obey the specifics of form data requests.</p>
+<button>Click Me!</button>
+
+<script>
+const btn = document.querySelector('button');
+
+function sendData( data ) {
+  console.log( 'Sending data' );
+  
+  const XHR = new XMLHttpRequest();
+  
+  let urlEncodedData = "",
+	  urlEncodedDataPairs = [],
+	  name;
+
+  // Turn the data object into an array of URL-encoded key/value pairs.
+  for( name in data ) {
+    urlEncodedDataPairs.push( encodeURIComponent( name ) + '=' + encodeURIComponent( data[name] ) );
+  }
+
+  // Combine the pairs into a single string and replace all %-encoded spaces to
+  // the '+' character; matches the behaviour of browser form submissions.
+  urlEncodedData = urlEncodedDataPairs.join( '&' ).replace( /%20/g, '+' );
+  
+  // Define what happens on successful data submissions
+  XHR.addEventListener( 'load', function(event) {
+    alert( 'Affirmative. Data sent and responce loaded.' );
+  } );
+  
+  // Define what happens in case of error
+  XHR.addEventListener( 'error', function(event) {
+    alert( 'Warning. Something has failed.' );
+  } );
+  
+  // Set up our requests
+  XHR.open( 'POST', 'http://rising.thunder.alpha.test/' )
+  
+  // Add the required HTTP header for form data POST requests
+  XHR.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+  
+  // Finally, send our data.
+  XHR.send( urlEncodedData );
+  }
+  
+  btn.addEventListener( 'click', function() {
+    sendData( {test:'Test Passed'} );
+  } )
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+

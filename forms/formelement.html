@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <nav><a href="forms.html">Back to Input Forms</a></nav>
+  <h2>Using FormData bound to a form element</h2>
+  
+  <form id="myForm">
+    <label for="myCallsign">Send me your Callsign:</label>
+	<input id="myCallsign" name="callsign" value="AgentSmith">
+	<input type="submit" value="Send Me!">
+  </form>
+  
+  <script>
+    window.addEventListener( "load", function () {
+	  function sendData() {
+	    const XHR = new XMLHttpRequest();
+		
+		// Bind the FormData object and the form element
+		const FD = new FormData( form );
+		
+		// Define what happens on successful data submission
+		XHR.addEventListener( "load", function(event) {
+		  alert( event.target.responceText );
+		} );
+		
+		// Define what happens in case of error
+		XHR.addEventListener( "error", function(event) {
+		  alert( 'Failure! Nothing Sent!' );
+		} );
+		
+		// Set up our request
+		XHR.open( "POST", "http://rising.thunder.alpha.test/forms/responce.html" );
+		
+		// The data sent is what the user provided in the form
+		XHR.send( FD );
+	  }
+	  
+	  // Access the form element...
+	  let form = document.getElementById( "myForm" );
+	  
+	  // ...and take over its submit event.
+	  form.addEventListener( "submit", function ( event ) {
+	    event.preventDefault();
+		
+		sendData();
+	  } );
+	} );
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

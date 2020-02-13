@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+  <nav><a href="forms.html">Back to Input Forms</a></nav>
+  <h2>Using XMLHttpRequest and the FormData object</h2>
+  
+  <button>Click on ME!</button>
+  
+  <script>
+    const btn = document.querySelector('button');
+	
+	function sendData( data ) {
+	  const XHR = new XMLHttpRequest(),
+	        FD  = new FormData();
+			
+	  // Push our data into our FormData object
+	  for( name in data ) {
+	    FD.append( name, data[ name ] );
+	  }
+	  
+	  // Define what happens on successful data submission
+	  XHR.addEventListener( 'load', function( event ) {
+		alert( 'Good Work! Data sent and responce loaded.' );
+	  } );
+	  
+	  // Define what happens in case of error
+	  XHR.addEventListener( 'error', function( event ) {
+	    alert( 'Failure! You have failed to send the data.' );
+	  } );
+	  
+	  // Set up our request
+	  XHR.open( 'POST', 'http://rising.thunder.alpha.test/' );
+	  
+	  // Send our FormData object; HTTP headers are set automatically
+	  XHR.send( FD );
+	}
+	
+	btn.addEventListener( 'click', function()
+	  { sendData( {test:'The TEST Data Sent!'} );
+	  } )
+  </script>
+
+
+</body>
+
+
+
+
+
+
+
+
+

@@ -121,7 +121,7 @@
 	   (because we haven't set a width, the list will adjust it's width automatically.
 	   If it can't, the content will be truncated) */
 	   
-	max-height: 10em; /* 100px */
+	max-height: 12em; /* 100px */
 	overflow-y: auto;
 	overflow-x: hidden;
 	
@@ -149,10 +149,80 @@
 	   - or we have not changed the body class, therefore the body class is still "no-widget",
 	   so the element whose class is "select" must be hidden */
 	position : absolute;
-	left	 : 40em;
+	left	 : 40em; /* set value at -5000em to move out of sight, for now it's set for testing */
 	/* height   : 0; commented out for testing */
     overflow : hidden;
-  }  
+  }
+
+  fieldset {
+	margin: 60px 0 40px 0;
+	width: 248px;
+	border: .14em solid #000;
+	border-radius: .6em;
+  }
+  
+  legend {
+	font-size: 1.25em;
+  }
+  
+  .styledSelect {
+	display: inline-block;
+	padding: 0;
+	font-size: 1.625em;
+	font-family: Verdana, Arial, sans-serif;
+  }
+  
+  .styledSelect li {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	width: 240px;
+  }
+  
+  .styledSelect [type=radio] {
+	position: absolute;
+	left: -100vw;
+	top: -100vh;
+  }
+  
+  .styledSelect label {
+	margin: 0;
+	line-height: 2;
+	padding: 0 0 0 4px;
+  }
+  
+  .styledSelect:not(:focus-within) input:not(:checked) + label {
+	height: 0;
+	outline: none;
+	overflow: hidden;
+  }
+  
+  .styledSelect:not(:focus-within) input:checked + label {
+	border: .14em solid #000;
+	border-radius: .4em;
+	box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  }
+  
+  .styledSelect:not(:focus-within) input:checked + label::after {
+	content  : "▼";
+	background: black;
+	float: right;
+	color: white;
+	padding: 0 4px;
+	margin: 0 0 0 8px;
+  }
+  
+  .styledSelect:focus-with {
+	border: .02em solid #000;
+	border-radius: .4em;
+	box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  }
+  
+  .styledSelect:focus-within input:checked + label {
+	background-color: #343;
+	color: #fff;
+	width: 100%;
+  }
 </style>
 
 </head>
@@ -162,45 +232,68 @@
   <nav><a href="forms.html">Back to Input Forms</a></nav><hr>
   
   <form class="no-widget">
-    <select name="myAircraft" tabindex="-1">
+    <select name="myAircraft">
 	  <option>Flanker</option>
 	  <option>Fulkrum</option>
 	  <option>Gratch</option>
-	  <option>Warthog</option>
+	  <option>Fishbed</option>
 	  <option>Hind</option>
 	  <option>Reserved 00</option>
+	  <option>Reserved 01</option>
     </select>
   
   <!-- This is our main container for our control.
 	   The tabindex atribute is what allows the user to focus the control.
 	   We'll see later that it's better to set it through JavaScript. -->
-  <div class="select" tabindex="0">
+  <!-- We add the role="listbox" attribute to our top element -->   
+  <div class="select" role="listbox">
   
     <!-- This container will be used to display the current value of the control -->
 	<span class="value">Flanker - Testing Max Width</span>
 	
 	<!-- This container will contain all the options available for our control.
 		 Because it's a list, it makes sence to use the ul element. -->
+	<!-- We also add the role="presentaion" to the ul element -->
 	<ul class="optList hidden">
 	  <!-- Each option only contains the value to be displayed, we'll see later
 		   how to handle the real value that will be sent  with the form data -->
-	  <li class="option">Flanker</li>
-	  <li class="option">Fulkrum</li>
-	  <li class="option">Gratch</li>
-	  <li class="option">Warthog</li>
-	  <li class="option">Hind</li>
-	  <li class="option">Reserved 00</li>
+	  <!-- And we add the role="option" attribute to all li elements -->
+	  <li role="option" class="option">Flanker</li>
+	  <li role="option" class="option">Fulkrum</li>
+	  <li role="option" class="option">Gratch</li>
+	  <li role="option" class="option">Fishbed</li>
+	  <li role="option" class="option">Hind</li>
+	  <li role="option" class="option">Reserved 00</li>
+	  <li role="option" class="option">Reserved 01</li>
 	  
 	</ul>
   </div>
+  
+  <fieldset>
+    <legend>Pick a Pilot</legend>
+	  <ul class="styledSelect">
+	    <li><input type="radio" name="pilot" value="Ltbot" id="pilotLtbot" checked><label for="pilotLtbot">Lt. Bot</label></li>
+		<li><input type="radio" name="pilot" value="Agentsmith" id="pilotAgentsmith"><label for="pilotAgentsmith">Agent Smith</label></li>
+		<li><input type="radio" name="pilot" value="Tonethousand" id="pilotTonethousand"><label for="pilotTonethousand">T-1000</label></li>
+		<li><input type="radio" name="pilot" value="Captsparrow" id="pilotCaptsparrow"><label for="pilotCaptainsparrow">Capt. Sparrow</label></li>
+		<li><input type="radio" name="pilot" value="Wags" id="pilotWags"><label for="pilotWags">Wags</label></li>
+	  </ul>
+	  <p style="color: red;">Use arrow keys to select.</p>
+  </fieldset>
     <p><button>Submit</button></p>
   </form>
+  <p style="width: 280px;">The above "Pick a Pilot" example works, to some extent, without JavaScript. This is a similar control to the top custom control,
+	  that works even if the JavaScript fails. It does work with the keyboard, but not as expected with a mouse click,
+	  and the control doesn't have the same functionality that a "select" has natively.
+	  </p>
   
   <script>
-  
+  // Because NodeList really looks like an Array and because forEach is so convenient to use,
+  //  we can easily add the support of forEach to NodeList in order to make our life easier,
+  // like so:
   
   NodeList.prototype.forEach = function (callback) {
-    Array.prototype.forEach.call(this, callback);
+  Array.prototype.forEach.call(this, callback);
   }
   
   // This function will be used each time we want to deactivate a custom control
@@ -223,7 +316,7 @@
 
   // This function will be used each time the user wants to (de)activate the control
   // It takes two parameters:
-  // select : the DOM node with the `select` class to activate
+  // select : the DOM (Document Object Model) node with the `select` class to activate
   // selectList : the list of all the DOM nodes with the `select` class
   function activeSelect(select, selectList) {
     
@@ -240,10 +333,10 @@
 	select.classList.add('active');
   }; // Differences notes, the ; was added in working code. not sure this makes a difference.
 	
-  // This function will be used each time the user wants to open/closed the list of options
+  // This function will be used each time the user wants to open/close the list of options
   // It takes one parameter:
   // select : the DOM node with the list to toggle
-  function toggleOptList(select, show) { // differences note, the , show is missing from the corse code
+  function toggleOptList(select, show) { // differences note, the , show is missing from the course code
     
 	// The list is kept from the control
 	var optList = select.querySelector('.optlist');
@@ -282,8 +375,20 @@
 	// We also need to get the value placeholder of our custom control
 	var value = select.querySelector('.value');
 	
+	// The aria-selected attribute is used to mark which option is currently selected;
+    // this lets assistive technologies inform the user what the current selection is.
+	var optionList = select.querySelectorAll('[role="option"]');
+	
 	// And we need the whole list of options
 	var optionList = select.querySelectorAll('.option');
+	
+	// We make sure that all the options are not selected
+	optionList.forEach(function (other) {
+	  other.setAttribute('aria-selected', 'false');
+	});
+	
+	// We make sure the chosen option is selected
+	optionList[index].setAttribute('aria-selected', 'true');
 	
 	// We set the select index to the index of our choice
 	nativeWidget.selectedIndex = index;
@@ -394,10 +499,12 @@
 	  select.addEventListener('keyup', function (event) {
 	    var length = optionList.length,
 		    index = getIndex(select);
-		 // Loose focus if the useer hits `esc`
-	  
-	    // deactivate on keyup of `esc`
-		if (event.keyCode === 27) { deactivateSelect(select); }	
+		
+		// Loose focus if the useer hits `esc`
+        // deactivate on keyup of `esc`
+		if (event.keyCode === 27) { 
+		   deactivateSelect(select);
+	    }		
 		// When the user hits the arrows, we jump to the next/previous option
 		if (event.keyCode === 40 && index < length - 1) { index++; }
 		if (event.keyCode === 38 && index > 0) { index--; }

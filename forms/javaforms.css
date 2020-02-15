@@ -5,6 +5,15 @@ body {
 	margin : 0;
 }
 
+h2 {
+	color: green;
+	font-size: 2em;
+}
+
+p {
+	color: rgb(128, 128, 0);
+}
+
 form {
 	max-width: 200px;
 }

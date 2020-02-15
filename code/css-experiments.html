@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>Experimenting with CSS</title>
+	<link rel="stylesheet" href="css-experiments.css">
+  </head>
+  <body>
+    <header>
+	  <h1>Experimenting with CSS</h1>
+	  <h2>Applying CSS to your HTML</h2>
+	</header>
+    <nav><a href="code.html">Back to the Code Repository</a></nav><hr>
+
+    <p class="intro">Creating my test HTML now!</p><hr>
+	
+	<p style="color: black;">Class Selectors &quot;<span class="red">.</span>whatever&quot;. (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">MDN web docs link</a>).</p>
+	<p class="red">This paragraph has dark red text.</p>
+	<p class="red yellow-bg">This paragraph has dark red text &amp; a yellow background.</p>
+	<p class="red fancy">This paragraph has dark red text &amp; &quot;fancy&quot; styling.</p><hr>
+	
+	<div id="identified">
+	  <p>The CSS &quot;ID&quot; selector matches an element based on the value of its id attribute.
+	  In order for the element to be selected, its id attribute must match exactly the value
+	  given in the selector. For example, this &lt;div&gt; has a special ID on it!</p>
+	</div>
+	
+	<div class="box">
+	  <p>The CSS &quot;class&quot; selector matches an element based on the value of its class attribute.
+	  In order for the element to be selected, its class attribute must match exactly the value given in the
+	  selector. For example, this paragraph in a &lt;div&gt; has a special class with a descendant combinator on it!</p>
+	  
+	</div>
+	
+	<div class="boxChild">
+	  <p>The &quot;:first-child&quot; CSS pseudo-class represents the first element among a group of sibling elements.
+	     In this example the &quot;boxChild p:first-child&quot; selctor, selects any &lt;p&gt; that is the
+		 first element among its siblings(&lt;p&gt; elements)(grey background /w black text applied). </p>
+	  <p>However, this paragraph was not selected as it is the second element in this division (no background /w default blue text).</p>
+	</div>
+	
+	<div>
+	  <p class="special">What color am I? A class selector is described as being more specific,
+	  or having more specificity than the element selector, so this text is red!</p>
+	</div>
+	
+	<div class="outer"><div class="barBox">The inner box is 60% - 32px.</div></div>
+	
+	<div class="tiltbox">Example of values for transform, such as rotate().</div>
+	
+	<div id="bgimage"></div>
+	
+	
+  </body>
+</html>

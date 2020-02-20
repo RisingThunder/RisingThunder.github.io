@@ -1,8 +1,19 @@
 /* This is just to make the example nicer */
+html {
+	background-color: darkseagreen;
+}
+
 body {
+	width: 1300px;
+	height: 800px;
+	border: 1px solid green;
 	font: 1em sans-serif;
 	padding: 1em;
-	margin : 0;
+	margin : 20px auto;	
+	background-color: aliceblue;
+	background-image: url(../images/a10c.jpg);
+	background-position: 30px 300px;
+	background-repeat: repeat-x;
 }
 
 h2 {

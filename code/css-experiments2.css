@@ -1,0 +1,25 @@
+/* For the body background to be azure at over 30em screen width and trasform to antiquewhite when under 
+   30em with the below css rules must it this order.  */
+body {
+	  /* Background default color is set, then imgage, first px value is for adjusting the image split left to
+		 right. Second px value if for adjusting implacement vertically. Fixed fixes the images in place to the
+		 browsers window. */
+	  background: antiquewhite url(../images/f14-480.jpg) 174px 540px repeat-x fixed;
+	 // background-color: antiquewhite;
+    }
+@media (min-width: 30em) {
+	body {
+	  background-color: azure;
+	  /* Changes background color to azure when the browser window in less than 30em. */
+	  )
+    }
+}
+nav {
+	border: 2px solid blue;
+	width: 600px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+

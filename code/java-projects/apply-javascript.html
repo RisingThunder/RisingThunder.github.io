@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+	<title>Apply JavaScript example</title>
+	<style>
+	  h2 {
+		color: red;
+	  }
+	  img {
+		border: 2px solid red;
+		border-radius: 6px;
+	  }
+	</style>
+	<script>
+	  document.addEventListener("DOMContentLoaded", function() {
+		function createResponce() {
+		  let heading = document.createElement('h2');	 
+		  heading.textContent = 'You clicked the button! Why did you do that!';
+		  document.body.appendChild(heading);
+		  
+		  let para = document.createElement('p');
+		  para.textContent = 'What will happen if you click the button again?';
+		  document.body.appendChild(para);
+		  
+		  let fireTruck = document.createElement('img');
+		  fireTruck.src = '../../images/fire-truck-320.png'
+		  document.body.appendChild(fireTruck);
+		}
+		
+		const buttons = document.querySelectorAll('button');
+		
+		for(let i = 0; i < buttons.length ; i++) {
+		  buttons[i].addEventListener('click', createResponce);
+		}
+	  });
+	</script>
+  </head>
+  <body>
+    <h1>Appy JavaScript example</h1><hr>
+	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
+    <button>Click Me!</button>
+	
+  </body>
+</html>

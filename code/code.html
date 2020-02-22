@@ -77,7 +77,7 @@
 
 	function LuaExportStop()
 		log_file:write(string.format("exit"))
-		if log_file: then
+		if log_file then
 			log_file:close()
 			log_file = nil
 		end

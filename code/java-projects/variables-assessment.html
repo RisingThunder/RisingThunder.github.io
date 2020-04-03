@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Test my skills: variables</title>
+  <style>
+    p {
+		color: purple;
+		margin: 0.5em 0;
+		border: 1px solid brown;
+		padding: 0.2em;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+  </style>
+</head>
+<body>
+  <h2>Testing my skills: variables</h2>
+  <nav><a href="variables.html">Back to Variables</a></nav><hr>
+  
+  <section class="preview">
+    
+  </section>
+  
+
+
+<script>
+  // Add your code here
+  
+  let myName = 'George Jr';
+  let myAge = 40;
+  
+  myName = 'George Warren Jr';
+  
+  // Don't edit the code below here!
+  
+  const section = document.querySelector('section');
+  
+  let para1 = document.createElement('p');
+      para1.textContent = myName;
+	  
+  let para2 = document.createElement('p');
+      para2.textContent = `My Age is ${myAge + 0}`;
+  
+  let para3 = document.createElement('p');
+      para3.textContent = `Next year I'll be ${myAge + 1} years old.`;
+	
+  
+  section.appendChild(para1);
+  section.appendChild(para2);
+  section.appendChild(para3);
+</script>
+</body>
+</html>

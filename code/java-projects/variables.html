@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Variables</title>
+  <style>
+section p {
+		color: brown;
+		margin: 0.5em 0;
+		border: 1px solid brown;
+		padding: 0.2em;
+	}
+  </style>
+</head>
+
+<body>
+  <h2>Variables</h2>
+  <nav>
+    <p><a href="../code.html">Back to the Code Repository</a></p>
+	<p><a href="variables-assessment.html">Testing my skills: variables</a></p>
+  </nav><hr>
+  
+    <button>Press me</button>
+  
+  <section class="infoClassParagraphHere">
+  
+  </section>
+  
+   
+   <script>
+   
+    const button = document.querySelector('button');
+	
+	button.onclick = function() {
+	  let name = prompt('Who are you?');
+	  alert('Hello ' + name + ', nice of you to check in!');
+	}
+    
+	myName = 'George Jr';
+	
+	function logName() {
+	  console.log(myName);
+	}
+	
+	logName();
+	
+	var myName;
+	
+	
+	// Below, expermenting with adding variable information into a paragraph.
+	
+	const myInfoClass = document.querySelector('.infoClassParagraphHere');
+	
+	let variableMyName = document.createElement('p');
+	    variableMyName.textContent = myName;
+		myInfoClass.appendChild(variableMyName);
+	
+	
+	let myCallsign = 'Georgie';
+	myCallsign = 'Digital Georgie';
+	
+	let variableMyCallsign = document.createElement('p');
+	    variableMyCallsign.textContent = myCallsign;
+		myInfoClass.appendChild(variableMyCallsign);
+	
+	
+	// Below, experminting with differing variable values.
+	
+	
+	
+	
+	let myMap = 'Caucasus';
+	
+	var myAircraft = 'Gratch';
+	
+	let myAirBase = 'Mozdoc';
+
+	let myAge = 15;
+	
+	let ourDream = 'Our dream is to offer the most authenic & realistic DCS Server';
+	
+	let ltBotisAlive = true;
+	
+	let mathTest = 6 < 3;
+	
+	let myNameArray = ['George', 'George Jr', 'Geo'];
+	let ltBotNumberArray = [03, 06, 09];
+	
+	let aircraft = { name : 'Gratch', type : 'Attack', designation : 'Su-25T' };
+	
+	let myGreeting = 'Hello DCS World';
+	
+	const daysInRotation = 4;
+	const hoursInReset = 8;
+	
+	
+	
+  </script>
+</body>
+</html>

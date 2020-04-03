@@ -37,7 +37,7 @@
 	  
 	  <div>
 	    <ul>
-	      <li><a href="startingcss.html">Starting with CSS</a></li>
+	      <li><a href="css-examples/startingcss.html">Starting with CSS</a></li>
 		  <li><a href="external-style.html">External Stylesheet Example</a></li>
 		  <li><a href="internal-style.html">Internal Stylesheet Example</a></li>
 		  <li><a href="inline-style.html">Inline Stylesheet Example</a></li>
@@ -45,6 +45,7 @@
 		  <li><a href="inheritance.html">Controlling inheritance</a></li>
 		  <li><a href="selectors.html">Types of selectors</a></li>
 		  <li><a href="type-selectors.html">Type, class, &amp; ID selectors</a></li>
+		  <li><a href="css-examples/presence-value-selectors.html">Presence and value selectors</a></li>
 	    </ul>
 		<ul>
 		  <li><a href="java-projects/player1.html">Pilot 1</a></li>
@@ -52,6 +53,8 @@
 		  <li><a href="java-projects/apply-javascript-external.html">Apply JavaScript external</a></li>
 		  <li><a href="java-projects/inline-javascript-handlers.html">Inline JavaScript handlers</a></li>
 		  <li><a href="java-projects/number-guessing-game.html">Number Guessing Game</a></li>
+		  <li><a href="java-projects/number-game-errors.html">An erroneous example</a></li>
+		  <li><a href="java-projects/variables.html">Variables</a></li>
 		  <li>Reserved</li>
 		  <li><a href="java-projects/import-time-data.html">Importing time data from a text file</a></li>
 		</ul>
@@ -64,7 +67,7 @@
 	local log_file = nil
 
 	function LuaExportStart()
-		log_file = io.open("C:/Users/DigitalEngine/Saved Games/DCS/Logs/Data.txt", "w")
+		log_file = io.open("C:/Users/<span class="highLight">YourUserName</span>/Saved Games/DCS/Logs/Data.txt", "w")
 	end
 
 	function LuaExportBeforeNextFrame()

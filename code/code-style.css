@@ -8,3 +8,6 @@ div ul {
 .highLight {
 	background-color: yellow;
 }
+pre {
+	border: 1px solid grey;
+}

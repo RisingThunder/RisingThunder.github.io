@@ -1,13 +1,1 @@
-div {
-	display: flex;
-	justify-content: space-evenly;
-}
-div ul {
-	width: 320px;
-}
-.highLight {
-	background-color: yellow;
-}
-pre {
-	border: 1px solid grey;
-}
+

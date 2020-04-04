@@ -76,19 +76,23 @@
 	end
 
 	function LuaExportAfterNextFrame()
-		local TIME = LoGetModelTime()
-		log_file:write(string.format("TIME: %.2f \n",TIME))
+		
 	end
 
+	function LuaExportActivityNextEvent(t)
+		local tNext = t
+		local TIME = LoGetModelTime()
+		log_file:write(string.format("%.0f \n",TIME))
+		tNext = tNext + 6
+		return tNext
+	end
+	
 	function LuaExportStop()
-		log_file:write(string.format("exit"))
+		log_file:write(string.format("EXIT"))
 		if log_file then
 			log_file:close()
 			log_file = nil
 		end
-	end
-
-	function LuaExportActivityNextEvent(t)
 	end
 	</code></pre>
 	

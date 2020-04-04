@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Start Engines</title>
+  <style>
+    body {
+		font-family: sans-serif;
+		width: 900px;
+		margin: 0 auto;
+	}
+  </style>
+  
+</head>
+
+<body>
+  <header>
+    <h1>Start Engines</h1>
+  </header>
+  <nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
+  <button>Start Engines</button>
+  <p>The engines are stopped.</p>
+  
+  <script>
+    const startStopButton = document.querySelector('button');
+	const engineStatusText = document.querySelector('p');
+	
+	startStopButton.addEventListener('click', updateStartStopButton);
+	
+	function updateStartStopButton() {
+	  if (startStopButton.textContent === 'Start Engines') {
+	  startStopButton.textContent = 'Stop Engines';
+	  engineStatusText.textContent = 'The engines have started!';
+	  } else {
+	    startStopButton.textContent = 'Start Engines';
+		engineStatusText.textContent = 'The engines have stopped.';
+	  }
+	}
+  </script>
+</body>
+</html>

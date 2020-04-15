@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Filtering Greeting Messages</title>
+  <style>
+    body {
+	  font-family: sans-serif;
+	}
+	span {
+	  background-color: yellow;
+	}
+  </style>
+</head>
+<body>
+  <h1>Filtering Greeting Messages</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
+  
+  <section>
+    <ol>
+	  <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
+	  <li>You'll then need to write a conditional test of the form operand1 operator operand2. Is the thing on the left equal to the thing on the right? <span><u>Or in this case</u>, does the method call on the left return the result on the right?</span></li>
+	  <li>Hint: In this case it is probably more useful to test whether the method call isn't equal to a certain result.</li>
+	</ol>
+  </section>
+  
+  <section class="output">
+    <ul>
+	</ul>
+  </section>
+  
+ <!-- My Version of this exercise -->
+  
+  <section class="oneWayMission">
+    <ol>
+	</ol>
+  </section>
+<script>
+  const list = document.querySelector('.output ul');
+  
+  list.innerHTML = '';
+  let greetings = ['Happy Birthday!',
+				   'Merry Christmas my love',
+				   'A happy Christmas to all the family',
+				   'You\'re all I want for Christmas',
+				   'Get well soon'];
+				   
+  for (let i = 0; i < greetings.length; i++) {
+    let input = greetings[i];
+	// Your conditional test needs to go inside the parentheses
+	// in the line below, adding to what's currently there (not replaceing it!).
+	if (greetings[i].indexOf('Christmas') !== -1 ) {
+	  // This below line needs to be added! Not in the default example, nor any mention thereof in the directions. 
+	  let result = input;
+	  let listItem = document.createElement('li');
+	  // The below should be changed to = result. Not input, as in the default example.
+	  listItem.textContent = result;
+	  list.appendChild(listItem);
+	}
+  }
+  
+// ---------- My Version of this exercise --------------------------------------
+  
+  const volunteerRoster = document.querySelector('.oneWayMission ol');
+  
+  volunteerRoster.innerHTML = '';
+  let reportToCommandCall = ['DigitalEngine',
+				             'Wags',
+							 'ChrisMills',
+							 'Yo-Yo',
+							 'Lt. Bot 000',
+							 'Lt. Bot 001',
+							 'Lt. Bot 002',
+							 'Lt. Bot 003'];
+  for (let ibot = 0; ibot < reportToCommandCall.length; ibot++) {
+    let callForVoluteers = reportToCommandCall[ibot];
+	if (reportToCommandCall[ibot].indexOf('Lt. Bot') !== -1 ) {
+	  let didNotStepBackFastEnough = callForVoluteers;
+	  let missionRoster = document.createElement('li');
+	  missionRoster.textContent = didNotStepBackFastEnough;
+	  volunteerRoster.appendChild(missionRoster);
+	}
+  }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

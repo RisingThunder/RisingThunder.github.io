@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Java: Test your Skills: Math Task 2</title>
+  <style>
+    body {
+		font-family: helvetica;
+	}
+	p {
+		color: purple;
+		margin: 0.5em 0;
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Java: Test your Skills: Math Task 2</h1>
+  </header>
+	<nav>
+    <p><a href="../code.html">Back to the Code Repository</a></p>
+	<p><a href="math-test1.html">Math Task 1</a> <a href="math-test3.html">Math Task 3</a></p>
+  </nav><hr>
+  <section class="preview">
+  </section>
+</body>
+
+<script>
+// Final result should be 10.42
+// Add/update your code here
+
+let result = (7 + 13) / (9 + 7);
+let result2 = 100 / (2 * 6);
+
+result = result *= result2;
+finalResult = result.toFixed(2);
+// finalResult = 'My Test For Failure, Text String' ;
+finalNumber = Number(finalResult);
+
+// Don't edit the code below here!
+
+const section = document.querySelector('section');
+
+let para1 = document.createElement('p');
+para1.textContent = `Your finalResult is ${ finalResult }`;
+let para2 = document.createElement('p');
+let finalNumberCheck = typeof finalNumber === 'number' ? 'The finalNumber is a number type. Well done!' : `Ooops! finalNumber is of type ${ typeof finalNumber }.`
+para2.textContent = finalNumberCheck;
+
+section.appendChild(para1);
+section.appendChild(para2);
+
+</script>
+</html>

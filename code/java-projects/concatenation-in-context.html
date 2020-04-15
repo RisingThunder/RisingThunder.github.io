@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Concatenation in Context</title>
+</head>
+<body>
+  <header>
+    <h1>Concatenation in Context</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
+  </header>
+  <button>Press me please!</button>
+  
+  <script>
+    const button = document.querySelector('button');
+	
+	button.onclick = function() {
+	  let name = prompt('What is your callsign?');
+	  alert('Hello ' + name + ', nice to see you!');
+	}
+  </script>
+</body>
+</html>

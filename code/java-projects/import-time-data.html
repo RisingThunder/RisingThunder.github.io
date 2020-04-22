@@ -20,9 +20,11 @@
 	hr {
 		margin-top: 10px;
 	}
-	
+	span {
+		background-color: chartreuse;
+	}
   </style>
-  <script src="import-time-data.js" defer></script>
+ 
   </head>
   
   <body>
@@ -33,16 +35,17 @@
 	  <label>Time Log</label>
 	  <p id="writeData" class="timeData">No time data</p>
 	  <label>Last Time Stamp</label>
-	  <p id="lastStamp">Off-Line</p>
+	  <p id="lastStamp" class="lastStamp">Off-Line</p>
 	  
 	  <p class="clockTime"></p>
 	  
 	</div><hr>
 	
-	<p class="thanks">Thanks to Daniel and his tip <q><a href="https://forums.tumult.com/t/importing-content-from-a-text-file-txt/2004" target="_blank">Importing content from a text file (.txt)</a></q></p><hr>
+	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q>.</p><hr>
+	<p><a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a></p>
 	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop#Syntax" target="_blank">Array.prototype.pop()</a></p>
 	<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_pop_out" target="_blank">JavaScript Array Methods</a></p>
-	<p><a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array Failure</a></p>
 	
+	 <script src="import-time-data.js" defer></script>
   </body>
 </html>

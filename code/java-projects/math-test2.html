@@ -45,7 +45,7 @@ const section = document.querySelector('section');
 let para1 = document.createElement('p');
 para1.textContent = `Your finalResult is ${ finalResult }`;
 let para2 = document.createElement('p');
-let finalNumberCheck = typeof finalNumber === 'number' ? 'The finalNumber is a number type. Well done!' : `Ooops! finalNumber is of type ${ typeof finalNumber }.`
+let finalNumberCheck = isNaN(finalNumber) === false ? 'The finalNumber is a number type. Well done!' : `Ooops! finalNumber is of type ${ typeof finalNumber }.`
 para2.textContent = finalNumberCheck;
 
 section.appendChild(para1);

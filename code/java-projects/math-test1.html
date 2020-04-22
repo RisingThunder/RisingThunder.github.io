@@ -21,33 +21,35 @@
   <h1>Java: Test your Skills: Math Task 1</h1>
   <nav>
     <p><a href="../code.html">Back to the Code Repository</a></p>
-	<p><a href="math-test2.html">Math Task</a> <a href="math-test3.html">Math Task 3</a></p>
+	<p><a href="math-test2.html">Math Task 2</a> <a href="math-test3.html">Math Task 3</a></p>
   </nav><hr>
   
-  <section>
+  <section class="attempZero">
+  </section><br>
+  
+  <section class ="attempOne">
   </section>
+  
 <body>
 <script>
-const section = document.querySelector('section');
+const section = document.querySelector('.attempZero');
 
 let finalResult;
 let evenOddResult;
 
-// Add your code here
-let numberA = 10;
-let numberB = 14;
+// Add your code here --------------------------------------------------------------------
+let numberA = 7;
+let numberB = 2;
 let numberC = 4;
 let numberD = 2;
 variableOne = numberA + numberB;
-variabletwo = numberC - numberD;
+variableTwo = numberC - numberD;
 
-finalResult = variableOne * variabletwo;
+finalResult = variableOne * variableTwo;
 
-evenOddCheck = finalResult % 2 + 0;
-evenOddResult = evenOddCheck;
+evenOddResult = finalResult % 2 + 0;
  
-
-// Don't edit the code below here!
+// Don't edit the code below here! -------------------------------------------------------
 
 section.innerHTML = ' ';
 let para1 = document.createElement('p');
@@ -59,6 +61,64 @@ para2.textContent = evenOddResultCheck;
 
 section.appendChild(para1);
 section.appendChild(para2);
+
+// ---------------------------SECOUND ATTEMPT!! ----------------------------------------
+
+const sectionOne = document.querySelector('.attempOne')
+
+// Note: As this is the secound attempt of this exercice, the below two variables must be
+// named different from the attempts above this attempt, also in the base code.
+let finalResultOne;
+let evenOddResultOne;
+
+// Add your code here -------------------------------------------------------------------
+
+// Create four variables that contain numbers. Call the variables something sensible.
+// To test for incorrect sum/odd number functions, use the numbers 7, 2, 4, 3 respectivly.
+
+let numberAone = 7;
+let numberBone = 2;
+let numberCone = 4;
+let numberDone = 3;
+
+// Add the first two variables together and store the result in another variable.
+variableAone = numberAone + numberBone;
+
+// Subtract the fourth variable from the third and store the result in another variable.
+variableBone = numberCone - numberDone;
+
+// Multiply the results from the last two steps together, storing the result in a variable
+// called finalResult. The product should be 48. If it isn't, you'll have to adjust some
+//  of the initial input values.
+finalResultOne = variableAone * variableBone;
+
+// Finally, write a calculation that checks whether finalResult is an even number.
+// Store the result in a variable called evenOddCheck.
+evenOddResultOne = finalResultOne % 2 + 0;
+
+// Don't edit the code below here! ------------------------------------------------------
+
+sectionOne.innerHTML = ' ';
+let paraOne1 = document.createElement('p');
+let finalResultCheckOne = finalResultOne === 48 ? `Yes, well done!` : `No, it is ${ finalResultOne }`;
+paraOne1.textContent = `Is the finalResult 48? ${ finalResultCheckOne }`;
+let paraOne2 = document.createElement('p');
+let evenOddResultCheckOne = evenOddResultOne === 0 ? 'The final result is even!' : 'The final result is odd, Ooops!'
+paraOne2.textContent = evenOddResultCheckOne;
+
+sectionOne.appendChild(paraOne1);
+sectionOne.appendChild(paraOne2);
 </script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+

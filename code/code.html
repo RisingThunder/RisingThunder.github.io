@@ -86,7 +86,7 @@
 	function LuaExportActivityNextEvent(t)
 		local tNext = t
 		local TIME = LoGetModelTime()
-		log_file:write(string.format("%.0f \n",TIME))
+		log_file:write(string.format("Time: %.0f \n",TIME))
 		tNext = tNext + 6
 		return tNext
 	end

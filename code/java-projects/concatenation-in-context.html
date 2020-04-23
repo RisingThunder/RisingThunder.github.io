@@ -9,14 +9,25 @@
     <h1>Concatenation in Context</h1>
 	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
   </header>
-  <button>Press me please!</button>
+  
+  <button id="zero">Press me please!</button>
+  
+  <button id="one">Press me please!</button>
   
   <script>
-    const button = document.querySelector('button');
+    
+	const buttonZero = document.querySelector('#zero');
+	const buttonOne = document.querySelector('#one');
 	
-	button.onclick = function() {
-	  let name = prompt('What is your callsign?');
-	  alert('Hello ' + name + ', nice to see you!');
+	
+	buttonZero.onclick = function() {
+	  let nameZero = prompt('What is your callsign?');
+	  alert('Hello ' + nameZero + ', nice to see you!');
+	}
+	
+	buttonOne.onclick = function() {
+	  let nameOne = prompt('What is your callsign again?');
+	  alert('Hello ' + nameOne + ', nice to see you again!');
 	}
   </script>
 </body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Making new strings from old parts</title>
+  <style>
+    body {
+		font-family: sans-serif;
+	}
+	span {
+		background-color: lightgrey;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Making new strings from old parts</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> / <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Making_new_strings_from_old_parts" target="_blank">MDN web docs: Making new strings from old parts</a></nav><hr>
+  
+  <section>
+    <ol>
+	  <li>Extract the three-letter station code and store it in a new variable (<span>stationCode</span>).</li>
+	  <li>Find the character index number of the semicolon.</li>
+	  <li>Extract the human-readable station name using the semicolon character index number (<span>indexOf(';')</span>) as a reference point, and store it in a new variable (<span>semiColon</span>).</li>
+	  <li>Concatenate the two new variables (<span>stationCode</span>)and (<span>stationName</span>) and a string literal (<span> + ': ' + </span>) to make the final string (<span>stationCode + ': ' + stationName</span>).<br>
+	      Changing the value of the <span>result</span> variable to equal to the final string <span>stationCode + ': ' +  stationName</span>, not the <span>input</span> variable.</li>
+	</ol>
+  </section>
+  
+  <section class="output">
+    <ul>
+	</ul>
+  </section>
+  
+<script>
+  const list = document.querySelector('.output ul');
+  list.innerHTML = '';
+  
+  let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+				  'GNF576746573fhdg4737dh4;Greenfield',
+				  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+				  'SYB4f65hf75f736463;Stalybridge',
+				  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+  for (let iStat = 0; iStat < stations.length; iStat++) {
+	let input = stations[iStat];
+	
+	// Write your code just below here
+	
+	// Extract the three-letter station code and store it in a new variable.
+	let stationCode = input.slice(0,3);
+	
+	// Find the character index number of the semicolon.
+	let semiColon = input.indexOf(';');
+	
+	// Extract the human-readable station name using the semicolon character index number
+	// as a reference point, and store it in a new variable.
+	let stationName = input.slice(semiColon + 1);
+
+	// Concatenate the two new variables and a string literal to make the final string
+	// along with changeing the value of the result variable to equal to the final string,
+	// and not the input variable.
+	
+	let result = stationCode + ': ' + stationName;
+	let listItem = document.createElement('li');
+	listItem.textContent = result;
+	list.appendChild(listItem);
+  }
+  
+</script>
+</body>
+
+</html>

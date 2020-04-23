@@ -10,6 +10,11 @@
 		width: 900px;
 		margin: 0 auto;
 	}
+	div {
+		border: solid grey 1px;
+	    padding-left: 8px;
+		margin-top: 2px;
+	}
   </style>
   </head>
 
@@ -18,24 +23,61 @@
   <h1>Start Engines</h1>
   </header>
   <nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
-  <button>Start Engines</button>
-  <p>The engines are stopped.</p>
+  
+  <div>
+    <p>Engine One</p>
+    <button class="one">Start Engine</button>
+    <p class="onePara">The engine is stopped.</p>
+  </div>
+  
+  <div>
+    <p>Engine Two</p>
+    <button class="two">Start Engine</button>
+    <p class="twoPara">The engine is stopped.</p>
+  </div>
   
   <script>
-    const startStopButton = document.querySelector('button');
-	const engineStatusText = document.querySelector('p');
+  
+    // Engine One ----------------------------------------------------------
+	
+    const startStopButton = document.querySelector('.one');
+	const engineStatusText = document.querySelector('.onePara');
 	
 	startStopButton.addEventListener('click', updateStartStopButton);
 	
 	function updateStartStopButton() {
-	  if (startStopButton.textContent === 'Start Engines') {
-	  startStopButton.textContent = 'Stop Engines';
-	  engineStatusText.textContent = 'The engines have started!';
+	  if (startStopButton.textContent === 'Start Engine') {
+	    startStopButton.textContent = 'Stop Engine';
+	    engineStatusText.textContent = 'The engine is running!';
 	  } else {
-	    startStopButton.textContent = 'Start Engines';
-		engineStatusText.textContent = 'The engines have stopped.';
+	    startStopButton.textContent = 'Start Engine';
+		engineStatusText.textContent = 'The engine has stopped.';
+	  }
+	}
+	
+	// Engine Two ----------------------------------------------------------
+	
+	const startStopButtonTwo = document.querySelector('.two');
+	const engineTwoStatusText = document.querySelector('.twoPara');
+	
+	startStopButtonTwo.addEventListener('click', updateBtnTwo);
+	
+	function updateBtnTwo() {
+	  if (startStopButtonTwo.textContent === 'Start Engine') {
+	    startStopButtonTwo.textContent = 'Stop Engine';
+		engineTwoStatusText.textContent = 'The engine is running!';
+	  } else {
+	    startStopButtonTwo.textContent = 'Start Engine';
+		engineTwoStatusText.textContent = 'The engine has stopped';
 	  }
 	}
   </script>
 </body>
 </html>
+
+
+
+
+
+
+

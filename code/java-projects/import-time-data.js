@@ -1,7 +1,8 @@
  const fullData = document.getElementById('writeData');
  const lastData = document.getElementById('lastStamp');
- 
-    function fetchData() {
+ // var getTime = lastData.innerHTML;
+	
+	function fetchData() {
       console.log('Fetching updated data.');
       let xhr = new XMLHttpRequest();
       xhr.open("GET", "time-log.txt", true);
@@ -9,6 +10,7 @@
         updateDisplay(xhr.response);
       }
       xhr.send();
+	  
     }
 
     function updateDisplay(text) {
@@ -20,8 +22,9 @@
       if(timeArray[timeArray.length-1] === '') {
         timeArray.pop();
       }
-
+	  
       lastData.textContent = timeArray[timeArray.length-1];
     }
     
 	setInterval(fetchData, 6000);
+	

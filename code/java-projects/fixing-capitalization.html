@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Fixing Capitalization</title>
+  <style>
+    body {
+		font-family: sans-serif;
+	}
+	span {
+		background-color: lightgrey;
+	}
+  </style>
+<head>
+<body>
+  <h1>Fixing Capitalization</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> / <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Fixing_capitalization" target="_blank">MDN web docs: Fixing Capitalization</a></nav><hr>
+  
+  <section>
+    <ol>
+	  <li>Convert the whole of the string contained in the <span>input</span> variable to lower case and store it in a new variable (<span>lower</span>).</li>
+	  <li>Grab the first letter of the string in this new variable and store it in another variable (<span>firstLetter</span>).</li>
+	  <li>Using this latest variable (<span>firstLetter</span>) as a substring,<br>
+	      replace the first letter of the lowercase string (<span>lower.replace(<i>firstLetter<b>,</b></i></span>) with the first letter of the lowercase string changed to upper case (<span><i>firstLetter.toUpperCase()</i></span>)<br>
+		  Store the result of this replace procedure in another new variable<span>capitalized</span>.</li>
+	  <li>Change the value of the result variable (<span>capitalized</span>) to equal to the final result, not the <span>input</span> variable.</li>  
+	</ol>
+  </section>
+  
+  <section class="output">
+    <ul>
+	</ul>
+  </section>
+<script>
+  const list = document.querySelector('.output ul');
+  
+  list.innerHTML = '';
+  let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+  
+  for (let i = 0; i < cities.length; i++) {
+    let input = cities[i];
+	// wrtie your code just below here
+	
+	// Convert the whole of the string contained in the input variable to lower case
+	// and store it in a new variable.
+	let lower = input.toLowerCase();
+	
+	// Grab the first letter of the string in this new variable
+	// and store it in another variable.
+	let firstLetter = lower.slice(0,1);
+	
+	// Using this latest variable as a substring, replace the first letter of the
+	//lowercase string with the first letter of the lowercase string changed to upper case.
+	// Store the result of this replace procedure in another new variable.
+	let capitalized = lower.replace(firstLetter, firstLetter.toUpperCase());
+	
+	// Change the value of the result variable to equal to the final result, not the input.
+	let result = capitalized;
+	let listItem = document.createElement('li');
+	listItem.textContent = result;
+	list.appendChild(listItem);
+  }
+</script>
+  
+</body>
+</html>

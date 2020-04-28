@@ -7,18 +7,23 @@
 <body>
   <header>
     <h1>Concatenation in Context</h1>
-	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenation_in_context" target="_blank">MDN Concatenation in context</a></nav><hr>
   </header>
   
   <button id="zero">Press me please!</button>
   
   <button id="one">Press me please!</button>
   
+  <button id="two">Press me too!</button>
+  
+  <button id="three">Press me three!</button>
+  
   <script>
     
 	const buttonZero = document.querySelector('#zero');
 	const buttonOne = document.querySelector('#one');
-	
+	const buttonTwo = document.querySelector('#two');
+	const buttonThree = document.querySelector('#three');
 	
 	buttonZero.onclick = function() {
 	  let nameZero = prompt('What is your callsign?');
@@ -28,6 +33,16 @@
 	buttonOne.onclick = function() {
 	  let nameOne = prompt('What is your callsign again?');
 	  alert('Hello ' + nameOne + ', nice to see you again!');
+	}
+	
+	buttonTwo.onclick = function() {
+	  let nameTwo = prompt('What is your name?');
+	  alert('Hello ' + nameTwo + ', That\'s your name?');
+	}
+	
+	buttonThree.onclick = function() {
+		let nameThree = prompt('How is your day?');
+		alert('We\'re happy that ' + nameThree + ', is your day!');
 	}
   </script>
 </body>

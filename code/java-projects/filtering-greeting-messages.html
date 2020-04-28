@@ -10,6 +10,9 @@
 	span {
 	  background-color: yellow;
 	}
+	strong {
+		color: red;
+	}
   </style>
 </head>
 <body>
@@ -20,7 +23,8 @@
     <ol>
 	  <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
 	  <li>You'll then need to write a conditional test of the form operand1 operator operand2. Is the thing on the left equal to the thing on the right? <span><u>Or in this case</u>, does the method call on the left return the result on the right?</span></li>
-	  <li>Hint: In this case it is probably more useful to test whether the method call isn't equal to a certain result.</li>
+	  <li><span><strong>Hint:</strong> In this case it is probably more useful to test whether the method call <u><i>isn't</i></u> equal to a certain result.</span></li>
+	  <li>Don't forget the () 's.</li>
 	</ol>
   </section>
   
@@ -50,10 +54,11 @@
 	// Your conditional test needs to go inside the parentheses
 	// in the line below, adding to what's currently there (not replacing it!).
 	if (greetings[i].indexOf('Christmas') !== -1 ) {
-	  // This below line needs to be added! Not in the default example, nor any mention thereof in the directions. 
+	  // This below line could be added, for the option to match the solution example
+	  // (the default reset and solution examples are not the same, however, both work). 
 	  let result = input;
 	  let listItem = document.createElement('li');
-	  // The below should be changed to = result. Not input, as in the default example.
+	  // The below should be changed to = result. Not input, to match the solution example.
 	  listItem.textContent = result;
 	  list.appendChild(listItem);
 	}

@@ -16,7 +16,7 @@
 
 <body>
   <h1>Strings: Task 3</h2>
-  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_3" target="_blank">MDN Test you skills: Strings 3</a></nav><hr>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_3" target="_blank">MDN Test you skills: Strings 3</a> | <a href="https://discourse.mozilla.org/t/mdn-first-steps-strings-3/54516" target="_blank">Mozilla Discourse Strings 3</a></nav><hr>
   
   <section class="preview">
   
@@ -28,10 +28,12 @@
   // Add your code here
   let quoteToLowerCase = quote.toLowerCase();
   let firstLetter = quoteToLowerCase[0];
+  let preFixedQuote = firstLetter.toUpperCase() + quoteToLowerCase.slice(1) + '!';
   
+  let fixedQuote = 'Sam says, "' + preFixedQuote + '"';
+ 
+  let finalQuote = 'But, ' + preFixedQuote.replace('green eggs and ham','moldy cheese and green beets');
   
-  fixedQuote = quote;
-  finalQuote = 'Placeholder finalQuote';
   // Don't edit the code below here!
   const section = document.querySelector('section');
   

@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <title>Strings: Task 2</title>
   <style>
+    body {
+		font-family: sans-serif;
+	}
     section {
 		color: purple;
 		margin: 0.5em 0;
 	}
-	span {
+	code {
 		background-color: lightgrey;
+		font-size: 1.2em;
 	}
   </style>  
 </head>
@@ -18,12 +22,14 @@
   <h1>Strings: Task 2</h1>
   <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_2" target="_blank">MDN Test your skills: Strings 2</a> | <a href="https://discourse.mozilla.org/t/assessment-wanted-for-strings-skills-test-2/58753" target="_blank">Mozilla Discourse: Assessment wanted for strings skills test #2</a></nav><hr>
   
-  <p>In this task you are provide with two variables, <span>quote</span> and <span>substring</span>, which contain two strings.</p>
+  <p>In this task you are provide with two variables, <code>quote</code> and <code>substring</code>, which contain two strings.</p>
   
   <ol>
     <li>Retrieve the length of the quote and store it in a variable called quoteLength.</li>
-	<li></li>
-	<li></li>
+	<li>Find the index position where <code>substring</code> appears in <code>quote</code>, and store that value in a variable called <code>index</code>.</li>
+	<li>Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham<strong>.</strong>", and store it in a variable named <code>revisedQuote</code>.<br>
+	    <i>Hint: Keep in mind, the slice "functions" on numerical values or the "equivalents" thereof (such as variables)</i>.</li>
+	<li>Ensure the "<strong>.</strong>" after "ham" is included in your new quote.</li>
   </ol>
   <hr>
   <section class="preview"> 
@@ -38,6 +44,8 @@
   
   let quoteLength = quote.length;
   let index = quote.indexOf(substring);
+  // Yes, you can concatencate inside the slice method.
+  // Keep in mind, the slice method "functions" on numerical values or the "equivalents" thereof (variables).
   let revisedQuote = quote.slice(0, index + substring.length + 1);
   
   // Don't edit the code below here!

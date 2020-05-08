@@ -8,8 +8,11 @@
      font-family: sans-serif;
    }
    p {
-	color: cadetblue;
-	margin: 0.5em 0;
+	 color: cadetblue;
+	 margin: 0.5em 0;
+   }
+   span {
+	 background-color: lightgrey;     
    }
  </style>
 </head>
@@ -18,24 +21,38 @@
   <h1>Strings: Task 3</h2>
   <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_3" target="_blank">MDN Test you skills: Strings 3</a> | <a href="https://discourse.mozilla.org/t/mdn-first-steps-strings-3/54516" target="_blank">Mozilla Discourse Strings 3</a></nav><hr>
   
-  <section class="preview">
-  
-  </section>
+  <ol>
+    <li>Change the casing to correct sentence case (all lowercase, except for the upper case first letter.) Store the <strong>new quote</strong> in a variable <strong>called</strong> <span>fixedQuote</span>.</li>
+	<li><strong>In</strong> <span>fixedQuote</span>, replace "green eggs and ham" with another food that you really don't like.<br>
+	    <i>In other words, store this <strong>new quote</strong> in a new variable <strong>called</strong> <span>fixedQuote.</span></strong></i></li>
+	<li>Add a full stop onto the end of the qoute, and save the final version in a variable called <span>finalQuote</span></li>
+  </ol>
+   
+  <hr>
+  <p>MDN web docs default version:</p>
+  <section class="default"></section>
+  <br>
+  <p>My version:
+     <i>(all the task objectives are still contained in this example, just in a slightly different order and result).</i></p>
+  <section class="custom"></section>
 </body>
 
 <script>
+
+  // MDN default version -----------------------------------------------------------------------------
+  
   let quote = 'I dO nOT lIke gREen eGgS anD HAM';
   // Add your code here
-  let quoteToLowerCase = quote.toLowerCase();
-  let firstLetter = quoteToLowerCase[0];
-  let preFixedQuote = firstLetter.toUpperCase() + quoteToLowerCase.slice(1) + '!';
+  let lowerCase = quote.toLowerCase();
+  let firstChar = lowerCase[0];
   
-  let fixedQuote = 'Sam says, "' + preFixedQuote + '"';
- 
-  let finalQuote = 'But, ' + preFixedQuote.replace('green eggs and ham','moldy cheese and green beets');
+  let fixedQuote = lowerCase.replace(firstChar,firstChar.toUpperCase()).replace('green eggs and ham','moldy cheese and green beets');
+  let finalQuote = fixedQuote + '!';
   
   // Don't edit the code below here!
-  const section = document.querySelector('section');
+  // If you want to write to a specific section, you can use a class attribute which will require
+  //   the use of "('.classNameYouWantForExample')". Don't forget the ".".
+  const section = document.querySelector('.default');
   
   let para1 = document.createElement('p');
   para1.textContent = fixedQuote;
@@ -44,6 +61,30 @@
   
   section.appendChild(para1);
   section.appendChild(para2);
+  
+  // My version --------------------------------------------------------------------------------------
+  
+  let quote2 = 'I dO nOT lIke gREen eGgS anD HAM';
+  
+  // Add your code here
+  let quoteToLowerCase = quote2.toLowerCase();
+  let firstLetter = quoteToLowerCase[0];
+  let preFixedQuote = firstLetter.toUpperCase() + quoteToLowerCase.slice(1) + '!';
+  
+  let myfixedQuote = 'Sam says, "' + preFixedQuote + '"';
+ 
+  let myfinalQuote = 'But, ' + preFixedQuote.replace('green eggs and ham','moldy cheese and green beets');
+  
+  // Don't edit the code below here!
+  const section2 = document.querySelector('.custom');
+  
+  let para3 = document.createElement('p');
+  para3.textContent = myfixedQuote;
+  let para4 = document.createElement('p');
+  para4.textContent = myfinalQuote;
+  
+  section2.appendChild(para3);
+  section2.appendChild(para4);
   
 </script>
 

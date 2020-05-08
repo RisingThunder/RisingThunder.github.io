@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Strings: Task 4</title>
+  <style>
+    body {
+		font-family: Arial, sans-serif;
+	}
+    p {
+		color: chocolate;
+		margin: 0.5em 0;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Strings: Task 4</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_4" target="_blank">MDN Test your skills: Strings 4</a></nav><hr>
+  
+  <ol>
+    <li>Change it from a regular string literal into a template literal.</li>
+	<li>Replace the four asterisks with four template literal placeholders. These should be:
+	  <ol>
+	    <li>The name of thet theorem.</li>
+		<li>The number values we have.</li>
+		<li></li>
+	  </ol></li>
+  </ol>
+  <hr>
+  <section class="preview">
+  </section>
+</body>
+
+<script>
+  let theorem = 'Pythagorean theorem';
+  
+  let a = 5;
+  let b = 8;
+  
+  let myString = `Using, ${ theorem }, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt(a**2 + b**2).toFixed(2) }.`;
+  
+  // Don't edit the code below here!
+  
+  const section = document.querySelector('section');
+  
+  let para1 = document.createElement('p');
+  para1.textContent = myString;
+  section.appendChild(para1);
+
+</script>
+
+</html>
+
+
+
+
+
+

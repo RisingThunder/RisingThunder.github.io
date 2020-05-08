@@ -24,6 +24,7 @@
 	  <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
 	  <li>You'll then need to write a conditional test of the form operand1 operator operand2. Is the thing on the left equal to the thing on the right? <span><u>Or in this case</u>, does the method call on the left return the result on the right?</span></li>
 	  <li><span><strong>Hint:</strong> In this case it is probably more useful to test whether the method call <u><i>isn't</i></u> equal to a certain result.</span></li>
+	  <li><b>Hint:</b> The <i>if</i> statement is looking for anything in the list that is <u>not equal</u> to <u>not containing</u> the substring "Christmas", and therefore will find anything that <u>does</u> include that substring.</li>
 	</ol>
   </section>
   
@@ -32,7 +33,7 @@
 	</ul>
   </section>
   
- <!-- My Version of this exercise -->
+ <p>My version of this exercise.</p>
   
   <section class="oneWayMission">
     <ol>
@@ -53,11 +54,11 @@
 	// Your conditional test needs to go inside the parentheses
 	// in the line below, adding to what's currently there (not replacing it!).
 	if (greetings[i].indexOf('Christmas') !== -1 ) {
-	  // This below line could be added, for the option to match the solution example
-	  // (the default reset and solution examples are not the same, however, both work). 
+	  // This below line could be added, for the option to match the MDN solution example
+	  // (the default MDN reset and solution examples are not the same, however, both work). 
 	  let result = input;
 	  let listItem = document.createElement('li');
-	  // The below should be changed to = result. Not input, to match the solution example.
+	  // The below should be changed to = result. Not input, in order to match the MDN solution example.
 	  listItem.textContent = result;
 	  list.appendChild(listItem);
 	}

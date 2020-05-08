@@ -4,11 +4,20 @@
   <meta charset="utf-8">
   <title>Strings: Task 1</title>
   <style>
+  body {
+	font-family: sans-serif;
+  }
     p {
 		color: purple;
 		margin: 0.5em 0;
 	}
-	
+	span {
+		background-color: lightgrey;
+	}
+	code {
+		background-color: lightgrey;
+		font-size: 1.2em;
+	}
     * {
 		box-sizing: border-box;
 	}
@@ -20,6 +29,13 @@
   <h1>Strings: Task 1</h1>
   <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings#Strings_1" target="_blank">MDN Strings 1</a></nav><hr>
   
+  <ol>
+    <li>Look up the other half of the quote, and add it to the example inside a variable called <code>quoteEnd</code>.</li>
+	<li>Concatenate the two strings together to make a single string containing the complete quote. Save the result inside a variable called <code>finalQuote</code>.</li>
+	<li>Fix the error with <code>quoteStart</code> so the quote displays correctly</li>
+  </ol>
+  <hr>
+  
   <section></section>
 
 </body>
@@ -27,7 +43,7 @@
 <script>
   // Add your code here
   
-  let quoteStart = 'Dont\' judge each day by the harvest you reap,';
+  let quoteStart = 'Don\'t judge each day by the harvest you reap,';
   let quoteEnd = ' but by the seeds that you plant.';
   let finalQuote = quoteStart + quoteEnd;
   

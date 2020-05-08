@@ -1,7 +1,6 @@
  const fullData = document.getElementById('writeData');
  const lastData = document.getElementById('lastStamp');
- // var getTime = lastData.innerHTML;
-	
+ 
 	function fetchData() {
       console.log('Fetching updated data.');
       let xhr = new XMLHttpRequest();
@@ -24,7 +23,20 @@
       }
 	  
       lastData.textContent = timeArray[timeArray.length-1];
+	  
+	  sliceTime = timeArray[timeArray.length-1].slice(6, -1);
+	  
+	  getTime = Number(sliceTime);
+	  
+	  rawTime = 600 + getTime / 60;
+	  
+	  worldTime = rawTime;
+	  
     }
-    
+	
+
+
 	setInterval(fetchData, 6000);
+	
+	
 	

@@ -8,6 +8,10 @@
 		font-family: sans-serif;
 	}
 	span {
+		background-color: lightgray;
+	}
+	code {
+	    font-size: 1.2em;
 		background-color: lightgrey;
 	}
 	.listNote {
@@ -21,13 +25,13 @@
   
   <section>
     <ol>
-	  <li>Convert the whole of the string contained in the <span>input</span> variable to lower case and store it in a new variable ( <span>lowerCaseString</span> ).</li>
-	  <li>Grab the first letter of the string in this new variable and store it in another variable ( <span>firstLetter</span> ).</li>
-	  <li>Using this latest variable ( <span>firstLetter</span> ) as a substring,<br>
-	      replace the first letter of the lowercase string ( <span>lowerCaseString.replace(<i>firstLetter </i></span><b>,</b> ) with the first letter of the lowercase string changed to upper case ( <span><i>firstLetter.toUpperCase()</i></span> )<br>
-		  Store the result of this replace procedure in another new variable ( <span>capCityName</span> ).</li>
-	  <li>Change the value of the <span>result</span> variable to equal to the final result ( <span>capCityName</span> ), not the <span>input</span> variable.</li>
-	  <li class="listNote">Note: We are basically replaceing the first letter slice of each array element with that same first letter slice, which is capitalized.</li>
+	  <li>Convert the whole of the string contained in the <code>input</code> variable to lower case and store it in a new variable <code>lowerCaseString</code>.</li>
+	  <li>Grab the first letter of the string in this new variable and store it in another variable <code>firstLetter</code>.</li>
+	  <li>Using this latest variable <code>firstLetter</code> as a substring,<br>
+	      replace the first letter of the lowercase string <code>lowerCaseString.replace(firstLetter</code><b>,</b> with the first letter of the lowercase string changed to upper case <code>firstLetter.toUpperCase()</code>.<br>
+		  Store the result of this replace procedure in another new variable <code>fixedList</code>.</li>
+	  <li>Change the value of the <code>result</code> variable to equal to the final result <code>fixedList</code>, not the <code>input</code> variable.</li>
+	  <li class="listNote">Note: We are basically replaceing the first letter of each array element with that same first letter, which is capitalized.</li>
 	  <li class="listNote">Don't forget the () 's.</li>
 	</ol>
   </section>
@@ -52,17 +56,18 @@
 	
 	// Grab the first letter of the string in this new variable
 	// and store it in another variable.
-	let firstLetter = lowerCaseString.slice(0,1);
+	let firstLetter = lowerCaseString[0];
+	// firstLetter = lowerCaseString.slice(0,1); would also work.
 	
 	// Using this latest variable as a substring, replace the first letter of the
 	//lowercase string with the first letter of the lowercase string changed to upper case.
 	// Store the result of this replace procedure in another new variable.
     // Basically replaceing the first letter slice of each array element with that same first letter slice
 	// that is capitalized.	
-	let capCityName = lowerCaseString.replace(firstLetter, firstLetter.toUpperCase());
+	let fixedList = lowerCaseString.replace(firstLetter, firstLetter.toUpperCase());
 	
 	// Change the value of the result variable to equal to the final result, not the input.
-	let result = capCityName;
+	let result = fixedList;
 	let listItem = document.createElement('li');
 	listItem.textContent = result;
 	list.appendChild(listItem);

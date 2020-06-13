@@ -10,6 +10,10 @@
 	span {
 		background-color: lightgrey;
 	}
+	code {
+		background-color: lightgrey;
+		font-size: 1.2em;
+	}
   </style>
 </head>
 
@@ -19,12 +23,12 @@
   
   <section>
     <ol>
-	  <li>Extract the three-letter station code and store it in a new variable ( <span>stationCode</span> ).</li>
-	  <li>Find the character index number of the semicolon ( <span>indexOf(';')</span> ).</li>
-	  <li>Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable ( <span>semiColon</span> ).<br>
-	      Remember, you'll want to extract the next character <i>after</i> the semiColon.</li>
-	  <li>Concatenate the two new variables ( <span>stationCode</span> )and ( <span>stationName</span> ) and a string literal ( <span> + ': ' + </span> ) to make the final string ( <span>stationCode + ': ' + stationName</span> ).<br>
-	      along with changing the value of the <span>result</span> variable to equal to the final string, not the <span>input</span> variable.</li>
+	  <li>Extract the three-letter station code and store it in a new variable ( <code>stationCode</code> ).</li>
+	  <li>Find the character index number of the semicolon ( <code>indexOf(';')</code> ).</li>
+	  <li>Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable ( <code>stationName</code> ).<br>
+	      Remember, you'll want to extract the next character <i>after</i> the semicolon. Hint, step 2.</li>
+	  <li>Concatenate the two new variables <code>stationCode</code> and <code>stationName</code> and a string literal <code> + ': ' + </code> to make the final string <code>stationCode + ': ' + stationName</code>.</li>
+	  <li>Change the value of the <code>result</code> variable to equal to the final string, not the <code>input</code> variable.</li>
 	</ol>
   </section>
   
@@ -58,10 +62,10 @@
 	let stationName = input.slice(semiColon + 1);
 
 	// Concatenate the two new variables and a string literal to make the final string
-	// along with changeing the value of the result variable to equal to the final string,
-	// and not the input variable.
+	let stationList = stationCode + ': ' + stationName;
 	
-	let result = stationCode + ': ' + stationName;
+	// Change the value of the result variable to equal to the final string, not the input variable.
+	let result = stationList;
 	let listItem = document.createElement('li');
 	listItem.textContent = result;
 	list.appendChild(listItem);

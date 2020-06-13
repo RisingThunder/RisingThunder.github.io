@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Printing those products!</title>
+  <style>
+   body {
+	font-family: sans-serif;
+   }
+   code {
+	background-color: lightgrey;
+	font-size: 1.2em;
+   }
+  </style>
+</head>
+<body>
+  <h1>Printing those products!</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays#Active_learning_Printing_those_products!" target="blank">MDN Active learning: Printing those products!</a></nav><hr>
+  
+  <ol>
+    <li>Below the <code>// number 1</code> comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called <code>products</code>.</li>
+	<li>On the same line as the <code>// number 2</code> comment is the <i>beginning</i> of a <i>"for loop"</i>.
+	    In this line we currently have <code>i <= 0</code>, which is a conditional test that causes the <i>"for loop"</i> to only run once, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts a 0.
+        We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
+	<li></li>
+    <li></li>	
+  </ol>
+  
+  <hr>
+  <section class="output">
+    <ul>
+    </ul>
+	<p></p>
+  </section>
+  
+</body>
+
+<script>
+  const list = document.querySelector('.output ul');
+  const totalBox = document.querySelector('.output p');
+  let total = 0;
+  list.innerHTML = '';
+  totalBox.textContent = '';
+  let products = [
+				  'Underpants:6.99',
+				  'Socks:5.99',
+				  'T-shirt:14.99',
+				  'Trousers:31.99',
+				  'Shoes:23.99'];
+				  
+   for (let i = 0; i < products.length; i++)  { // number 2
+	// number 3
+	let subArray = products[i].split(':');
+	let name = subArray[0];
+	let price = Number(subArray[1]);
+		
+	// number 4
+	total += price;
+	// number 5
+	let itemText = name + ' - $ ' + price;
+	
+	const listItem = document.createElement('li');
+	listItem.textContent = itemText;
+	list.appendChild(listItem);
+  }
+  
+  totalBox.textContent = 'Total: $' + total.toFixed(2);
+</script>
+
+</html>

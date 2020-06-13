@@ -1,5 +1,7 @@
- const fullData = document.getElementById('writeData');
- const lastData = document.getElementById('lastStamp');
+  const fullData = document.getElementById('writeData');
+  const lastData = document.getElementById('lastStamp');
+    let worldTime = document.getElementById('postTime');
+	let progressTime = document.getElementById('timeBar');
  
 	function fetchData() {
       console.log('Fetching updated data.');
@@ -28,15 +30,16 @@
 	  
 	  getTime = Number(sliceTime);
 	  
-	  rawTime = 600 + getTime / 60;
+	  calTime = 600 + getTime / 60;
 	  
-	  worldTime = rawTime;
+	  worldTime.textContent = calTime;
+	  
+	  progressTime = worldTime.textContent;
 	  
     }
-	
+ 	extractTime = progressTime;
 
 
 	setInterval(fetchData, 6000);
 	
-	
-	
+	 

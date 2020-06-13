@@ -5,3 +5,8 @@
 		background-image:
 			linear-gradient(to right, rgba(220,0,225,0.3), rgba(64,148,128,0.5)),
 			url(../images/f14-crew.jpg);
+}
+
+span {
+	background-color: yellow;
+}

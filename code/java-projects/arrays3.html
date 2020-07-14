@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Arrays: Task 3</title>
+  <style>
+    body {
+		font-family: Verdana, sans-serif;
+	}
+	p {
+		color: darkcyan;
+		margin: 0.5em 0;
+	}
+	code {
+		font-size: 1.2em;
+		background-color: lightgrey;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Arrays: Task 3</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays#Arrays_3" target="_blank">MDN Web Docs Arrays 3</a> | <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/marking.md#task-3" target="_blank">SPOILER! Task 3 solution</a></nav><hr>
+  
+  <ol>
+    <li>Remove the lst item in the array.</li>
+	<li>Add two new names to the end of the array.</li>
+	<li>Go over each item in the array and add its index number after the name inside parentheses, for example <code>Flipper (0)</code>.<br>
+	    Hint, the <code>forEach()</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">method</a> exectes a provide function once for each array element.<br>
+        Note, that when using <code>forEach</code> you are performing operations on a copy of the array elements, not the array elements themselves, so you can't change them directly, you have to create the new array item and copy it back over.</li>
+	<li>Finally, join the array items together in a single string called <code>myString</code>, with a separator of "<code> - </code>".</li>
+  </ol>
+  <hr>
+  
+  <section class="preview"></section>
+  
+</body>
+
+  <script>
+    let myArray = [ "Flipper", "Flogger", "Flora", "Flounder", "Forger", "Foxbat", "Foxhound", "Frank"];
+	
+	// Add your code here
+	myArray.pop();
+	myArray.push('Flatpack/Foxglove', 'Flashlight');
+	
+	
+	
+	myString = myArray.join(' - ');
+	// Don't edit the code below here!
+	
+	const section = document.querySelector('section');
+	
+	let para1 = document.createElement('p');
+	para1.textContent = myString;
+	
+	section.appendChild(para1);
+	
+  </script>
+
+</html>

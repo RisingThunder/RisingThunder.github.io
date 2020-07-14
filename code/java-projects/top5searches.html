@@ -7,6 +7,10 @@
     body {
 		font-family: Arial, sans-serif;
 	}
+	code {
+		background-color: lightgrey;
+		font-size: 1.2em;
+	}
   </style>
 </head>
 
@@ -15,8 +19,9 @@
   <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays#Active_learning_Top_5_searches" target="_blank">MDN Active learning: Top 5 searches</a></nav><hr>
   
   <ol>
-    <li></li>
-	<li></li>
+    <li>Add a line below the <code>// number 1</code> comment that adds the current value entered into the search input, to the start of the array.
+	    This can be retrieved using <code>searchInput.value</code>.</li>
+	<li>Add a line below the <code>// number 2</code> comment that removes the value currently at the end of the array.</li>
   </ol>
   
   <section class="output">
@@ -34,7 +39,7 @@
   const searchInput = document.querySelector('.output input');
   const searchBtn = document.querySelector('.output button');
   
-  list.innerHTML = '';
+  // list.innerHTML = ''; -- Do not use this if running on your local server/host. Will cause errors. --
   
   let myHistory = [];
   
@@ -42,6 +47,29 @@
     // we will only allow a term to be entered if the search input isn't empty
 	if (searchInput.value !== '') {
 	  // number 1
+	  myHistory.unshift(searchInput.value);
+	  
+	  // empty the list so that we don't display duplicate entries,
+	  // the display is regenerated every time a search term is entered.
+	  list.innerHTML = ''; 
+	  
+	  // loop through the array, and display all the search terms in the list.
+	  for (let i = 0; i < myHistory.length; i++) {
+      itemText = myHistory[i];
+      const listItem = document.createElement('li');
+      listItem.textContent = itemText;
+      list.appendChild(listItem);
+    }
+	  
+	  // If the array length is 5 or more, remove the oldest search term.
+	  if (myHistory.length >= 5) {
+	    // number 2
+		myHistory.pop();
+	  }
+	  
+	  // empty the search input and focus it, ready for the next term to be entered.
+	  searchInput.value = '';
+	  searchInput.focus();
 	
 	}
   }

@@ -25,7 +25,7 @@
 	<li><u>On the same line</u> as the <code>// number 2</code> comment is the <i>beginning</i> of a <i>"for loop"</i>.
 	    In this line we currently have <code>i <= 0</code>, which is a conditional test that causes the <i>"for loop"</i> to only run once, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts a 0.
         We'd like you to <u><i>replace</i></u> this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.<br>
-		<span>For additional thought, if you were to add <code>+ 1</code>, or <code>- 1</code> following the requested code, it will add or subtract a line in the list respectively. Give it a try.</span></li>
+		<span>For an additional hint, if you were to add <code>+ 1</code>, or <code>- 1</code> following the requested code, it will add or subtract a line in the list respectively. Give it a try.</span></li>
 	<li>Just below the <code>// number 3</code> comment we want you to write line(<strong>s</strong>) of code that splits the current array item <code>(name:price)</code> into two separate items, one containing just the name and one containing just the price.</li>
     <li>As part of the above line(<strong>s</strong>) of code, you'll also need to convert the price from a string to a number.</li>
 	<li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code.
@@ -59,6 +59,9 @@
 				  'Shoes:23.99'];
 				  
    for (let i = 0; i < products.length; i++)  { // number 2 - BTW, the "loop" starts here.
+     // This code is saying;
+	    // 1. Start looping at item number 0 in the array.
+   
 	// number 3
 	let subArray = products[i].split(':');
 	let name = subArray[0];

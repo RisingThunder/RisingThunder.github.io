@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Arrays: Task 1</title>
+  <style>
+    body {
+	  font-family: Helvetica, sans-serif
+	}
+    p {
+	  color: purple;
+	  margin: 0.5em 0;
+	}
+	code {
+	  background-color: lightgrey;
+	  font-size: 1.2em;
+	  color: black;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Arrays: Task 1</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays#Arrays_1" target="_blank">MDN Web Docs Arrays Task 1</a> | <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/marking.md#task-1" target="_blank">Spoiler: Task 1 solution.</a></nav><hr>
+  
+  <ol>
+    <li>In this task create an array of three items, stored inside a variable called <code>myArray</code>. The items can be anything you'd like, your favourite combat aircraft, missile, etc..</li>
+    <li>Next, modify the first two items in the array using simple bracket notation and assignment.</li>
+    <li>Then add a new item to the <u>beginning</u> of the array.</li>
+  </ol>
+  
+  <hr>
+     
+  <section class="preview"></section>
+
+</body>
+  
+  <script>
+    // Add your code here
+	let myArray = ['Flanker', 'Fulcrum', 'Frogfoot'];
+	myArray[0] = 'Fagot';
+	myArray[1] = 'Faceplate';
+	myArray.unshift('Fishbed');
+	
+	
+	// Don't edit the code below here!
+	
+	const section = document.querySelector('section');
+	
+	let para1 = document.createElement('p');
+	para1.textContent = `Array: ${ myArray }`;
+	
+	section.appendChild(para1);
+  
+  </script>
+
+</html>

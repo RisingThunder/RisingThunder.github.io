@@ -25,36 +25,38 @@
 	}
 	meter {
 		width: 100%;
+		margin-bottom: 18px;
+	}
+	.postTime, .lastStamp {
+		width: 106px;
+		text-align: center;
 	}
   </style>
  
   </head>
   
   <body>
-    <h1>Importing time data from a text file (.txt)</h1>
+    <h1>Importing DCS time data from a text file</h1>
 	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
 	
 	<div>
-	  <label>Time Log</label>
-	  <p id="writeData" class="timeData">No time data</p>
-	  
-	  <label>Last Time Stamp</label>
-	  <p id="lastStamp" class="lastStamp">Off-Line</p>
-      
 	  <label>DCS World Time</label>
-	  <p id="postTime">Off-Line</p>
+	  <p id="postTime" class="postTime">Off-Line</p>
 	  
 	  <label>DCS World Time Bar</label><br>
       <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter> 
 	  
+	  <label>Last Time Stamp<br>(in total secounds)</label>
+	  
+	  <p id="lastStamp" class="lastStamp">Off-Line</p>
+	  
+	  
+	  <label>Time Log</label>
+	  <p id="writeData" class="timeData">No time data</p>
+	  
 	</div><hr>
 	
-	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q>.</p><hr>
-	<p><a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a></p>
-	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop#Syntax" target="_blank">Array.prototype.pop()</a></p>
-	<p><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling#Meters_and_progress_bars" target="_blank">Meters and progress bars short explaination</a></p>
-	<p><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls#Meters_and_progress_bars" target="_blank">Forms, Meters and progress bars</a></p>
-	<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter" target="_blank">The HTML Meter element</a></p>
+	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q> and his help <a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a> on the MDN learning forum.</p><hr>
 	
 	 <script src="import-time-data.js" defer></script>
   </body>

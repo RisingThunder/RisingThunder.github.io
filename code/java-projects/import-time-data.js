@@ -30,13 +30,18 @@
 	  getTime = Number(sliceTime); // This is in secounds value.
 	  startTime = 21600 // This is in a secounds value (in this example, starting off the mission @ 0600).
 	  calTime = ( startTime + getTime ) / 60 ; // This is the current time in total minutes.
-	  hourTime = Math.floor(calTime / 60); // This returns the largest whole hour value
+	  hourTime = Math.floor(calTime / 60); // This returns the largest whole hour value.
 	  minuteTime = Math.floor(calTime % 60); // This returns any minutes to the largest whole minute.
 	  
-	  if (minuteTime < 10) {minuteTime = '0' + minuteTime};
+	  if (minuteTime < 10) {minuteTime = '0' + minuteTime}; // Configures the time format to 00:00.
 	  if (hourTime < 10) {hourTime = '0' + hourTime};
 	  
 	  worldTime.innerHTML = hourTime + ':' + minuteTime;
+	  
+	  // If the mission is exited, then the DCS World Time will display "Server Off-Line".
+	  if (lastData.textContent === 'EXIT') {worldTime.innerHTML = 'Server Off-Line'};
+	  
+	  // The progress bar is caculated in secounds, for time cycles of 8 hour duration.
 	  progressTime.value = getTime;
       
 	}

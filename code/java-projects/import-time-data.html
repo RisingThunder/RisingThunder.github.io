@@ -2,7 +2,13 @@
 <html lang="en-US">
   <head>
   <meta charset="utf-8">
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  
+  
   <title>Importing DCS time data from a text file</title>
+  
   <style>
     h1, a, .thanks {
 		font-family: sans-serif;
@@ -31,7 +37,10 @@
 		width: 106px;
 		text-align: center;
 	}
+	
   </style>
+  
+  
  
   </head>
   
@@ -39,7 +48,7 @@
     <h1>Importing DCS time data from a text file</h1>
 	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
 	
-	<div>
+	<div class="group" id="group">
 	  <label>DCS World Time</label>
 	  <p id="postTime" class="postTime">Off-Line</p>
 	  
@@ -58,6 +67,8 @@
 	
 	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q> and his help <a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a> on the MDN learning forum.</p><hr>
 	
-	 <script src="import-time-data.js" defer></script>
+	
+	
+	 <script src="import-time-data.js?12345" defer></script>
   </body>
 </html>

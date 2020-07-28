@@ -19,7 +19,8 @@
 
     function updateDisplay(text) {
 	  
-	  document.getElementById('writeData').textContent = "Server Starting";
+	  // This line is added to empty the browsers cache, not sure it really does anyting though.
+	  document.getElementById('writeData').innerHTML = "";
       
 	  fullData.textContent = text;
 
@@ -51,6 +52,6 @@
 	  progressTime.value = getTime;
       
 	}
-
+	
 	setInterval(fetchData, 6000);
 	

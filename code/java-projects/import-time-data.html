@@ -3,6 +3,9 @@
   <head>
   <meta charset="utf-8">
   
+  <!-- This code is for blocking the browser from caching the dcs-time.txt data, preventing it from 
+       refressing the cashe unstead of the new data of the file. Was having a errores with this before 
+	   adding these lines of code. Not positve this was the fix though -->
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -45,7 +48,7 @@
     <h1>Importing DCS time data from a text file</h1>
 	<nav><a href="../code.html">Back to the Code Repository</a></nav><hr>
 	
-	<div class="group" id="group">
+	<div class="timeGroup" id="timeGroup">
 	  <label>DCS World Time</label>
 	  <p id="postTime" class="postTime">No Time Data</p>
 	  

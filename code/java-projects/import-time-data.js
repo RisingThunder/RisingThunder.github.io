@@ -3,8 +3,11 @@
   const worldTime = document.getElementById('postTime');
   const progressTime = document.getElementById('timeBar');
  
+    
+ 
 	function fetchData() {
-      console.log('Fetching updated data.');
+      
+	  console.log('Fetching updated data.');
       let xhr = new XMLHttpRequest();
       xhr.open("GET", "dcs-time.txt", true);
       xhr.onload = function() {
@@ -15,7 +18,10 @@
     }
 
     function updateDisplay(text) {
-      fullData.textContent = text;
+	  
+	  document.getElementById('writeData').textContent = "Server Starting";
+      
+	  fullData.textContent = text;
 
       let timeArray = text.split('\n');
       
@@ -36,16 +42,15 @@
 	  if (minuteTime < 10) {minuteTime = '0' + minuteTime}; // Configures the time format to 00:00.
 	  if (hourTime < 10) {hourTime = '0' + hourTime};
 	  
-	  worldTime.innerHTML = hourTime + ':' + minuteTime;
+	  worldTime.textContent = hourTime + ':' + minuteTime;
 	  
 	  // If the mission is exited, then the DCS World Time will display "Server Off-Line".
-	  if (lastData.textContent === 'EXIT') {worldTime.innerHTML = 'Server Off-Line'};
+	  if (lastData.textContent === 'EXIT') {worldTime.textContent = 'Server Off-Line'};
 	  
 	  // The progress bar is caculated in secounds, for time cycles of 8 hour duration.
 	  progressTime.value = getTime;
       
 	}
- 		
+
 	setInterval(fetchData, 6000);
 	
-	 

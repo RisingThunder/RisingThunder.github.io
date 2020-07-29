@@ -157,3 +157,26 @@ span.greytext {
 	text-align: center;
 	color: red;
 }
+.rightSvgLabelBar {
+	margin-left: 1.4px;
+}
+#postTime {
+	border: 1px solid red;
+	padding: 2px;
+	margin-top: 0;
+	width: 106px;
+	text-align: center;
+	margin-left: 68%;
+	margin-bottom: 6px;
+	
+}
+meter {
+		width: 49.7%;
+		margin-bottom: 18px;
+		margin-left: 50.3%;
+}
+#lastStamp {
+	max-width: 0;
+	max-height: 0;
+	visibility: hidden;
+}

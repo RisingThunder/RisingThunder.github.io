@@ -9,7 +9,16 @@
 	 <link href="styles/table.css" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	 <link rel="shortcut icon" href="images/rtfavicon.ico" type="image/x-icon">
-	 <!-- imbed thunderstorm sounds & lighting effect into website -->
+	 <!-- Inbed thunderstorm sounds & lighting effect into website -->
+	
+    <!-- Testing cache control -->
+    <!-- This code is for blocking the browser from caching the dcs-time.txt data, preventing it from 
+       refreshing the cashe unstead of the new data of the file. Was having  errors with this before 
+	   adding these lines of code. Not positve this is a fix though -->	
+	<meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+	 
   </head>
  
   <body>
@@ -28,17 +37,22 @@
 	     <h4>DCS Mission Map Times - </h4>
 	     <p id="paragrah1">See the Javascript file for the mission map times script</p>
 		 
-		 <svg width="49%" height="20">
-			<rect width="100%" height="100%" fill="blue"/>
-			<text x="6" y="80%" font-size="16" fill="white">
-            Current DCS NTTR Map Time:</text>
-		 </svg>
-		 <svg width="49%" height="20">
-			<rect width="100%" height="100%" fill="red"/>
-			<text x="6" y="80%" font-size="16" fill="white">
-			Current DCS Caucasus Map Time:</text>
-		 </svg><br>
+		 <div>
+		   <svg width="49.7%" height="20">
+		     <rect width="100%" height="100%" fill="blue"/>
+			 <text x="6" y="80%" font-size="16" fill="white">
+             Current DCS NTTR Map Time:</text>
+		   </svg>
+		   <svg class="rightSvgLabelBar" width="49.7%" height="20">
+			 <rect width="100%" height="100%" fill="red"/>
+			 <text x="118" y="80%" font-size="16" fill="white">
+			 Current DCS Caucasus Map Time</text>
+		   </svg>
+		   <p id="postTime" class="postTime">No Time Data</p>
+		   <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter>
+		 </div>
 		 
+		 <div>
 		 <svg
 			width="100%" height="200">
 			<rect width="100%" height="100%" fill="grey" />
@@ -46,7 +60,7 @@
 			<circle cx="84%" cy="100" r="90" fill="grey" stroke="red"/>
 			<image href="images/construction.svg" x="72" y="16" height="160" />
 			<image href="images/construction.svg" x="76%" y="16" height="160" />
-			<image href="images/analog-clock.svg" x="40%" y="8" "height="180" width="180" />
+			<image href="images/analog-clock.svg" x="41%" y="8" "height="180" width="180" />
 			</svg><br><br>
 			
 		  <svg width="51%" height="20">
@@ -59,7 +73,7 @@
 			<text x="6" y="80%" font-size="16" fill="white">
 			Current DCS Caucasus Map Weather:</text>
 		 </svg><br>
-		 
+		 </div>
 		 
 		 <!-- I cannot get the style="border px solid blue (or red)" to work in the below table, however, it does work on stats page. -->
 		 <!-- Probably rework to this table into a two cell (blue/red) realist "offical pilots weather report" format anyway -->
@@ -148,6 +162,10 @@
 		</picture>
 	  </section>
 	  
+	  <div id="lastStamp" class="lastStamp"></div>
+	  <div id="writeData" class="timeData"></div>
+	  
+	  
 	</main>
 	  
     <footer>
@@ -156,6 +174,7 @@
 	</footer>
 		
     <script src="scripts/main.js"></script>
+	<script src="scripts/import-time-dataCAU.js"></script>
 	<script src="scripts/revision.js"></script>
 	
   </body>

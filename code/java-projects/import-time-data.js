@@ -9,7 +9,7 @@
       
 	  console.log('Fetching updated data.');
       let xhr = new XMLHttpRequest();
-      xhr.open("GET", "dcs-time.txt", true);
+      xhr.open("GET", "../../data/dcs-time.txt", true);
       xhr.onload = function() {
         updateDisplay(xhr.response);
       }

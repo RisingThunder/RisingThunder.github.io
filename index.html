@@ -15,10 +15,16 @@
     <!-- This code is for blocking the browser from caching the dcs-time.txt data, preventing it from 
        refreshing the cashe unstead of the new data of the file. Was having  errors with this before 
 	   adding these lines of code. Not positve this is a fix though -->	
-	<meta http-equiv="Cache-Control" content="no-cache" />
-    <meta http-equiv="Expires" content="-1" />
-    <meta http-equiv="Pragma" content="no-cache" />
-	 
+    Cache-Control: must-revalidate, max-age=0
+    Cache-Control: no-cache
+    Cache-Control: no-store
+    Cache-Control: must-revalidate
+    Expires: 0
+    Cache-Control: must-revalidate
+    Expires: Sat, 12 Oct 1991 05:00:00 GMT
+    Pragma: no-cache
+    Vary: *
+
   </head>
  
   <body>

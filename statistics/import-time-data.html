@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+
+ <!-- These lines are added as an attempt to force the time data to refresh in the client browser. I'm Having a issue where the time data
+          being loaded into the browser will be from what appears to be a "stuck" cached data, causing the time not the become updated on the html page 
+		  from the current time-data.txt file as this script is being run. This happens when revisiting the html page after sometime has passed,
+		  the next day for example. -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">	
+  
+  <title>Importing DCS time data from a text file</title>
+  
+  <style>
+    h1, a, .thanks {
+		font-family: sans-serif;
+	}
+    div p {
+	border: 1px solid grey;
+	padding: 2px;
+	margin-top: 0;
+	}
+	div {
+		border: 2px solid black;
+		margin: 10px;
+		padding: 10px 10px;
+	}
+	hr {
+		margin-top: 10px;
+	}
+	span {
+		background-color: chartreuse;
+	}
+	meter {
+		width: 100%;
+		margin-bottom: 18px;
+	}
+	.postTime, .lastStamp {
+		width: 106px;
+		text-align: center;
+	}
+	
+  </style>
+  </head>
+  
+  <body>
+    <h1>Importing DCS time data from a text file</h1>
+	<nav><a href="statistics.html">Back to the Statistics Page</a></nav><hr>
+	
+	<div class="timeGroup" id="timeGroup">
+	  <label>DCS World Time</label>
+	  <p id="postTime" class="postTime">data loading..</p>
+	  
+	  <label>DCS World Time Bar</label><br>
+      <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter> 
+	  
+	  <label>Last Time Stamp<br>(in total secounds)</label>
+	  
+	  <p id="lastStamp" class="lastStamp">data loading..</p>
+	  
+	  
+	  <label>Time Log</label>
+	  <p id="writeData" class="timeData">data loading..</p>
+	  
+	</div><hr>
+	
+	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q> and his help <a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a> on the MDN learning forum.</p><hr>
+	
+	
+	
+	 <script src="import-time-data.js?12345" defer></script>
+  </body>
+</html>

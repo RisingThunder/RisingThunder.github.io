@@ -11,21 +11,15 @@
 	 <link href="styles/table.css" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	 <link rel="shortcut icon" href="images/rtfavicon.ico" type="image/x-icon">
-	 <!-- Inbed thunderstorm sounds & lighting effect into website -->
+	 <!-- Inbed lighting effect into website -->
 	
-    <!-- Testing cache control -->
-    <!-- This code is for blocking the browser from caching the dcs-time.txt data, preventing it from 
-       refreshing the cashe unstead of the new data of the file. Was having  errors with this before 
-	   adding these lines of code. Not positve this is a fix though -->	
-    <meta Cache-Control: must-revalidate, max-age=0>
-    <meta Cache-Control: no-cache>
-    <meta Cache-Control: no-store>
-    <meta Cache-Control: must-revalidate>
-    <meta Expires: 0>
-    <meta Cache-Control: must-revalidate>
-    <meta Expires: Sat, 12 Oct 1991 05:00:00 GMT>
-    <meta Pragma: no-cache>
-    <meta Vary: *>
+     <!-- These lines are added as an attempt to force the time data to refresh in the client browser. I'm Having a issue where the time data
+          being loaded into the browser will be from what appears to be cached data, causing the time not the become updated on the html page 
+		  from the current time-data.txt file as this script is being run. This happens when revisiting the html page after sometime has passed,
+		  the next day for example. -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 
   </head>
  
@@ -56,7 +50,7 @@
 			 <text x="118" y="80%" font-size="16" fill="white">
 			 Current DCS Caucasus Map Time</text>
 		   </svg>
-		   <p id="postTime" class="postTime">No Time Data</p>
+		   <p id="postTime" class="postTime">data loading..</p>
 		   <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter>
 		 </div>
 		 
@@ -134,7 +128,7 @@
          <button>Change Your Callsign</button><br><br>
 		 
 		<section>
-		  <audio controls autoplay loop>
+		  <audio id="thunderAudio" controls autoplay loop>
 	        <source src="images/thunderstorm-audio.webm" type="audio/webm">
 		    <p>Your browser doesn't support HTML5 audio. Here is a <a href="images/deck-crew.webm"> link to the audio</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
 	      </audio>
@@ -182,7 +176,7 @@
 	</footer>
 		
     <script src="scripts/main.js"></script>
-	<script src="scripts/import-time-dataCAU.js"></script>
+	<script src="scripts/time-data.js"></script>
 	<script src="scripts/revision.js"></script>
 	
   </body>

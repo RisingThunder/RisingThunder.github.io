@@ -6,7 +6,7 @@ let myHeading = document.querySelector('#paragrah1');
 	myButton = document.querySelector('button');
 	myHeading = document.querySelector('#welcomecallsign');
 	
-	alert('Rising Thunder Alfa Test is in the works for 2020!');
+	alert('Rising Thunder Alpha Test is in the works for 2020!');
 
 document.querySelector('#paragrah1').onclick = function() {
     alert('Mission Map Times are my "next up" item to do. If you can help with how to extract data from an .innerHTML, which is stored into a "const" (JavaScript), please contact me, via the DCS forums, user "DigitalEngine". Currently I\'m in the proccess of studying the JavasScript language for this project. Thanks!');

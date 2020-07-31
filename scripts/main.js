@@ -1,9 +1,3 @@
-/* This line is added as an attempt force the time data to refresh in the client browser. Having a issue where the time data
-     being loaded into the browser will be from what appears to be cached data from the dcs-time.txt file, causing the time
-     not the become updated on the html page as this script is run. This happens when revisiting the html page after sometime
-	 has passed (next day for example). */
-onload="location.reload();"
-
 let myHeading = document.querySelector('#paragrah1');
 	myHeading.textContent = 'Comming Soon! Click here for information on how you can help.';
 	
@@ -45,4 +39,6 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+
+document.getElementById("thunderAudio").volume = 0.4; 
 

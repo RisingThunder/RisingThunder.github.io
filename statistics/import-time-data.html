@@ -9,7 +9,8 @@
 		  the next day for example. -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">	
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Vary" content="*">
   
   <title>Importing DCS time data from a text file</title>
   
@@ -41,8 +42,13 @@
 		width: 106px;
 		text-align: center;
 	}
-	
+	.timeData {
+		height: 104px;
+		overflow: auto;
+		padding: 2px;
+	}
   </style>
+ 
   </head>
   
   <body>
@@ -51,25 +57,55 @@
 	
 	<div class="timeGroup" id="timeGroup">
 	  <label>DCS World Time</label>
-	  <p id="postTime" class="postTime">data loading..</p>
+	  <p class="postTime" id="postTime" >data loading..</p>
 	  
 	  <label>DCS World Time Bar</label><br>
       <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter> 
 	  
 	  <label>Last Time Stamp<br>(in total secounds)</label>
-	  
-	  <p id="lastStamp" class="lastStamp">data loading..</p>
-	  
+	  <p class="lastStamp" id="lastStamp">data loading..</p> 
 	  
 	  <label>Time Log (data is updated in 6 second intervals)</label>
-	  <p id="writeData" class="timeData">data loading..</p>
-	  
+	  <p class="timeData" id="writeData">data loading..</p>
+	  <button class="resetTimeLog" id="resetTimeLog" onclick="resetTimeLogFunction()">Reset Auto Scroll</button><label class="autoScrollLabel" id="autoScrollLabel"></label>
 	</div><hr>
 	
 	<p class="thanks">Thanks to <span>Chrisdavidmills</span> and his invaluable help with his example code <q><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Simple_timed_XHR_example" target="_blank">Simple timed XHR example</a></q> and his help <a href="https://discourse.mozilla.org/t/array-prototype-pop-return-last-element-of-an-array-failure/54441" target="_blank">Array.prototype.pop() Return last element of an Array</a> on the MDN learning forum.</p><hr>
 	
+	<script src="import-time-data.js" defer></script>
 	
+	<script>
+	  // Get a reference to the div you want to auto-scroll.
+	  var timeElement = document.querySelector('.timeData');// Create an observer and pass it a callback.
+	  var timeObserver = new MutationObserver(scrollToBottom);// Tell it to look for new children that will change the height.
+	  var configScroll = {childList: true};
+		  timeObserver.observe(timeElement, configScroll);
+	  
+	  scrolled = true;
+	  console.log(scrolled);
+	 
+	  document.getElementById('writeData').addEventListener("wheel", function(){
+		scrolled = false;
+		console.log(scrolled);
+	  });
+	  
+	  document.getElementById('writeData').addEventListener("click", function(){
+		scrolled = false;
+		console.log(scrolled);
+	  });
+	  
+	  function resetTimeLogFunction() {
+		scrolled = true;
+		console.log(scrolled);
+	  }
 	
-	 <script src="import-time-data.js?12345" defer></script>
+	  function scrollToBottom() {
+	      if(scrolled === true){
+			timeElement.scrollTop = timeElement.scrollHeight;
+		 }  
+	  }
+     
+	 
+	</script>
   </body>
 </html>

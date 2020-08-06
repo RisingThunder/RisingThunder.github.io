@@ -2,9 +2,7 @@
   const lastData = document.getElementById('lastStamp');
   const worldTime = document.getElementById('postTime');
   const progressTime = document.getElementById('timeBar');
- 
-    
- 
+
 	function fetchData() {
       
 	  console.log('Fetching updated data.');
@@ -50,8 +48,14 @@
 	  
 	  // The progress bar is caculated in secounds, for time cycles of 8 hour duration.
 	  progressTime.value = getTime;
-      
 	}
 	
+	
+
+
+	
 	setInterval(fetchData, 6000);
+	
+	
+
 	

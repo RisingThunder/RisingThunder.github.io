@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-US"
-   
-   >
+<html lang="en-US">
+
   <head>
      <meta charset="utf-8">
 	 <meta name="author" content="George Warren Jr">
@@ -30,134 +29,148 @@
 	   <h2>A "Career Level" DCS World Server Series</h2>
        <img src="images/su25t.jpg" width="100%" alt="Su-25T Image" title="Click to Change Image">
 	   <p>Inspired by the excellent DCS World servers by <a href="http://gadget.buddyspike.net/" target="_blank" title="Operation:BlueFlag 2.5">BuddySpike</a></p>
+	   <!-- See main.js file for the alert and inputting of the visitors "callsign" -->
 	   <h3 id="welcomecallsign">Welcome [your call sign]</h3>
 	   <hr>
 	</header>
 	
 	<main>
 	  <section>
-	     <h3>Server Status:</h3>
-	     <h4>DCS Mission Map Times - </h4>
-	     <p id="paragrah1">See the Javascript file for the mission map times script</p>
+	    <div>
+	      <h3>Server Status</h3>
+		</div>
+
+		<div> <!-- Mission Times divsion -->
+		  <div> <!-- Mission Map Times labels -->
+		    <h4>DCS Mission Map Times:</h4>
+		    <svg width="49.7%" height="20">
+		      <rect width="100%" height="100%" fill="blue"/>
+			  <text x="184" y="80%" font-size="16" fill="white">
+              Current NTTR Map Time</text>
+		    </svg>
+		    <svg class="rightSvgLabelBar" width="49.7%" height="20">
+			  <rect width="100%" height="100%" fill="red"/>
+			  <text x="132" y="80%" font-size="16" fill="white">
+			  Current Caucasus Map Time</text>
+		    </svg>
+		  </div>  
 		 
-		 <div>
-		   <svg width="49.7%" height="20">
-		     <rect width="100%" height="100%" fill="blue"/>
-			 <text x="6" y="80%" font-size="16" fill="white">
-             Current DCS NTTR Map Time:</text>
-		   </svg>
-		   <svg class="rightSvgLabelBar" width="49.7%" height="20">
-			 <rect width="100%" height="100%" fill="red"/>
-			 <text x="118" y="80%" font-size="16" fill="white">
-			 Current DCS Caucasus Map Time</text>
-		   </svg>
-		   <p id="postTime" class="postTime">data loading..</p>
-		   <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter>
-		 </div>
+		  <div> <!-- Mission map times data output elements -->
+		    <svg style="float: left; "width="49.7%" height="28px">
+		      <rect width="100%" height=100% fill="grey" />
+		      <image href="images/construction.svg" x="50%" height="98%"  />
+		      <image href="images/construction.svg" x="10%" height="98%"  />
+		      <image href="images/construction.svg" x="90%" height="98%"  />
+		    </svg>
+		    <p id="postTime" class="postTime">data loading..</p>
+		  </div>  
 		 
-		 <div>
-		 <svg
-			width="100%" height="200">
-			<rect width="100%" height="100%" fill="grey" />
-			<circle cx="150" cy="100" r="90" fill="grey" stroke="blue" />
-			<circle cx="84%" cy="100" r="90" fill="grey" stroke="red"/>
-			<image href="images/construction.svg" x="72" y="16" height="160" />
-			<image href="images/construction.svg" x="76%" y="16" height="160" />
-			<image href="images/analog-clock.svg" x="41%" y="8" "height="180" width="180" />
-			</svg><br><br>
-			
-		  <svg width="51%" height="20">
-			<rect width="100%" height="100%" fill="blue"/>
-			<text x="6" y="80%" font-size="16" fill="white">
-            Current DCS NTTR Map Weather:</text>
-		 </svg>
-		 <svg width="48%" height="20">
-			<rect width="100%" height="100%" fill="red"/>
-			<text x="6" y="80%" font-size="16" fill="white">
-			Current DCS Caucasus Map Weather:</text>
-		 </svg><br>
-		 </div>
-		 
-		 <!-- I cannot get the style="border px solid blue (or red)" to work in the below table, however, it does work on stats page. -->
-		 <!-- Probably rework to this table into a two cell (blue/red) realist "offical pilots weather report" format anyway -->
-		 <table style="width: 100%;">
-		   <colgroup>
-		     <col style="border: 6px solid yellow" span="2"> <col style="background-color: rgb(255,180,200); border: 2px solid red;" span="2"> 
-		   </colgroup>
-		   
-		   <tr> 
-		     <td style="border:1px solid blue;">Temp 21<sup>0</sup>C</td> <td>QNH 30.51 inHg</td> <td>Temp 21<sup>0</sup>C</td> <td>QNH 745 mmHg</td>
-		   </tr> 
-		   
-		   <tr>
-		     <td>Cloud Base 984 Feet</td> <td>Density 0</td> <td>Cloud Base 800m</td> <td>Density 10</td>
-		   </tr>
-		   
-		   <tr>
-		     <td>NA</td> <td>NA</td> <td>NA</td> <td>NA</td>
-		   </tr>
-		 </table>
-		 
-		 <img src="images/construction.svg" height="200" alt="Rising Thunder is under construction" class="center"/>
-		 
-		 <hr>
-	  </section>
-	  
-	  <section>	  
-         <h5>Description</h5>
-	     <!-- to display special characters in html see https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML -->
-         <p>The “Rising Thunder Alpha Test” servers are a &lt;persistent&gt; 24/7 Client & AI <em>(Bots)</em> training campaign utilizing the DCS Caucasus and NTTR maps, containing training task and objectives to fulfill for both coalitions. The primary purpose of the “Rising Thunder Alpha Test” servers are to develop the base code and administration processes required for the planned forthcoming “Rising Thunder DCS World Dedicated Server Series”.</p>
-	
-	     <!-- Following is for the list box of Rising Thunder Gadgets and sub gadgets. -->	
-         <p>The Rising Thunder Gadget has six sub gadgets to manage your roleplaying experience in the works;</p>
-         <ul id="ulborder"> 
-           <li>Server Status
-	         <ul>
-		       <li>Current Mission Time</li>
-			   <li>Current Map Weather</li>
-	         </ul>
-           <li>Leaderboard</li>
-           <li>Your Account Gadget</li>
-           <li>more to be announced soon</li>
-         </ul>
-         <p>Check back in <u><i>two weeks</i></u> :-)</p>
-	
-         <!-- DCS World logo image link -->
-         <a href="https://www.digitalcombatsimulator.com/en/" target="_blank" title="Go to the DCS World Home Page now!">
-	     <img src="https://www.digitalcombatsimulator.com/images/dcs-world-logo.svg?v2" alt="DCS Logo" id="dcsimage"></a>	
-  
-         <button>Change Your Callsign</button><br><br>
-		 
-		<section>
-		  <audio id="thunderAudio" controls autoplay loop>
-	        <source src="images/thunderstorm-audio.webm" type="audio/webm">
-		    <p>Your browser doesn't support HTML5 audio. Here is a <a href="images/deck-crew.webm"> link to the audio</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
-	      </audio>
-	  
-	      <audio controls autoplay loop>
-	        <source src="images/rain-on-roof.mp3" type="audio/ogg">
-	        <p>Your browser doesn't support HTML audio. Here is a <a href="images/musicintro.ogg">link to the audio</a> instead</p>
-	      </audio>
-	    </section><hr>
+		  <div> <!-- Map time meter bars -->
+		    <meter id="timeBar" min="0" low="25200" high="27600" optimum="14400" max="28680"></meter>
+		  </div>
+		</div>
 		
-	    <nav>
-         <!-- for internal path navigation -->
-		 <h3>Rising Thunder Site Navigation</h3>
-         <p>Rising Thunder Statistics page (<a href="statistics/statistics.html" title="Statistics place holder page">under constuction</a>).</p>
-		 <p>Rising Thunder<a href="forms/forms.html" title="Go to Input Forms page"> Input Forms page</a>.</p>
-		 <p>Rising Thunder <a href="code/code.html" title="Go to the Rising Thunder Code Repository">Code Repository</a>.</p>
-		 <p>Rising Thunder <a href="blogs/news.html">News & Blogs</a>.</p>
-         <p>Want to contact a Rising Thunder Administrator or Moderator?<br>Find details on our <a href="contacts.html" title="Rising Thunder Contacts Page">Rising Thunder contacts page</a>.</p>
-	    </nav>
-	  
-         <blockquote cite="https://www.digitalcombatsimulator.com/en/downloads/world/stable/">
-         <cite>"Our dream is to offer the most authentic and realistic simulation of military aircraft, tanks, ground vehicles and ships possible."<br>~Eagle Dynamics~</cite>
-         </blockquote>
+		<div> <!-- Mission Map Weather data. -->
+		  <div> <!-- Weather data table lables -->
+		    <h4>DCS Mission Weather:</h4>
+		    <svg width="49.7%" height="20">
+		      <rect width="100%" height="100%" fill="blue"/>
+			  <text x="184" y="80%" font-size="16" fill="white">
+              Current NTTR Map Weather</text>
+		    </svg>
+		    <svg class="rightSvgLabelBar" width="49.7%" height="20">
+			  <rect width="100%" height="100%" fill="red"/>
+			  <text x="132" y="80%" font-size="16" fill="white">
+			  Current Caucasus Map Weather</text>
+		    </svg>
+		  </div>
+		
+		  <div>	<!-- Mission Map weather tables -->	
+		        <!-- I cannot get the style="border px solid blue (or red)" to work in the below table, however, it does work on stats page. -->
+		        <!-- Probably rework to this table into a two cell (blue/red) realist "offical pilots weather report" format anyway -->
+		    <table style="width: 100%; table-layout: fixed;">
+		      <colgroup>
+		        <col span="2">
+				<col style="background-color: rgb(255,180,200); border: 2px solid red;" span="2"> 
+		      </colgroup>
+		   
+		      <tr> <!-- Row #1 -->
+		        <td>Temp 21<sup>0</sup>C</td>
+				<td>QNH 30.51 inHg</td>
+				<td>Temp 21<sup>0</sup>C</td>
+				<td>QNH 745 mmHg</td>
+		      </tr> 
+		   
+		      <tr> <!-- Row #2 -->
+		        <td>Cloud Base 984</td>
+				<td>Density 0</td>
+				<td>Cloud Base 800m</td> <td>Density 10</td>
+		      </tr>
+		   
+		      <tr> <!-- Row #3 -->
+		        <td><svg height="18px" width="18px"><image href="images/construction.svg" height="100%" width="100%" /></svg></td>
+				<td><svg height="18px" width="18px"><image href="images/construction.svg" height="100%" width="100%" /></td>
+				<td><svg height="18px" width="18px"><image href="images/construction.svg" height="100%" width="100%" /></td>
+				<td><svg height="18px" width="18px"><image href="images/construction.svg" height="100%" width="100%" /></td>
+		      </tr>
+		    </table>
+		 
+		    <img src="images/construction.svg" height="200" alt="Rising Thunder is under construction" class="center" />
+		    <hr>
+		  </div>
+		</div>
 	  </section>
 	  
+	  <section>	 <!-- Server Discription section -->
+        <h3>Description</h3>
+	    <!-- to display special characters in html see https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML -->
+        <p>The “Rising Thunder Alpha Test” servers are &lt;persistent&gt; 24/7 Client & AI <em>(Bots)</em> training and testing servers utilizing the DCS Caucasus and NTTR maps, containing training task and objectives to fulfill for both coalitions. The primary purpose of the “Rising Thunder Alpha Test” servers are to develop the base code and administration processes required for the forthcoming “Rising Thunder DCS World Dedicated Server Series”.</p>
+	    
+	    <!-- Following is for the list box of Rising Thunder Gadgets and sub gadgets. -->	
+        <p>The Rising Thunder Gadget has six sub gadgets to manage your roleplaying experience in the works;</p>
+        <ul id="ulborder"> 
+          <li>Server Status
+	        <ul>
+		      <li>Current Mission Time</li>
+			  <li>Current Map Weather</li>
+	        </ul>
+          <li>Leaderboard</li>
+          <li>Your Account Gadget</li>
+          <li>more to be announced soon</li>
+        </ul>
+        <p>Check back in <u><i>two weeks</i></u> :-)</p>
+		
+		<!-- As implied, this button is for the site visitor to set their callsigh in the welcome header -->
+		<button>Change Your Callsign</button>
+		<hr>
+	  </section> 
+	 
+	  <section> <!-- Site navigation section -->
+        <!-- DCS World logo image link -->
+        <a href="https://www.digitalcombatsimulator.com/en/" target="_blank" title="Go to the DCS World Home Page now!">
+	    <img src="https://www.digitalcombatsimulator.com/images/dcs-world-logo.svg?v2" alt="DCS Logo" id="dcsimage"></a>	
+  
+	    <nav> 
+          <!-- for internal path navigation -->
+		  <h3>Rising Thunder Site Navigation</h3>
+		  <ul>
+			<li><a href="statistics/statistics.html">Statistics</a></li>
+			<li><a href="pdfs/documents.html">Documents Page</a></li>
+			<li><a href="contacts.html">Contacts Page</a></li>
+			<li><a href="code/code.html">Code Repository</a></li>
+			<li><a href="blogs/news.html">News & Blogs</a></li>
+			<li><a href="media.html">Media</a></li>
+			<li><a href="forms/forms.html">Input Forms</a></li>
+		  <ul>
+	    </nav>
+		<hr>
+	  </section>
 	  
-	  
-	  <section>
+	  <section> <!-- Just some ending quotes, tid-bits and what-nots... -->
+        <blockquote cite="https://www.digitalcombatsimulator.com/en/downloads/world/stable/">
+          <cite>"Our dream is to offer the most authentic and realistic simulation of military aircraft, tanks, ground vehicles and ships possible."<br>~Eagle Dynamics~</cite>
+        </blockquote>
+
 	    <picture>
 		  <source media="(max-width: 639px)" srcset="images/f14-crew-crop.jpg">
 		  <source media="(min-width: 640px)" srcset="images/f14-crew.jpg">
@@ -165,16 +178,16 @@
 		</picture>
 	  </section>
 	  
-	  <div id="lastStamp" class="lastStamp"></div>
-	  <div id="writeData" class="timeData"></div>
-	  
-	  
 	</main>
 	  
     <footer>
-	     <!-- To keep padding under the revision date paragraph (the text in the blue field), adjust the body bottom padding in the css file. As to why this must be done is unknown to me for now -->
-         <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file</p>
+	  <!-- To keep padding under the revision date paragraph (the text in the blue field), adjust the body bottom padding in the css file. As to why this must be done is unknown to me for now -->
+      <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file</p>
 	</footer>
+	
+	<!-- The below div's must be on the html page for the time-data.js script to function -->
+	<div id="lastStamp" class="lastStamp"></div>
+	<div id="writeData" class="timeData"></div>
 		
     <script src="scripts/main.js"></script>
 	<script src="scripts/time-data.js"></script>

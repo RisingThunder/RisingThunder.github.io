@@ -144,8 +144,8 @@
 	
 	<section>
 	  <h5>Audio</h5>
-	  <p>Turn off the thunder if your frightened :-) .</p>
-	  <audio controls autoplay loop>
+	  <p>Turn down the thunder if your frightened :-) .</p>
+	  <audio id="thunderAudio" controls autoplay loop>
 	    <source src="images/thunderstorm-audio.webm" type="audio/webm">
 		<p>Your browser doesn't support HTML5 audio. Here is a <a href="images/deck-crew.webm"> link to the audio</a> instead. Update for the latest <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>!</p>
 	  </audio>
@@ -163,7 +163,7 @@
 	     <!-- To keep padding under the revision date paragraph (the text in the blue field), adjust the body bottom padding in the css file. As to why this must be done is unknown to me for now -->
          <p id="paragrah2" class="paragrah2js">Revision Date, see the Javascript file</p>
   </footer>
-  
+  <script>document.getElementById('thunderAudio').volume = 0.6;</script>
   <script src="scripts/revision.js"></script>
   
 </body>

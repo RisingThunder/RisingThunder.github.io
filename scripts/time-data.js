@@ -1,4 +1,4 @@
-  const fullData = document.getElementById('writeData').hidden = true;
+  const fullData = document.getElementById('writeData').hidden = true; // This line must be present, however, do not want this data displayed on the home page.
   const lastData = document.getElementById('lastStamp');
   const worldTime = document.getElementById('postTime');
   const progressTime = document.getElementById('timeBar');
@@ -54,5 +54,5 @@
       
 	}
 	
-	setInterval(fetchData, 6000);
+	setInterval(fetchData, 6000); // This refreshes the data in 6 second intervals.
 	

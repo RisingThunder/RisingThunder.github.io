@@ -75,30 +75,36 @@
 	<script src="import-time-data.js" defer></script>
 	
 	<script>
+	  // This script is to auto scroll the timedata element down as new lines are added to it by the import-time-data.js script.
 	  // Get a reference to the div you want to auto-scroll.
 	  var timeElement = document.querySelector('.timeData');// Create an observer and pass it a callback.
 	  var timeObserver = new MutationObserver(scrollToBottom);// Tell it to look for new children that will change the height.
 	  var configScroll = {childList: true};
 		  timeObserver.observe(timeElement, configScroll);
 	  
+	  // Sets the varable to true, when true, the auto scroll is functioning.
 	  scrolled = true;
 	  console.log(scrolled);
-	 
+	  
+	 // If the user mouse scrolls in the timedata element, the auto scroll is set to false.
 	  document.getElementById('writeData').addEventListener("wheel", function(){
 		scrolled = false;
 		console.log(scrolled);
 	  });
 	  
+	  // If the user clicks in the timedata element, the auto scroll is set to false.
 	  document.getElementById('writeData').addEventListener("click", function(){
 		scrolled = false;
 		console.log(scrolled);
 	  });
 	  
+	  // If the user clicks the reset button, the auto scroll is set back to true.
 	  function resetTimeLogFunction() {
 		scrolled = true;
 		console.log(scrolled);
 	  }
-	
+	  
+	  // This function activates the auto scroll if the variable scrolled = true.
 	  function scrollToBottom() {
 	      if(scrolled === true){
 			timeElement.scrollTop = timeElement.scrollHeight;

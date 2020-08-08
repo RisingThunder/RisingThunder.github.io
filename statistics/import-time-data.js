@@ -50,11 +50,7 @@
 	  progressTime.value = getTime;
 	}
 	
-	
-
-
-	
-	setInterval(fetchData, 6000);
+	setInterval(fetchData, 6000); // This refreshes the data in 6 second intervals.
 	
 	
 

@@ -2,7 +2,7 @@
 	myButton = document.querySelector('button');
 	myHeading = document.querySelector('#welcomecallsign');
 	
-	alert('Rising Thunder Alpha Test is in the works for 2020. Private testing has started!');
+	alert('Closed testing has started for Rising Thunder Alpha!');
 
 //Image Rotation code
 myImage.onclick = function() {

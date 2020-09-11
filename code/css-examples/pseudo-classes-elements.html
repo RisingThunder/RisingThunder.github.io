@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Pseudo-classes and pseudo-elements</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+	}
+	.first {
+	  font-size: 102%;
+	  font-weight: bold;
+	}
+	article p:first-child {
+	  font-size: 120%;
+	  font-weight: bold;
+	}
+	a:link,
+	a:visited {
+	  color: rebeccapurple;
+	  font-weight: bold;
+	}
+	a:hover {
+	  color: hotpink;
+	}
+	section p::first-line {
+	  font-size: 102%;
+	  font-weight: bold;
+	}
+	div p:first-child::first-line {
+	  font-size: 102%;
+	  font-weight: bold;
+	}
+	.testBox::before {
+	  content: "<Photo Area> ";
+	  font-size: 102%;
+	  font-weight: bold;
+	}
+	.testBox::after {
+	  content: " ®" ;
+	}
+	.weatherBox::after {
+	  content: "TEMP[21]C, QNH[30.51]inHg";
+	  display: block;
+	  width: 280px;
+	  height: 22px;
+	  background-color: lightblue;
+	  border: 1px solid black;
+	}
+	.arrowPlease {
+	  text-align: center;
+	  padding-top: 10px;
+	  display: block;
+	  width: 240px;
+	  height: 40px;
+	  margin-bottom: 40px;
+	  position: relative;
+	  background: #88b7d5;
+	  border: 4px solid #c2e1f5;
+	}
+	.arrowPlease:after, .arrowPlease:before {
+	  top: 100%;
+	  left: 50%;
+	  border: solid transparent;
+	  content: " ";
+	  height: 0;
+	  width: 0;
+	  position: absolute;
+	  pointer-events: none;
+	}
+	.arrowPlease:after {
+	  border-color: rgba(136, 183, 213, 0);
+	  border-top-color: #88b7d5;
+	  border-width: 30px;
+	  margin-left: -30px;
+	}
+	.arrowPlease:before {
+	  border-color: rgba(194, 225, 245, 0);
+	  border-top-color: #c2e1f5;
+	  border-width: 36px;
+	  margin-left: -36px;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Pseudo-classes and pseudo-elements</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements" target="_blank">MDN web docs Pseudo-classes and pseudo-elements</a></nav>
+  <hr>
+  
+  <h2>What is a pseudo-class?</h2>
+  <article>
+    <p>The Rising Thunder Gadget (RTG)</p>
+    <p class="first">The core of the Rising Thunder server concept is the use of the “Rising Thunder Gadget”.</p>
+	<p>The Rising Thunder Gadget has six major sub gadgets to manage your career level experience via your “personas”.</p>
+	<ul>
+	  <li><a href="../../statistics/statistics.html">Server Status</a></li>
+	</ul>
+  </article><hr>
+  
+  <section>
+    <h2>What is a pseudo-element?</h2>	
+    <p>As the Rising Thunder Server has a differing end goal than of many other servers, one of survival and longevity of your personas life, our Leaderboard is also a little different. As such all rankings and overviews are listed per each clients personas. Furthermore, as this first iteration of Rising Thunder servers are of an alpha test solely focused in a training scenario, the alpha leaderboard will be more to a training nature. Below are some of  the statistics Rising Thunder would like to present:</p>
+	<p>You may click on the column titles to rearrange the listings in ascending or descending order. By default, the Personas Overview initiates with the highest promotion points showing first and descending. By default the Rising Thunder Leaderboard is open when visiting the Rising Thunder Website. It can be collapsed/expanded with the &lt;-&gt;&lt;+&gt; in the top left corner. (by default, personas are listed descending by promotion points, 20 personas per page)</p>
+  </section><hr>
+  
+  <h2>Conbining pseudo-classes and pseudo-elements</h2>
+  <div>
+    <p>Rising Thunder server accounts are registered via an email verification. You may have only one Rising Thunder account per email address (we suggest you use a “gaming only email account”). You must choose one coalition (Blue or Red) for your account. Choose wisely. No defecting. No duel accounts per players please! While this is unenforceable, it’s disadvantageous, because of the time investment per personas, and besides, spys will be shot! 😲</p>
+	<p>The Account bar is at the top right of the Rising Thunder Gadget. Click it to bring up the Rising Thunder Account Gadget. Most entries are fairly basic and common, &lt;your gaming email&gt; &lt;create a password (this will be the same password in which you shall use to log in your personas in the Rising Thunder DCS server chat window, see How to Sign In)&gt; &lt;confirm your password&gt; &lt;choose your coalition (this is permanent, choose wisely!)&gt; &lt;confirm your email (an email will be sent with a confirmation link, replying with this link will create your account)&gt; &lt;reset your password&gt;, &lt;auto login option&gt;  and the ever important &lt;forgot your password&gt;.</p>
+  </div>
+  
+  <h2>Generating content with ::before and ::after</h2>
+  <p class="testBox">You may upload an avatar image or picture (recommend not of yourself) for your Pesona. Limited to 240x240 pixel size. Larger will be auto resized. Again choose wisely, as this is permanent for that Persona.  You may have a differing image for each Persona.</p>
+  <p class="weatherBox">Current Weather:</p>
+  
+  <div>
+    <p class="arrowPlease"><a href="http://www.cssarrowplease.com/" target="_blank">CSS ARROW PLEASE!</a></p>
+    <p>Create and export CSS code for a custom box with an arrow extending out from the side. Great for tooltips, flyouts and the like.</p>
+  </div>
+</body>
+</html>

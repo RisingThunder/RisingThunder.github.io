@@ -1,6 +1,18 @@
 span {
 	background-color: yellow;
 }
+
+/* This is for the 15FEB20 image at the bottom of the article. */
+#bgimage00 {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 40px;
+	background-image:
+	  linear-gradient(to right, rgba(220,0,225,0.3), rgba(64,148,128,0.5)),
+	  url(../images/f14-crew.jpg);
+}
+
+/* This is for the 30SEP20 CSS ARROW in the aside. */
 .arrow_box {
 	display: block;
 	font-weight: bold;
@@ -25,7 +37,6 @@ span {
 	position: absolute;
 	pointer-events: none;
 }
-
 .arrow_box:after {
 	border-color: rgba(18, 104, 110, 0);
 	border-right-color: #6b9ad1;

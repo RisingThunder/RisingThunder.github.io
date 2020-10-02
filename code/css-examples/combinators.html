@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Combinators</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+	  font-family: sans-serif;
+	}
+    body article p, h4, h5 {
+	  color: yellowgreen;
+	}
+	.box p {
+	  color: red;
+	}
+	article > p {
+	  background-color: whitesmoke;
+	  width: 600px;
+	}
+	ul > li {
+	  border-top: 5px solid red;
+	  width: 250px;
+	}
+	div p + img {
+	border: 3px solid red;
+	margin-bottom: 6px;
+	}
+	h4 + p {
+	  font-weight: bold;
+	  background-color: yellow;
+	  width: 600px;
+	  padding: .2em;
+	}
+	h5 ~ img {
+	  border: 3px solid blue;
+	}
+    h5 {
+	  font-size: 110%;
+	}
+	h5 ~ p {
+	  font-weight: bold;
+	  background-color: wheat;
+	  width: 600px;
+	  padding: .2em;
+	}
+	ul > li[class="blue"] {
+	  color: blue;
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Combinators</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators" target="_blank">MDN web docs Combinators</a></nav>
+	<hr>
+  </header>
+  
+  <article>
+    <div>
+    <p><b>Decendant combinators</b> combine two selectors such that are descendant.</p>
+	</div>
+  </article>
+  <p>In the example below, we are matching only the &lt;p&gt; elements inside an element with a class of .box.</p>
+    
+  <div class="box">
+    <p>Text in a .box class</p>
+  </div>
+  <p>Text not in a .box class</p>
+  
+  <article><hr>
+    <p><b>Child Combinator</b> matches only those elements matched by the secound selector that are direct children.</p>
+  </article>
+  
+  <ul>
+    <li>Unordered list item.</li>
+	<li>Unordered list item.
+	  <ol>
+	    <li>Nested ordered list item.</li>
+		<li>Nested ordered list item.</li>
+	  </ol>
+	</li>
+  </ul><hr>
+  
+  <article>
+    <div>
+      <h4>Adjacent Sibling combinator</h4>
+	  <p>is used to select something if it is right next to another element at the same level of the hierarchy.</p>
+      <p>The fist imgage has a border, the secound does not.</p>
+	  <img src="../../images/timebar.png"><br>
+	  <img src="../../images/timebar.png" style="padding-left: 3px;">
+    </div>
+  </article><hr>
+  
+  <article>
+      <div>  
+        <h5>General sibling combinator</h5>
+	    <p>to select siblings of elements even if they are not directly adjacent,</p>
+	    <div></div>
+	    <img src="../../images/timebar.png">
+	    <p>then you can use the general sibling combinator</p>
+	    <div></div>
+	    <img src="../../images/timebar.png">
+	</div>
+  </article>
+  
+  
+  <ul>
+    <li class="blue">List item Class Blue</li>
+	<li>List item without class</li>
+  </ul>
+
+
+</body>
+</html>

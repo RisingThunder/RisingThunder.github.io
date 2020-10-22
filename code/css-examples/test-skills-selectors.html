@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Test your skills: Selectors</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+		font-family: sans-serif;
+	}
+	.firstContainer h1 {
+		color: blue;
+	}
+	.firstContainer h2 {
+		color: white;
+		background-color: blue;
+	}
+	.firstContainer span {
+	  font-size: 200%;
+	}
+	#special {
+	  background-color: yellow;
+	}
+	.alert {
+	  border: solid grey 1px;
+	}
+	.alert.stop {
+	  background-color: red;
+	}
+	.alert.go {
+	  background-color: green;
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Test your skills: Selectors</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks" target="_blank">MDN web docs Test your skills: Selectors</a></nav>
+	<hr>
+  </header>
+  <main>
+    <div class="firstContainer">
+	  <h1>Selectors One</h1>
+	  <p>The primary anti-tank guided missile <span>(ATGM)</span> system for the Su-25T is the "Vikhr". This was later followed by the "Vikhr-M" with laser guidance.</p>
+	  <h2>A level 2 heading</h2>
+	  <p>The primary aiming system, "Shkval", provides acquisition and automatic target guidance. This works in conjunction with the "Prichal" system that provides laser illumination and rangefinder.</p>
+	  <hr>
+    </div>
+	
+	<div class="secondContainer">
+	  <h1>Selectors Two</h1>
+	  <p>For <span class="alert">low-light</span> operations, the <span class="alert stop">aircraft can be equipped</span> with a fuselage-mounted pod with a low-level television camera. This system is termed "Mercury."</p>
+	  <h2 id="special">A level 2 heading</h2>
+	  <p>"Mercury" provides an electro-optical aiming system to "Shkval" for night-time operations.</p>
+	  <h2>Another level 2 heading</h2>
+	  <p>The <span class="alert go">television image</span> from the aiming systems is transferred to the IT-23M television monitor (TVM), which is positioned in the upper right portion of the instrument panel.</p>
+	</div>
+  </main>
+</body>
+</html>

@@ -6,6 +6,7 @@
   <style>
     h1 {
 		color: blue;
+		font-family: Arial, sans-serif; 
 	}
 	span {
 		background-color: yellow;
@@ -16,31 +17,31 @@
 	em {
 		color: rebeccapurple;
 	}
-	* {
+	.first * {
 		margin: 0; 	/* This strips out all native margins of the page!
 		               So we'll have put them all back in manually! As I'll do below */
 	}
 	/* --- Adding margins back in manually ----- :-( */
-	h1 {
+	.first h1 {
 		margin: 10px 0;
 	}
-	p {
+	.first p {
 		margin: 2px 0;
 	}
-	hr {
+	.first hr {
 		margin: 4px 0;
 	}
-	div {
+	.first div {
 		margin: 4px 0;
 	}
 	/* --- End manual margins ------------------------- :-) */
-	article :first-child {
+	.first article :first-child {
 		color: blue;
 	}
-	article:first-child {
+	.first article:first-child {
 		background-color: cornsilk;
 	}
-	article *:first-child {
+	.first article *:first-child {
 		border: 1px solid black;
 	}
 	.highlight {
@@ -52,14 +53,15 @@
 	h1.highlight {
 		background-color: cadetblue;
 	}
-	.divsionBox {
+	.first .divisionBox,
+	.second .divisionBox {
 		margin: 20px auto; /* The "auto" puts it in the center of the window. */
 		width: 600px;
 		border: 1px solid black;
 		padding: 10px;
 		font-family: Arial, sans-serif;
 	}
-	.notebox {
+	.first .notebox {
 		border: 4px solid #668;
 		padding: .5em;
 		margin: 10px;
@@ -78,10 +80,64 @@
 	#one {
 		background-color: burlywood; 
 	}
+	/* ------ Second Go Around----------------------------------------------------------------------------- */
+	.second h2 {
+		text-decoration: underline;
+	}
+	.second span {
+	    background-color: aliceblue;
+	}
+	.second strong {
+		background-color: antiquewhite;
+	}
+	.second em {
+		background-color: aqua;
+	}
+	.second * {
+		margin: 0;
+	}
+	.second :first-child {
+		font-family: Verdana, sans-serif;
+	}
+	.second *:first-child {
+		font-size: 1.1em;
+	}
+	.second h2.highlight {
+		background-color: pink;
+	}
+	.second span.highlight {
+		background-color: yellow;
+	}
+	
+	.noteboxTwo {
+		border: 4px solid #666;
+		padding: .5em;
+		margin: 12px;
+		font-family: Gill Sans, sans-serif;
+	}
+	.noteboxTwo.warning {
+		border-color: orange;
+		font-weight: bold;
+	}
+	.noteboxTwo.danger {
+		border-color: red;
+		font-weight: bold;
+	}
+	.danger.moveRight {
+		padding-left: 24px;
+	}
+	#heading {
+	  color: rebeccapurple;
+	}
+	#two {
+		background-color: cadetblue;
+	}
+	
   </style>
 </head>
 
 <body>
+  <section class="first">
   <h1 class="highlight">Type, class &amp; ID selectors</h1>
   <hr><nav class="highlight"><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors" target="_blank">MDN web docs Type, class, and ID selectors</a></nav><hr>
   
@@ -104,7 +160,7 @@
 		   &lt;article&gt; element:</p>
 	</div>
 	
-	<div class="divsionBox">
+	<div class="divisionBox">
 	  <div class="notebox">
 	    This is an infomational note.
 	  </div>
@@ -124,9 +180,50 @@
 	  records and statistics are created, filed and managed. </p>
 	  <p id="one">The following is a description and operation of this gadget (to help you understand what your Persona
 	     is, please read <q>Your Persona’s Life</q>).</p>
-	</div> 
+	</div><hr>
+	</section>
+	
+	<section class="second">
+	  <h2 class="highlight">Second Go Around</h2>
+	  <p>A <span>type selector</span> is sometimes referred to as a tag name selector or element selector because it selects an HTML tag/element in your document.</p>
+	  <p><strong>The universal selector</strong></p>
+	  <p>The universal selector is indicated by an asterisk <em>(*)</em>.</p>
+	  <article>
+	    <p>One use of the universal selector is to make selectors easier to read and more obvious in terms of what they are doing.</p>
+		<p>if we wanted to select any descendant elements of an article element that are the first child of their parent, including direct children, and make them bold, we could use the :first-child pseudo-class,</p>
+	  </article>
+	  <p><span class="highlight">You can create</span> a selector that will target specific elements with the class applied.</p>
+	  <div class="divisionBox">
+	    <div class="noteboxTwo">
+	      This is an informational note.
+	    </div>
+	    <div class="noteboxTwo warning">
+	      This note shows a warning.
+	    </div>
+	    <div class="noteboxTwo danger">
+	      This note shows danger!
+	    </div>
+	    <div class="danger moveRight">
+	      This won't get styled - it also needs to have the noteboxTwo class.
+	    </div>
+	  </div>
+	  <h2 id="heading">ID Selectors</h2>
+	  <p id="two">An ID selector begins with a # rather than a dot character, but is used in the same way as a class selector. </p>
+	  
+	</section>
 
 </body>
 
 <html>
+
+
+
+
+
+
+
+
+
+
+
 

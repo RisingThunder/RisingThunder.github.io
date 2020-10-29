@@ -1,0 +1,122 @@
+<!DOCTYPE>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Attribute selectors</title>
+  <style>
+    body {
+		width: 680px;
+		margin: 10px auto;
+		border: 1px solid black;
+		padding: 10px;
+	}
+    h2 {
+		font-size: 150%;
+		font-family: sans-serif;
+	}
+	li {
+		font-size: 160%;
+	}
+    li[class] {
+		font-size: 200%;
+	}
+	li[class="aircraftType"] {
+		background-color: yellow;
+	}
+	li[class~="aircraftType"] {
+		color: red;
+	}
+	
+	li[class~="nextDcsModule"] {
+	    border: 1px solid red;
+	}
+	div li[class^="alpha"] {
+		text-decoration: underline;
+	}
+	div li[class$="alpha"] {
+		background-color: yellow;
+	}
+	li[class*="alpha"] {
+		color: red;
+	}
+	div li[class^="delta"] {
+		background-color: yellow;
+	}
+	div li[class^="delta" i] {
+		color: red;
+	}
+
+	li[class="links"] {
+		margin-bottom: 10px;
+		padding-left: 10px;
+		width: 100%px;
+	}
+	div a {
+		border: 5px solid grey;
+		/* By default "a" is an inline element, and inline elements can't specify a width or height.
+		You can change it to be a block element like this: */
+		display: block; 
+		padding-left: 10px;
+	}
+	a[title] {
+		border: 5px solid red;
+	}
+	a[href*="warthog"] {
+		border: 5px solid orange;
+	}
+	
+	/* Note: For the below to work, it must be a string, no numeric or other characters. */
+	a[href^=start] { 
+		border: 2px solid blue;
+	}
+	
+	p {
+		text-align: center;
+	}
+  </style>
+</head>
+<body>
+  <nav><a href="../code.html">Back to the Code Repoitory</a> <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors#Presence_and_value_selectors" target="_blank">MDN Presence and value selectors</a></nav><hr>
+  <h2>Attribute selectors</h2>
+  <ul>
+    <li class="aircraftType nextDcsModule">Flanker</li>
+	<li class="aircraftType">Viper</li>
+	<li class="aircraftType coalition">Gratch</li>
+	<li class="aircraftTypeCoalition">Warthog</li>
+	 <li>Reserved</li>
+  </ul>
+  
+  
+  <div>   
+    <h2>Substring matching selectors</h2>
+   
+    <ul>
+	  <li class="alpha">Lt. Bot 1</li>
+	  <li class="alphabeta">Lt. Bot 2</li>
+	  <li class="betacharliealpha">Lt. Bot 3</li>
+	  <li class="betacharliealphabetacharilie">Lt. Bot 4</li>
+	</ul>
+  </div>
+  
+  <div>
+    <h2>Case-insensitivity</h2>
+	<ul>
+	  <li class="delta">Lt. Bot 5</li>
+	  <li class="DELTA">Lt. Bot 6</li>
+	  <li class="DeltaFoxtrot">Lt. Bot 7</li>
+	  <li>Reserved</li>
+	</ul>
+  </div>
+  
+  <div class="links">
+    <h2>Trying it out!</h2>
+    <ul>
+	  <li class="links"><a href="https://www.digitalcombatsimulator.com/en/products/planes/mig-29_dcs_world/" target="_blank">MiG-29</a></li>
+	  <li class="links"><a href="https://www.digitalcombatsimulator.com/en/products/planes/viper/" target="_blank">F-16C</a></li>
+	  <li class="links"><a href="https://www.digitalcombatsimulator.com/en/products/world/" target="_blank" title="Visit the World of DCS">Su-25T</a></li>
+	  <li class="links"><a href="https://www.digitalcombatsimulator.com/en/products/planes/warthog/" target="-blank">A-10C</a></li>
+    </ul>
+  </div>
+  <p><a href="startingcss.html">Getting Started with CSS</a></p>  
+</body>
+</html>

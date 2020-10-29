@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <title>Types of selectors</title>
+  <title>CSS selectors</title>
   <link rel="shortcut icon" href="../../images/rtfavicon.ico">
   <style>
    body {
@@ -44,12 +44,59 @@
 	background-color: black;
 	color: bisque;
    }
-   
+   h2 {
+     color: blue;
+   }
+   .specialZero {
+     color: blue;
+   }
+   section h3, .specialOne {
+     color: aliceblue;
+	 background-color: brown;
+   }
+   h4,
+   .specialTwo {
+     color: antiquewhite;
+	 background-color: brown;
+   }
+   span {
+     background-color: yellow;
+   }
+   strong, em {
+     color: rebeccapurple;
+   }
+   h5 {
+     text-decoration: underline;
+   }
+   .boxOne {
+     background-color: aquamarine;
+   }
+   #uniqueOne {
+     background-color: azure;
+   }
+   section a[title] {
+     color: green;
+	 background-color: beige; 
+   }
+   section a[href="testOne"] {
+     background-color: bisque;
+   }
+   section a:hover {
+     color: red;
+	 text-decoration: none;
+   }
+   .firstline p::first-line {
+     background-color: black;
+	 color: blanchedalmond; 
+   }
+   section > p {
+     font-family: Helvetica, sans-serif;
+   }
   </style>
 </head>
 
 <body>
-  <h1>Types of selectors</h1>
+  <h1>CSS selectors</h1>
   <nav><a href="../code.html">Go back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">MDN web docs CSS Selectors</a></nav><hr>
 
   <ul class="box">
@@ -70,11 +117,25 @@
   <p> This group of selectors is combined in order to target certian elements within our documents. The following
       for example selects paragraphs that are direct children of &lt;article&gt; elements using the child
 	  combinator (&gt;).</p>
-  </article>
+  </article><hr>
   
-  <div>
-    <a title="link">Another Link</a>   
-  </div>
+  <section>
+    <h2>Selector list</h2>
+	<p class="specialZero">This is wrote as two separate rules with the same color.</p>
+    <h3>This is a specialOne class paragraph.</h3>
+	<p class="specialOne">You could also combine these into a selector list, by adding a comma between them.</p>
+	<h4>This is a specialTwo class paragraph.</h4>
+	<p class="specialTwo">You may find the selectors more readable if each is on a new line.</p>
+	<p>The “<span>Rising Thunder DCS World Dedicated Server Series</span>” are a long term, story driven DCS world, “multi-client”, “muti-campaign”, “career level ” server series greatly inspired by the excellent DCS World servers by BuddySpike, “<strong>Operation:BlueFlag</strong>”, and loosely inspired by the novel, “<em>Tom Clancy’s Red Storm Rising</em>”, although with many differences, and with a few twists and surprises planned.</p>
+	<h5>The Rising Thunder Gadget (RTG)</h5>
+	<p class="boxOne">The core of the Rising Thunder server concept is the use of the “Rising Thunder Gadget” located at (http://??)(imbed thunderstorm sounds & lighting effect into website)</p>
+    <p id="uniqueOne">As the Rising Thunder Server has a differing end goal than of many other servers, one of survival and longevity of your personas life, our Leaderboard is also a little different.</p>
+	<a href="#" title="link">Another test Link</a> <a href="testOne">Test Link One</a>
+	<div class="firstline">
+	  <p>The souls of the Rising Thunder DCS World experience are your Personas. By default, each Rising Thunder account will have only two living personas. However, official Rising Thunder Supporters will get one extra persona per account, for a maximum of pool upthree living personas at any one time, for the next twenty four pppmonths after your last donation.</p>
+	  <p>Persona’s life matters, so don’t throw your Personas life away (see the Rank Matters Table). Dead is dead, and dying sucks. Stuff happens by no fault of your own. Don’t ask to be a Lazareth! Survival, the self preservation of your personas life, and good training are the major philosophy of this server.</p>
+    </div>	
+  </section>
   
   <h3><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#Reference_table_of_selectors" target="_blank">MDN web docs Reference table of selectors</a></h3>
 </body>

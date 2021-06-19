@@ -8,7 +8,7 @@
   
   <style>
     body {
-	  background-color: #fff;
+	  background-color: #ffe;
 	  color: #333;
 	  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
 	  padding: 1em;
@@ -17,8 +17,23 @@
 	* {
 		box-sizing: border-box;
 	}
-    
-  
+    #special {
+	  background-color: yellow;
+	}
+	#specialGrey {
+	  background-color: lightgrey;
+	}
+	.alert {
+	  border: solid blue 1px;
+	}
+	.stop {
+	  background: red;
+	  color: white;
+	}
+    .go {
+	  background: green;
+	  color: white;
+	}
   </style>
 </head>
 
@@ -29,15 +44,18 @@
   </head>
   
   <div class="container">
-    <h2>Header Level Two</h2>
-	<p>Para regular text
-	  <span class="alert">(span alert text)</span>, more regular para text
-	  <span class="alert stop" >(span alert stop text)</span>
-	  continuing regular para text.</p>
-	<h3>Header Level 3</h3>
-	<p>
-	  <span class="alert go">(Span alert go text)</span>
-	  continuing regualr para text.</p>
+    <h2>Persona</h2>
+	<h3 id="specialGrey">&lt;Callsigns&gt;</h3>
+	<p>Unique & protected for Rising Thunder <span class="alert">Personas</span>. No Duplicate Callsigns. Callsigns are unique & protected, 
+	   per each living persona. <span class="alert stop">No “living” duplicates</span>. </p>
+	
+	<h3 id="special">&lt;Photo Area&gt;</h3>
+	<p>You may upload an avatar image or picture (recommend not of yourself) for your Pesona. Limited to 240x240
+ 	   pixel size. Larger will be auto resized. Again choose wisely, as this is permanent for that Persona.</p>
+	
+	<h3>Your Persona’s Life</h3>
+	<p>The <span class="alert go">souls</span> of the Rising Thunder DCS World experience are your 
+	   <span class="alert go">Personas</span>.</p>
     
   </div>
 

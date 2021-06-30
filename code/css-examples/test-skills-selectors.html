@@ -17,11 +17,14 @@
 	}
 	table {
 	  border-collapse: collapse;
-	  width: 550px;
+	  width: 650px;
 	}
     td, th {
 	  padding: 0.2em;
 	  text-align: left;
+	}
+	hr {
+	  color: black;
 	}
 	.firstContainer h2 {
 		color: blue;
@@ -56,12 +59,23 @@
 	}
 	.thirdContainer p:first-of-type {
 	  font-size: 150%;
-	  /* For this example, using :first-of-type, unstead of :first-child, because of the h1 element is the first element in the .thirdContainer div */
+	  /* For this example, we're using :first-of-type, unstead of :first-child, because of the h1 element is the first element in the .thirdContainer div */
 	}
 	.thirdContainer p:first-of-type::first-line {
 	  color: red;
 	}
-	
+	tr:nth-child(2n) {
+	  background: #339;
+	  color: white
+	}
+	/* The adjacent sibling selector (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector.  */
+	.fourthContainer h2 + p { 
+	 color: red;
+	}
+	.note::before {
+	  content: "NOTE: ";
+	  color: red;
+	}
   </style>
 </head>
 
@@ -101,48 +115,66 @@ of danger they each pose, and strike the most dangerous first.</p>
 		  <th>Radar designation</th>
 		  <th>HUD designation</th>
 		</tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>Patriot</td>
+		  <td>AN/MPQ-53</td>
+		  <td>P</td>
 		<tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>Improved Hawk</td>
+		  <td>AN/MPQ-50</td>
+		  <td>H50</td>
 		</tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>Improved Hawk</td>
+		  <td>AN/MPQ-46</td>
+		  <td>H46</td>
 		<tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
-		</tr>
-		<tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>Roland</td>
+		  <td>Roland search radar</td>
+		  <td>G</td>
 		</tr>
 		<tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>Roland</td>
+		  <td>Roland</td>
+		  <td>R</td>
 		</tr>
 		<tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
+		  <td>SA-10 S-300PS SR 64N6E</td>
+		  <td>Big Bird</td>
+		  <td>BB</td>
+		</tr>
+		<tr>
+		  <td>SA-10 S-300PS SR 5N66M</td>
+		  <td>Clam Shell</td>
+		  <td>CS</td>
 		</tr>	
 	  </table>
+	</div><hr>
+	
+	<div class="fourthContainer">
+	  <h2>Selectors Four</h2>
+	  <p style="color: yellowgreen;" class="note">The adjacent sibling selector (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector</p>
+	  <h3>Free-fall Bombing</h3>
+	  <p>The category of ballistic-trajectory "free-fall" weapons includes all "iron" bombs, e.g. FAB-500, FAB-250, FAB-100, BetAB-500, and ODAB-500, RBK cluster bombs and KMGU dispensers, ZAB-500 incendiary bombs etc.</p>
+	  <p>To employ free-fall weapons against ground targets, the pilot activates the "ОПТ-ЗЕМЛЯ" (GROUND) mode [7] and chooses the required free-fall bombs, cluster bombs or containers.</p>
+	  
+	  <h3>Weapon Status Panel</h3>
+	  <p>The weapon status panel is located right lower part of the front instrument panel.</p>
+	  
+	  <ul class="list">
+	    <li>The yellow lamps in the upper row indicate weapon availability and presence on hardpoint stations.</li>
+		<li>The currently selected weapon type is indicated in the upper right of the panel:
+		  <ul>
+		    <li>Б for bombs</li>
+			<li>УР for missiles</li>
+			<li>НРС for rockets</li>
+			<li>ВПУ for the built-in 30 mm cannon</li>
+		  </ul>
+		</li>
+	  </ul>
+	  
 	</div><hr>
   </main>
 </body>
 </html>
-
-
-
-
-
-
 
 
 

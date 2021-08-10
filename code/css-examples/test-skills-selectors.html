@@ -81,6 +81,20 @@
 	  border-bottom: 1px solid blue;
 	}
 	
+	.fifthContainer li {list-style-type: none; margin:  0 0 6px; padding:}
+	.fifthContainer a {display: block; width: 200px; padding: 2px 0 2px 20px;}
+	.fifthContainer a {border: 5px solid grey;}
+	.fifthContainer a[href^="sel"] {border-color: blue;} /* This selector will be superseded by the following css selector rules. */
+	.fifthContainer a[title] {border-color: red;}
+	.fifthContainer a[href*="three"] {border-color: orange;}
+	.fifthContainer a[href$="one.html"] {border-color: green;}
+	.fifthContainer a[href|=selectors]::after {
+	  content: " ➥";
+	}
+	
+	
+	
+	
   </style>
 </head>
 
@@ -175,9 +189,20 @@ of danger they each pose, and strike the most dangerous first.</p>
 		  </ul>
 		</li>
 		<li>The weapon system control panel can be seen near the bottom of the left instrument panel.</li>
-	  </ul>
-	  
+	  </ul>  
 	</div><hr>
+	
+	<div class="fifthContainer">
+	  <h2>Selectors Five</h2>
+	  <ul>
+	    <li><a href="selectors-one.html" target="_blank">S-5</a></li>
+		<li><a href="selectors-two.html" title="Open selectors two" target="_blank">S-8</a></li>
+		<li><a href="selectors-three.html" target="_blank">S-13</a></li>
+		<li><a href="selectors-four.html" target="_blank">S-24</a></li>
+		<li><a href="selectors-five.html" target="_blank">S-25</a></li>
+	  </ul><hr>
+	  
+	</div>
   </main>
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 	paragrah2 = document.querySelector('#paragrah2');
-	paragrah2.textContent = 'Revision 01JUL2021 - Click for info.';
+	paragrah2.textContent = 'Revision 10AUG2021 - Click for info.';
 	
 // Revision Date click for alert informaion.
 paragrah2.onclick = function () {

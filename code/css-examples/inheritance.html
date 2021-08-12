@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Controlling inheritance</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    h2 {
+		font-size: 1.4em;
+		color: #000;
+		font-family: Georgia, 'Times New Roman', serif;
+	}
+    body {
+		color: green;
+		font-size: 1.2em;
+	}
+	.my-class-1 a { 			/* Don't forget the . and the a! */
+		color: inherit;
+	}
+	.my-class-2 a {
+		color: initial;
+	}
+	.my-class-3 {
+		color: unset;
+	}
+	li a { color: red; }
+	nav, {
+		font-size: intitial;
+	}
+	.small {
+		font-size: 1em;
+	}
+	.bright {
+		color: rebeccapurple;
+	}
+	/* ----------------------------------------------------------------------------------------------- */
+	/* specificity: 0101 */
+	#outer a {
+		background-color: deeppink;
+	}
+	/* specificity: 0201 */
+	#outer #inner a {
+		background-color: cadetblue;
+	}
+	/* specificity 0104 */
+	#outer div ul li a {
+		color: yellow;
+	}
+	/* specificity: 0113 */
+	#outer div ul .nav a {
+		color: white;
+	}
+	
+	/* specificity: 0023 */
+	div li:nth-child(2) a:hover {
+	border: 10px dashed hotpink; 
+	}
+	
+	/* specificity 0024 */
+	div div li:nth-child(2) a:hover {
+		border: 10px solid hotpink;
+	}
+	
+	/* specificity 0033 */
+	div div .nav:nth-child(2) a:hover {
+		border: 10px double darkslategrey;
+	}
+	
+	.container a {
+		display: inline-block;
+		line-height: 40px;
+		font-size: 20px;
+		text-decoration: none;
+		text-align: center;
+		width: 200px;
+		margin-bottom: 10px;
+	}
+	#inner ul {
+		padding-left: 40px;
+	}
+	
+	#outer #inner li {
+		list-style-type: none;
+	}
+	
+	p {
+		background-color: blue;
+		color: white;
+		padding: 5px;
+	}
+	
+	#winning {						/* And "id" trumps a "class". An "id" is more specific than a "class". */
+		background-color: red;
+		border: 1px solid black;
+	}
+	.better {
+		background-color: gray;
+		border: none !important; 
+		/* The 2nd element does get the red background color, but no border. Why? Because of the !important
+		declaration in the second rule — including this after "border: none" means that this declaration will
+		win over the border value in the previous rule, even though the ID has higher specificity. */
+	}
+  </style>
+</head>
+<body>
+  <h1>Controlling Inheritance Examples & Specificity</h1><hr>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank">MDN Web Docs Cascade and inheritance</a></nav><hr>
+  <h2>Heading with no class</h2>
+  <h2 class="small">Heading with class of small</h2>
+  <h2 class="bright">Heading with class of bright</h2>
+  <hr>
+  
+  <div id="outer" class="container">
+    <div id="inner">
+	  <ul>
+	    <li class="nav"><a href="####">One</a></i>
+		<li class="nav"><a href="#####">Two</a></ii>
+	  </ul>
+	</div>
+  </div>
+  
+  <ul>
+	<li>Default <a href="##">link</a> color.</li>
+	<li class="my-class-1">Inherit. This <a href=##">link</a> inherints the parents body color in this case, as &lt;a&gt;
+		is a child of the &lt;li&gt; element, which is a child of the &lt;body&gt; element,
+		set to green.</li>
+	<li class="my-class-2">Initial. Resets the <a href="###">link</a> color to the browsers default style sheet color for
+		the element (in this case the &lt;li&gt; element). The &lt;a&gt; is nested inside the &lt;li&gt; element,
+		and class selector (class=&quot;my-class-2&quot;) is in the &lt;li&gt; element.
+	<li class="my-class-3">Unset. Reset the <a href="###">link</a> to its natural color.</li>
+	</ul>
+	<p>With css selector &quot;li a&quot; valued to the color red, (a {color: red}) the above first and last list item links
+	   will become red.</p><hr>
+	   
+	<div id="rule">
+	  <p class="better">This is a paragraph.</p>
+	  <p class="better" id="winning">One selector to rule them all!</p>
+	  <p id="winning">You should only have one element type with each unique ID on a page,
+	     however, you may have many elements with the same class on a page.</P>
+	</div>
+  
+</body>
+</html>
+

@@ -1,6 +1,16 @@
 span {
 	background-color: yellow;
 }
+aside {
+	width: 20%;
+	margin-top: 1.2rem;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
 
 /* This is for the 15FEB20 image at the bottom of the article. */
 #bgimage00 {
@@ -12,7 +22,7 @@ span {
 	  url(../images/f14-crew.jpg);
 }
 
-/* This is for the 30SEP20 CSS ARROW in the aside. */
+/* This is for the 30SEP20 article CSS ARROW in the aside. */
 .arrow_box {
 	display: block;
 	font-weight: bold;

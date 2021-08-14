@@ -46,18 +46,8 @@ p, li {
   line-height: 1.2;
   letter-spacing: .2px;
 }
-aside {
-	width: 20%;
-	margin-top: 1.2rem;
-    padding-left: .5rem;
-    margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-}
-/* with out the comma between aside & p, limits this attrbute
-	to only the paragrah inside the aside element, I think, anyway.. */
+
+/* Limits this attrbute or rule to the paragrah inside the aside element. */
  aside p { 
 	width: 100%;
 	margin: .5rem;

@@ -48,10 +48,7 @@ p, li {
 }
 
 /* Limits this attrbute or rule to the paragrah inside the aside element. */
- aside p { 
-	width: 100%;
-	margin: .5rem;
-}
+
  article img {
 	width: 100%;
 }

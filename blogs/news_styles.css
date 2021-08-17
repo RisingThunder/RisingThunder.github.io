@@ -11,6 +11,10 @@ aside {
     font-style: italic;
     color: #29627e;
 }
+ aside p { 
+	width: 100%;
+	margin: .5rem;
+}
 
 /* This is for the 15FEB20 image at the bottom of the article. */
 #bgimage00 {

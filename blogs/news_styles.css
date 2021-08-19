@@ -15,6 +15,9 @@ aside {
 	width: 100%;
 	margin: .5rem;
 }
+ article img {
+	width: 100%;
+}
 
 /* This is for the 15FEB20 image at the bottom of the article. */
 #bgimage00 {

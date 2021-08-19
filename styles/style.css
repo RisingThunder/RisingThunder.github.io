@@ -46,18 +46,7 @@ p, li {
   line-height: 1.2;
   letter-spacing: .2px;
 }
-
-/* Limits this attrbute or rule to the paragrah inside the aside element. */
-
- article img {
-	width: 100%;
-}
-/* Removing Image width css attribute as a site wide funtion for now,
-   as it was interfering with the native inset of svg images.
-   Set the width using the with attribute in the html image element*/
 img { 
-	// width: 100%;
-	// display: block; /* removed as interfering with responsive images globally */
 	margin: 0 auto;
 }
 figure {

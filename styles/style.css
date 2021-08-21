@@ -52,15 +52,6 @@ img {
 figure {
 	margin: 0 auto;
 }
-#contact-image {
-	width: 34%;
-    padding-top: 5px;
-	padding-left: 1rem;
-    margin-top: .5rem;
-	margin-left: 5;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-}
 #welcomecallsign {
 	color: blue;
 	text-align: center;

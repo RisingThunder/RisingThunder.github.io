@@ -56,13 +56,7 @@ figure {
 	color: blue;
 	text-align: center;
 }
-#paragrah1 {
-	border: 1px solid blue;
-	width: 470px;
-	padding: 0 0 0 6px;
-	margin-bottom: 32px;
-}
-#paragrah2 {
+.revisionDate {
   font-size: 14px;
   color: red;
   text-align: right;
@@ -70,8 +64,7 @@ figure {
   align: right;
   border: 1px solid red;
   width: 24%; 
-    float: right;
-    -- position:relative;
+  float: right;
 }
 #dcsimage {
 	width: 60px;

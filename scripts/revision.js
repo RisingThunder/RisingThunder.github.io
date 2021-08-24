@@ -1,8 +1,7 @@
-
-	paragrah2 = document.querySelector('#paragrah2');
-	paragrah2.textContent = 'Revision 21AUG2021 - Click for info.';
+	revisionDate = document.querySelector('.revisionDate');
+	revisionDate.textContent = 'Revision 24AUG2021 - Click for info.';
 	
 // Revision Date click for alert informaion.
-paragrah2.onclick = function () {
+revisionDate.onclick = function () {
 	alert('Rising Thunder Alfa Test is in the works for 2024! Check back in 2 weeks!');	
 }

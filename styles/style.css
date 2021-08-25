@@ -52,10 +52,6 @@ img {
 figure {
 	margin: 0 auto;
 }
-#welcomecallsign {
-	color: blue;
-	text-align: center;
-}
 .revisionDate {
   font-size: 14px;
   color: red;
@@ -66,12 +62,15 @@ figure {
   width: 24%; 
   float: right;
 }
+#welcomecallsign {
+	color: blue;
+	text-align: center;
+}
 #dcsimage {
 	width: 60px;
 	display: block;
 	margin: 0 auto;
 	float: right;
-    -- position:relative;
 }
 #firetruckimg {
 	display:block;
@@ -80,10 +79,6 @@ figure {
 #ulborder {
 	width: 220px;
 	border: 1px solid black;
-}
-#dlborder {
-	border: 1px solid green;
-	padding: 12px;
 }
 span.bluetext {
 	color: blue;

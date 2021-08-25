@@ -1,5 +1,5 @@
 	revisionDate = document.querySelector('.revisionDate');
-	revisionDate.textContent = 'Revision 24AUG2021 - Click for info.';
+	revisionDate.textContent = 'Revision 25AUG2021 - Click for info.';
 	
 // Revision Date click for alert informaion.
 revisionDate.onclick = function () {

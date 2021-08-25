@@ -18,6 +18,9 @@ aside {
  article img {
 	width: 100%;
 }
+#blueBackground {
+	background-color: lightblue;
+}
 
 /* This is for the 15FEB20 image at the bottom of the article. */
 #bgimage00 {
@@ -69,3 +72,4 @@ aside {
 .arrow_box:hover{
 	font-size: 120%;
 }
+/* End Arrow css code */

@@ -1,7 +1,64 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <meta charset="utf-8"/>
+  <title>The box model</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  
+  <style>
+	body {
+	  font-family: Arial, sans-serif;
+	}
+	code {
+	  font-size: 1.3em;
+	  background-color: lightgrey;
+	}
+	
+	/* Display property and flow layout ---------- */
+	
+	.container {
+	  display: flex;
+	  border: 2px solid green;
+	  color: green;
+	}
+	.container > div {
+	  border: 2px solid blue;
+	  margin: 3px;
+	  color: darkblue;
+	}
+	.child > * {
+	  border: 2px solid red;
+	  margin: 2px;
+	  color: darkred;
+	}
+  </style>
 </head>
+
+<body>
+  <header>
+	<h1>The box model</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model" target="_blank">MDN Web Docs: The box model</a></nav>
+	<hr>
+  </header>
+  
+  <h2>Notes:</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow#the_display_property_and_flow_layout" target="_blank">The display property and flow layout</a></h3>
+  <p>The flex container behaves like a block element: it displays on a new line and takes up all of the space it can in the inline direction.</p>
+  <p>The flex items however are participating in a flex formatting context, because their parent is the element with <code>display: flex</code>, which has an inner display type of <code>flex</code>, establishing the flex formatting context for the direct children.</p>
+  
+  <div class="container">
+    <div>Flex Item - <br> Direct Child</div>
+	<div>Flex Item - <br> Direct Child</div>
+	<div class="child">
+	  <div>However,</div>
+	  <div>Grand-childern</div>
+	  <div>are in</div>
+	  <div>normal flow.</div>
+	</div>
+	This is the parent element<br>(flex container)
+  </div>
+  
+</body>
 
 
 </html>

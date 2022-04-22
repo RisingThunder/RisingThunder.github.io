@@ -13,6 +13,10 @@
 	  font-size: 1.3em;
 	  background-color: lightgrey;
 	}
+	hr {
+	  color: slategrey;
+	  margin-top: 12px;
+	}
 	
 	/* Display property and flow layout ---------- */
 	
@@ -31,6 +35,31 @@
 	  margin: 2px;
 	  color: darkred;
 	}
+	
+	/* Examples of different display types ---------------- */
+	.displayTypes p, ul, .block {
+	  border: 2px solid yellowgreen;
+	  padding: .5em;
+	}
+	.displayTypes ul {
+	  display: flex;
+	  list-style: none;
+	}
+	.displayTypes li {
+	  border: 2px solid blue;
+	  padding: .5em;
+	  margin-right: .5em;
+	}
+	.displayTypes span {
+	  color: yellow;
+	  background: slategrey;
+	  margin: 3px 0px;
+	}
+	.displayTypes .block {
+	  display: block;
+	}
+	
+	/* */
   </style>
 </head>
 
@@ -41,7 +70,7 @@
 	<hr>
   </header>
   
-  <h2>Notes:</h2>
+  <h3>Notes: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow" target="_blank">Block and inline layout in normal flow</a></h3>
   <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow#the_display_property_and_flow_layout" target="_blank">The display property and flow layout</a></h3>
   <p>The flex container behaves like a block element: it displays on a new line and takes up all of the space it can in the inline direction.</p>
   <p>The flex items however are participating in a flex formatting context, because their parent is the element with <code>display: flex</code>, which has an inner display type of <code>flex</code>, establishing the flex formatting context for the direct children.</p>
@@ -56,6 +85,22 @@
 	  <div>normal flow.</div>
 	</div>
 	This is the parent element<br>(flex container)
+  </div><hr>
+  
+  <h3>Examples of different display types</h3>
+  <div class="displayTypes">
+    <p>This is a paragraph. The browser renders this paragraph as a block box, so the paragraph begins on a new line, and expands to the full width available to it, ie, normal flow for a paragraph.</p>
+	
+	<ul>
+	  <li>List Item Zero</li>
+	  <li>List Item One</li>
+	  <li>List Item Two</li>
+	  <li>These list are laid out</li>
+	  <li>using <code>display: flex</code>.</li>
+	</ul>
+	
+	<p>In this paragraph some of the <span class="block">words (this span has <code style="color: red;">display: block</code> applied to it)</span> have been wrapped in <span>span elements</span>.</p>
+	
   </div>
   
 </body>

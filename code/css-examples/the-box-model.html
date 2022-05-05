@@ -37,6 +37,7 @@
 	}
 	
 	/* Examples of different display types ---------------- */
+	
 	.displayTypes p, ul, .block {
 	  border: 2px solid yellowgreen;
 	  padding: .5em;
@@ -49,6 +50,7 @@
 	  border: 2px solid blue;
 	  padding: .5em;
 	  margin-right: .5em;
+	  background: whitesmoke;
 	}
 	.displayTypes span {
 	  color: yellow;
@@ -58,8 +60,232 @@
 	.displayTypes .block {
 	  display: block;
 	}
+	.displayTypes span code {
+	  color: black;
+	}
 	
-	/* */
+	/* Next Example of different display types ------------------ */
+	
+	.nextExample p, .nextExample ul {
+	  border: 2px solid violet;
+	  padding: .5em;
+	}
+    .nextExample span {
+	  border: 1px solid blue;
+	  background: slategrey;
+	  color: yellow;
+	}
+	.nextExample li {
+	  border: 2px solid blue;
+	  padding: .5em;
+	  background: whitesmoke;
+	  margin-right: .5em;
+	}
+	.nextExample ul {
+	  display: inline-flex;
+	  list-style: none;
+	}
+	.nextExample .inline {
+	  display: inline;
+	}
+	
+	/* Playing with box models ----------------------------- */
+	
+	.boxContainer {
+	  display: flex;
+	}
+	.box {
+	  border: 5px solid turquoise;
+	  background-color: wheat;
+	  padding: 40px;
+	  margin: 20px;
+	  width: 200px;
+	  height: 100px;
+	  
+	}
+	.alternate {
+	  box-sizing: border-box;
+	  width: 290px;
+	  height: 190px;
+	}
+	
+	/* Margins ------------------------------------------------ */
+	
+	.marginCrate {
+	  display: flex;
+	}
+	.marginContainer {
+	  / width: 600px;
+	  / height: 250px;
+	  border: 5px solid teal;
+	  margin-left: 20px;
+	  margin-top: 40px;
+	}
+	.marginBox {
+	  width: 400px;
+	  height: 120px;
+	  background: wheat;
+	  border: 5px solid rebeccapurple;
+	  padding: 10px;
+	  margin-top: -40px;
+	  margin-left: 5em;
+	  margin-right: 40px;
+	  margin-bottom: 40px;
+	}
+	.rightBox {
+	  margin-right: -40px;
+	}
+	
+	/* Margin Collapsing --------------------------------------- */
+	
+	.marginCollapsingContainer {
+	border: 5px solid teal;
+	margin-left: 20px;
+	}
+	.marginCollapsingContainer .para {
+	  border: 3px solid rebeccapurple;
+	  margin: 5px;
+	  padding: 20px;
+	  background-color: wheat;
+	  font-size: 1.2em;
+	}
+	.marginCollapsingContainer .one {
+	  margin-bottom: 50px;
+	}
+	.marginCollapsingContainer .two {
+	  margin-top: -20px;
+	}
+	
+	/* Borders -------------------------------------------------- */
+	
+	.bordersDiv {
+	  border: 5px solid teal;
+	  margin-left: 20px;
+	  padding: 44px;
+	  display: flex;
+	}
+	.borderContainer {
+	  width: 400px;
+	  padding:40px;
+	  text-align: center;
+	  font-size: 1.4em;
+	  background: wheat;
+	  border-top: 5px dotted red;
+	  border-right: 2px solid sienna;
+	  border-bottom: 18px double royalblue;
+	}
+	.borderBox {
+	  background: silver;
+	  padding: 20px;
+	  border: 2px solid saddlebrown;
+	  border-top-style: dotted;
+	  border-right-width: 12px;
+	  border-bottom-color: orangered;
+	}
+	.borderType {
+	  font-size: 1.2em;
+	  padding: 20px;
+	  text-align: center;
+	  margin-left: 40px;
+	  border-color: lightgrey;
+	  border-width: 10px;
+	}
+	.dashed {
+	  border-style: dashed;
+	  border-width: 5px;
+	  border-color: grey;
+	}
+	.groove {
+	  border-style: groove;
+	}
+	.ridge {
+	  border-style: ridge;
+	}
+	.inset {
+	  border-style: inset;
+	}
+	.outset {
+	  border-style: outset;
+	}
+	
+	/* Box Model and Inlne Boxes ---------------------------------------------- */
+	
+	.inlineDiv {
+	  margin-left: 20px;
+	  font-size: 1.2em;
+	}
+	.inlineDiv p {
+	  border: 2px solid teal;
+	  width: 240px;
+	  padding:4px;
+	}
+	.inlineDiv span {
+	  border: 1px solid blue;
+	  margin: 20px;
+	  padding: 20px;
+	  background-color: rgba(173, 216, 230, 0.8);
+	  width: 100px;   /* width is not respected! */
+	  height: 100px;  /* height is not respected! */ 
+	}
+	
+	/* Using display: inline-block ------------------------------------------- */
+	
+	.inlineBlock {
+	  margin-left: 20px;
+	  font-size: 1.2em;
+	  display: inline-flex;
+	}
+	.inlineBlock code {
+	  font-size: 1em;
+	}
+	.inlineBlock p {
+	  border: 2px solid teal;
+	  width: 240px;
+	  padding:4px;
+	  margin-top: 0;
+	  margin-right: 20px;
+	}  
+	.inlineBlock span {
+	  border: 1px solid blue;
+	  background-color: lightblue;
+	  margin: 20px;
+	  padding: 20px;
+	  width: 80px;
+	  height: 50px;
+	}
+	.inlineSpan span {
+	  display: inline-block;
+	}
+	.block span {
+	  display: block;
+	}
+	
+	/* Larger Links ---------------------------- */
+	
+	.linksContainer {
+	  border: 2px solid teal;
+	  margin-left: 20px;
+	  padding: 0 20px;
+	}
+	.links-list {
+	  border: 2px solid blue;
+	  list-style: none;
+	  display: flex;
+	}
+	.links-list a {
+	  border: 2px solid blue;
+	  background-color: rgb(179, 57, 81);
+	  color: #fff;
+	  text-decoration: none;
+	  padding: 1em 2em;
+	  margin: 2px;
+	  display: inline-block;
+	}
+	.links-list a:hover {
+	  background-color: rgb(66, 28, 40);
+	  color: #fff;
+	}
+	
   </style>
 </head>
 
@@ -70,7 +296,7 @@
 	<hr>
   </header>
   
-  <h3>Notes: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow" target="_blank">Block and inline layout in normal flow</a></h3>
+  <h3>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow" target="_blank">Block and inline layout in normal flow</a></h3>
   <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow#the_display_property_and_flow_layout" target="_blank">The display property and flow layout</a></h3>
   <p>The flex container behaves like a block element: it displays on a new line and takes up all of the space it can in the inline direction.</p>
   <p>The flex items however are participating in a flex formatting context, because their parent is the element with <code>display: flex</code>, which has an inner display type of <code>flex</code>, establishing the flex formatting context for the direct children.</p>
@@ -99,9 +325,80 @@
 	  <li>using <code>display: flex</code>.</li>
 	</ul>
 	
-	<p>In this paragraph some of the <span class="block">words (this span has <code style="color: red;">display: block</code> applied to it)</span> have been wrapped in <span>span elements</span>.</p>
+	<p>In this paragraph some of the <span class="block">words (this span has <code>display: block</code> applied to it)</span> have been wrapped in <span>span elements</span>.</p>
 	
   </div>
+  
+  <div class="nextExample">
+    <p>
+	  In this next example we see how <code>inline</code> elements behave. The <span>span elements</span> in this paragraph are inline by default, and as such, the <span>span elements</span> do not force line breaks.
+	</p>
+	
+	<ul>
+	  <li>This is a <code>&lt;ul&gt;</code> element</li>
+	  <li>set to <code>display: inline-flex</code></li>
+	  <li>creating an line box</li>
+	  <li>around these flex items.</li>
+	</ul>
+	
+	<p class="inline">Here are two paragraphs, both set to <code>display: inline</code>.</p>
+	<p class="inline">The inline flex container and paragraphs all run together on one line rather than breaking onto new lines</p>
+  </div><hr>
+  
+  <h3>Playing with box models</h3>
+  <div class="boxContainer">
+    <div class="box">The standard box model<br>Width = 200px<br>Height = 100px</div>
+    <div class="box alternate">The alternate box model<br>Width = 290px<br>Height = 190px</div>
+  </div><hr>
+  
+  <h3>Margins</h3>
+  <div class="marginCrate">
+    <div class="marginContainer">
+      <div class="marginBox">Change the margin values to see how the boxs are pushed around due to the margin creating (or removing space if it is a negative margin) between this element and the containing element. </div>
+    </div>
+    <div class="marginContainer">
+	  <div class="marginBox rightBox">Right Box</div>
+    </div>
+  </div><hr>
+  
+  <h3>Margin Collapsing</h3>
+  <div class="marginCollapsingContainer">
+    <p class="para one">The concept of margin collapsing.</p>
+	<p class="para two">There are a number of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank">rules</a> when margines will, and will not collapse.</p>
+  </div><hr>
+  
+  <h3>Borders &amp; Padding</h3>
+  <div class="bordersDiv">
+    <div class="borderContainer">
+	  <div class="borderBox">There are many <a href="https://drafts.csswg.org/css-backgrounds/#border-style" target="_blank">types of Borders</a></div>
+	</div>
+	<div class="borderType dashed">Dashed</div>
+	<div class="borderType groove">Groove</div>
+	<div class="borderType ridge">Ridge</div>
+	<div class="borderType inset">Inset</div>
+	<div class="borderType outset">Outset</div>
+  </div><hr>
+  
+  <h3>Box Model &amp; Inlne Boxes</h3>
+  <div class="inlineDiv">
+    <p>This is a paragraph with a <span>span</span> inside this paragraph. A span is an inline element, and as such it will not respect the width &amp; height properties.</p>
+  </div><hr>
+  
+  <h3>Using <code>display: inline-block</code> &amp; <code>display: block</code></h3>
+    <div class="inlineBlock">
+      <p class="inlineSpan">This is a paragraph with a <span>span</span> inside this paragraph. A span is an inline element, and as such it will not respect the width &amp; height properties. <code>display: inline-block</code></p>
+	  <p class="block">This is a paragraph with a <span>span</span> inside this paragraph. A span is an inline element, and as such it will not respect the width &amp; height properties. <code>display: block</code></p>
+    </div>
+	
+	<div class="linksContainer">
+	  <nav>
+	    <ul class="links-list">
+		  <li><a href="the-box-model-test-one.html">Test your skills: One</a></li>
+		  <li><a href="the-box-model-test-two.html">Test your skills: Two</a></li>
+		  <li><a href="the-box-model-test-three.html">Test your skills: Three</a></li>
+		</ul>
+	  </nav>
+	</div><hr>
   
 </body>
 

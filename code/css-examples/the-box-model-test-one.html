@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Test your skills: The Box Model One</title>
+  <link rel="shorcut icon" href="../../images/rtfavicon.ico">
+	
+  <style>
+	body {
+	  font-family: Arial, sans-serif;
+	}
+	.box {
+	  border: 5px solid rebeccapurple;
+	  background-color: lightgray;
+	  padding: 40px;
+	  margin: 40px;
+	  width: 300px;
+	  height: 150px;
+	}
+	.alternate {
+	  box-sizing: border-box;
+	  width: 390px;
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Test your skills: The Box Model One</h1>
+    <nav>
+      <a href="the-box-model.html">Back to The Box Model</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks" target="_blank">MDN Test your skills: The Box Model</a> | <a href="../code.html">Back to the Code Repository</a>
+    </nav><hr>
+  </header>
+ 
+  <div class="box">This box uses the Standard Box Model</div>
+  <div class="box alternate">This box uses the Alternate Box Model</div>
+	
+</body>
+
+</html>

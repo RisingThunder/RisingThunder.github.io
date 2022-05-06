@@ -1,6 +1,3 @@
-span {
-	background-color: yellow;
-}
 aside {
 	width: 20%;
 	margin-top: 1.2rem;
@@ -18,18 +15,11 @@ aside {
  article img {
 	width: 100%;
 }
+span {
+	background-color: yellow;
+}
 #blueBackground {
 	background-color: lightblue;
-}
-
-/* This is for the 15FEB20 image at the bottom of the article. */
-#bgimage00 {
-	width: 100%;
-	height: 100px;
-	margin-bottom: 40px;
-	background-image:
-	  linear-gradient(to right, rgba(220,0,225,0.3), rgba(64,148,128,0.5)),
-	  url(../images/f14-crew.jpg);
 }
 
 /* This is for the 30SEP20 article CSS ARROW in the aside. */
@@ -73,3 +63,13 @@ aside {
 	font-size: 120%;
 }
 /* End Arrow css code */
+
+/* This is for the 15FEB20 image at the bottom of the article. */
+#bgimage00 {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 40px;
+	background-image:
+	  linear-gradient(to right, rgba(220,0,225,0.3), rgba(64,148,128,0.5)),
+	  url(../images/f14-crew.jpg);
+}

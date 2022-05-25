@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Attachment Example</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  background-color: yellow;
+	  margin: 0;
+	  padding: 1em;
+	  height: 2000px;
+    }
+    code {
+	  font-size: 1.2em;
+	  background-color: rgba(0,0,0,0.3);
+	}
+	section {
+	  display: flex;
+	  border: 2px solid red;
+      padding: 1%;	  
+	}
+    div {
+	  flex: 1;
+	  height: 400px;
+	  background-color: rgba(0,0,0,0.5);
+	  background-image: url(../../images/emoji.png);
+	  background-size: 400px 400px;
+	  background-repeat: no-repeat;
+	  background-position: center top;
+	  padding: 1%;
+	  overflow: auto;
+	}
+	p {
+	  padding: 10px;
+	  color: white;
+	  background: rgba(0,0,0,0.3);
+	}
+	pre {
+	  height: 800px;
+	}
+	
+    .fixed, .scroll {
+	  margin-right: 1%;
+	}
+	.scroll {
+	  background-attachment: scroll;
+	}
+	.fixed {
+	  background-attachment: fixed;
+	  background-position: center top 28%;
+	}
+	.local {
+	 background-attachment: local;
+	}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Background Attachment Example</h1>
+	<nav><a href="backgrounds-and-borders.html">Back to Backgrounds and borders</a> | <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html" target="_blank">MDN's Background attachment example</a></nav><hr>
+  </header>
+  
+  <section class="divOne">
+    <div class="scroll">
+      <p><code>background-attachment: scroll</code> causes the elements background to be fixed to the page, so that it scrolls when the page is scrolled. If the element content is srcolled, the background does not move.</p>
+	  <pre></pre>
+    </div>
+    <div class="fixed">
+      <p><code>background-attachment: fixed</code> causes an elements background to be fixed to the viewport, so that it does not scroll when the page or element content is scrolled. It will always remain in the same position on the screen.</p>
+	  <pre></pre>
+    </div>
+    <div class="local">
+	  <p><code>background-attachment: local</code>, causes an elements background to be fixed to the actual element itself. When the page is scrolled, the elements background will move along with it, if the element does so also. When the elements content is scrolled, the background will scroll along with it.</p>
+	  <pre></pre>
+	</div>
+  </section>
+  
+
+</body>
+</html>

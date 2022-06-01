@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Handling different text directions</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+	  font-family: Arial, sans-serif;
+	  margin-left: 1em;
+	  background-color: whitesmoke;
+	}
+	.containerOne {
+	  display: flex;
+	}
+	.containerOne h1 {
+	  background: black;
+	  color: white;
+	  padding: 10px;
+	  writing-mode: vertical-lr;
+	}
+	.box {
+	  border: 1px solid black;
+	  padding: 10px;
+	}
+	.box h2 {
+	  margin: 0;
+	  display: inline-flex;
+	  border-block-end: 2px solid black;
+	  border-inline-end: 2px dotted black;
+	  padding-inline-end: 4px;
+	}
+	.box img {
+	  margin-inline-start: 6px;
+	}
+	.horizontal {
+	  writing-mode: horizontal-tb;
+	}
+	.horizontal img {
+	  margin-block-end: -9px;
+	}
+	.vertical {
+	  writing-mode: vertical-rl;
+	  margin-block-end: 20px;
+	}
+	#timebar {
+	  width: 300px;
+	  float: inline-end;
+	  margin-inline-start: 2px;
+	  margin-block-start: 2px;
+	}
+	
+	/* Task One -------------------------------------------------------- */
+	
+	.taskContainer {
+	  display: flex;
+	  border: 1px solid black;
+      padding-left: 20px;
+	}
+	.boxOne {
+	  font-size: 1.2em;
+	  border: 5px solid Black;
+	  background-color: lightgray;
+	  padding: 40px;
+	  margin-block-start: 40px;
+	  writing-mode: vertical-rl;
+	}
+	
+	/* Task Two ---------------------------------------------------------- */
+	
+	.taskContainerTwo {
+	  display: flex;
+	  margin-right: 20px;
+	}
+	.boxTwo {
+	  font-size: 1.2em;
+	  border: 5px solid black;
+	  background-color: lightgray;
+	  padding: 40px;
+	  margin-inline-end: 20px;
+	  inline-size: 180px;
+	  block-size: 40px;
+	}
+	.verticalTwo {
+	  writing-mode: vertical-rl;
+	}
+	
+	/* Task Three ----------------------------------------------------------- */
+	
+	.taskContainerThree {
+	display: flex;
+	/ border: 1px solid black;
+	}
+	.boxThree {
+	  font-size: 1.2em;
+	  background: lightgrey;
+	  width: 100px;
+	  height: 120px;
+	  border-block-start: 5px solid rebeccapurple;
+	  border-inline-end: 5px solid grey;
+	  border-block-end: 5px dotted red;
+	  border-inline-start: 5px dotted blue;
+	  margin-inline-end: 20px;
+	  padding: 20px;
+	}
+	.verticalThree {
+	  writing-mode: vertical-rl;
+	}
+	
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Handling different text directions</h1>
+    <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions" target="_blank">MDN web docs: Handling different text directions</a></nav><hr>
+  </header>
+  
+  <div class="containerOne">
+    <h1>Rising Thunder Alpha Test</h1>
+	<div class="box horizontal">
+	  <h2>A DCS World Server</h2><img src="../../images/tiny-yellow-star.png">
+	  <p>The “Rising Thunder DCS World Dedicated Server Series” is a long term, story driven DCS world, “multi-client”, “muti-campaign”, “career level ”, server series, greatly inspired by the excellent “BuddySpike Operation:BlueFlag” DCS World servers, and also inspired by the novel “Tom Clancy’s Red Storm Rising”, however, with many differences, along with a few twists and surprises planned.</p>
+	  <img id="timebar" src="../../images/timebar.png">
+	  <p>The “Rising Thunder Alpha Test” servers are a persistent 24/7 client & AI (Bots) training campaign utilizing the DCS Caucasus and NTTR maps, with training tasks and objectives to fulfill for both coalitions. Once the development objectives of the Rising Thunder Alpha Test servers are met, it is planned for the Rising Thunder Alpha Test servers to transition to “Rising Thunder Beta” servers, along with all clients personas progress (that’s the plan anyway, however, keep in mind, this is an alpha version). In this first iteration of Rising Thunder Alpha Test each coalition will train on its own respective maps. The primary purpose of the “Rising Thunder Alpha Test” servers are to develop the base code and administration processes required for the planned forthcoming “Rising Thunder DCS World Dedicated Server Series”.</p>
+	</div>
+	<div class="box vertical">
+	  <h2>Description and Operation</h2><img src="../../images/tiny-yellow-star.png">
+	  <p>The “Rising Thunder Alpha Test” servers are persistent.</p>
+	  <p>Rising Thunder Server has a differing end goal.</p>
+	</div>
+  </div><hr>
+  
+  <!-- Task One -->
+  
+  <div class="taskContainer">
+    <div>
+	  <h2>Task One</h2>
+      <div class="boxOne">Turn me on my side.</div>
+	</div>
+	
+	<!-- Task Two -->
+	
+	<div>
+	  <h2>Task Two</h2>
+	  <div class="taskContainerTwo">
+	    <div class="boxTwo">Horizontal</div>
+	    <div class="boxTwo verticalTwo">Vertical</div>
+	  </div>
+	</div>
+	
+	<!-- Task Three -->
+	
+	<div>
+	  <h2>Task Three</h2>
+	  <div class="taskContainerThree">
+	    <div class="boxThree">Horizontal Logical Borders</div>
+	    <div class="boxThree verticalThree">Vertical Logical Borders</div>
+	  </div>
+	</div>
+  </div><hr>
+
+
+</body>
+
+</html>

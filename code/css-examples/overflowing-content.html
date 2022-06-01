@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Overflowing content</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+	  font-family: Arial, sans-serif;
+	  margin-left: 1em;
+	  background-color: whitesmoke;
+	}
+	.container {
+	  display: flex;
+	  border: 1px solid black;
+	  padding: 0px 20px 20px 20px;
+	}
+	.boxOne {
+	  border: 5px solid black;
+	  padding: 1em;
+	  height: 200px;
+	  width: 300px;
+	  overflow: auto;
+	  margin-right: 40px;
+	}
+	.boxTwo {
+	  border: 5px solid black;
+	  height: 230px;
+	  width: 330px;
+	  overflow: hidden;
+	}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Overflowing content</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content" target="_blank">MDN web docs Overflowing content</a></nav><hr>
+  </header>
+  
+  <h2>Test your skills: Overflow</h2>
+  <div class="container">
+    
+	<div>
+	  <h3>Task One</h3>
+	  <div class="boxOne">
+	    <p>Rising Thunder server accounts are registered via an email verification. You may have only one Rising Thunder account per email address. You must choose one coalition (Blue or Red) for your account. Choose wisely. No defecting. No duel accounts per client please! While this is unenforceable, it is disadvantageous, because of the time investment per personas, and besides, spys will be shot!</p>
+		<p>Starting from your Personas first day the “Personas Personnel Gadget” is where your Personas records and statistics are created, filed and managed. The following is a description and operation of this gadget (to help you understand what your Persona is, please read “Your Persona’s Life”)</p>
+	  </div>
+	</div>
+	
+    <div>    
+	  <h3>Task Two</h3>
+	  <div class="boxTwo">
+	    <img src="../../images/f14-480.jpg" alt="DCS World picture">
+	  </div>
+	</div>
+  
+  </div>  
+
+</body>
+
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>CSS values and units</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+	font-family: Arial, sans-serif;
+	background-color: whitesmoke;
+	margin-left: 1em;
+	}
+    h1 {
+	  color: blue;
+	  background-color: rgb(197,193,111);
+	}
+	* {
+	   box-sizing: border-box;
+	}
+	code {
+	  background-color: lightgray;
+	}
+	/* Exploring an example ---------------------------------------------------- */
+	.wrapperOne {
+	  border: 1px solid black;
+	  padding: 0 10px;
+	  font-size: 1.2em;
+	  display: inline-block;
+	}
+	.boxOne {
+	  background-color: lightblue;
+	  border: 5px solid darkblue;
+	  padding: 10px;
+	  margin: 1em 0;
+	}
+	.pxOne {
+	  width: 240px;
+	}
+	.vwOne {
+      width: 12vw;	  
+	}
+	.emOne {
+	  width: 12em;
+	}
+	/* ems and rems ------------------------------------------------------------------ */
+	.containerOne {
+	  border: 1px solid black;
+	  display: inline-block;
+	  font-size: 16px;
+	}
+	.ems li {
+	  font-size: 1.3em;
+	}
+	.rems li {
+	  font-size: 1.3rem;
+	}
+	/* Percentages ------------------------------------------------------------------- */
+	.containerTwo {
+	  border: 1px solid black;
+	  padding: 0px 20px 20px 20px;
+	  font-size: 1.3em
+	}
+	.boxPercent {
+	  border: 5px solid darkblue;
+	  background-color: lightblue;
+	  padding: 10px;
+	  margin: 20px 0;
+	}
+	.wrapperPercent {
+	  border: 5px solid rebeccapurple;
+	  width: 600px;
+	}
+	.pxTwo {
+	  width: 200px;
+	}
+	.percentTwo {
+	  width: 60%;
+	}
+    .containerTwo ul {
+	  font-size: 1.2em;
+	}
+	.containerTwo ul li {
+	  font-size: 70%;
+	}
+	/* Numbers ---------------------------------------------------------------------------- */
+	.wrapperNumbers {
+	  border: 1px solid darkblue;
+	  background-image: url("../../images/f14-480.jpg");
+	  width: 480px;
+	  height: 210px;
+	}
+	.boxNumbers {
+	  font-size: 1.2em;
+	  color: black;
+	  border: 5px solid olivedrab;
+	  width: 250px;
+	  padding: 20px 10px;
+	  margin: 4% 22%;
+	  background-color: lightblue;
+	  opacity: 0.5;
+	}
+	/* Colors ------------------------------------------------------------------------- */
+	.containerColors {
+	  / border: 1px solid black;
+	  display: flex;
+	  padding-left: 10px;
+	  margin-top: 10px;
+	}
+	.containerColors div {
+	  margin-right: 20px;
+	}
+	.containerColors div div {
+	  font-size: 1.3em;
+	  width: 300px;
+	  padding: 10px;
+	  border-radius: 12px;
+	  margin: 20px 0;
+	}
+	.keywords .one {
+	  background-color: antiquewhite;
+	}
+	.keywords .two{
+	  background-color: blueviolet;
+	}
+	.keywords .three {
+	  background-color: greenyellow;
+	}
+	.hexValues .one {
+	  background-color: #02798b;
+	}
+    .hexValues .two {
+	  background-color: #c55da1;
+	}
+    .hexValues .three {
+	  background-color: #128a7d;
+	}
+	.rgbValues .one {
+	  background-color: rgb(2, 121, 139);
+	}
+	.rgbValues .two {
+	  background-color: rgb(197, 93, 161);
+	}
+	.rgbValues .three {
+	  background-color: rgb(18, 138, 125);
+	}
+	.rgbaValues {
+	  background-image: url(../../images/f14-480.jpg);
+	  background-repeat: no-repeat;
+	  background-size: 103%;
+	  background-position-y: 60px;
+	}
+	.rgbaValues .one {
+	  background-color: rgba(2, 121, 139, .3);
+	}
+	.rgbaValues .two {
+	  background-color: rgba(197, 93, 161, .7);
+	}
+	.rgbaValues .three {
+	  background-color: rgba(18, 138, 125, .9);
+	}
+	.hslValues .one{
+	  background-color: hsl(188, 97%, 28%);
+	}
+	.hslValues .two {
+	  background-color: hsl(321, 47%, 57%);
+	}
+	.hslValues .three {
+	  background-color: hsl(174, 77%, 31%);
+	}
+	.hslaValues {
+	  background-image: url(../../images/f14-480.jpg);
+	  background-repeat: no-repeat;
+	  background-size: 103%;
+	  background-position-y: 60px;
+	}
+	.hslaValues .one {
+	  background-color: hsla(188, 97%, 28%);
+	}
+	.hslaValues .two {
+	  background-color: hsla(321, 47%, 57%);
+	}
+	.hslaValues .three {
+	  background-color: hsla(174, 77%, 31%);
+	}
+	/* Images --------------------------------------------------------------- */
+	.containerImages {
+	  display: flex;
+	  border: 1px solid black;
+	  padding: 10px;
+	}
+	.imageOne {
+	  width: 300px;
+	  height: 150px;
+	  background-image: url(../../images/purple-star.png);
+	  background-repeat: no-repeat;
+	  background-position: center;
+	}
+	.gradientOne {
+	  width: 300px;
+	  height: 150px;
+	   background-image: linear-gradient(100deg, rgba(119,0,255,1) 42%, rgba(0,212,255,1) 98%);
+	  border-radius: 20px;
+	}
+	/* Position */
+	.boxPosition {
+	  border: 5px solid rebeccapurple;
+	  border-radius: 40px;
+	  margin-left: 10px;
+	  height: 300px;
+	  width: 400px;
+	  background-image: url(../../images/purple-star.png);
+	  background-repeat: no-repeat;
+	  background-position: right 40px;
+	}
+    /* Strings and identifiers ------------------------------------------------------------ */
+	.boxStrings {
+	  font-size: 1.3em;
+	  width: 400px;
+	  padding: 1em;
+	  margin-left: 10px;
+	  border-radius: .5em;
+	  border: 5px solid rebeccapurple;
+	  background-color: lightblue;
+	}
+	.boxStrings::after {
+	  content: "The souls of the Rising Thunder DCS World experience are your Personas."
+	}
+	/* Functions --------------------------------------------------------------------- */
+	.functions {
+	  border: 5px solid rebeccapurple;
+	  border-radius: 10px;
+	  background-color: lightblue;
+	  font-size: 1.3em;
+	  padding: 1em;
+	  margin-left: 10px;
+	  width: calc(20% + 200px);
+	}
+	/* Task One ------------------------------------------------------------------------ */
+	.test {
+	  display: flex;
+	}
+	.test ul {
+	  / width: 200px;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	}
+	.test li {
+	  font-size: 1.2em;
+	  margin: 1em;
+	  padding: 0.5em;
+	  border-radius: 5px;
+	}
+	.test .hex {
+	  background-color: #86DEFA;
+	}
+	.test .rgb {
+	  background-color: rgb(134,222,250);
+	}
+	.test .hsl {
+	  background-color: hsl(194,92%,75%);
+	}
+	.test .transparency {
+	  background-color: rgba(134,222,250, .6);
+	}
+	/* Task Two --------------------------------------------------------------------- */
+	.task2 {
+	  width: 450px;
+	  margin-left: 20px;
+	}
+	.task2 h4 {
+	  font-size: 20px;
+	}
+	.task2 h5 {
+	  font-size: 1.2em;
+	  margin: 0;
+	}
+	.task2 p {
+	  font-size: 14px;
+	}
+	.task2 h4+p {
+	  font-size: 120%;
+	}
+	/* Task Three --------------------------------------------------------------------- */
+	.task3box {
+	  width: 300px;
+	  height: 180px;
+	  border: 5px solid rebeccapurple;
+	  border-radius: 20px;          	
+	  background-image: url(../../images/purple-star.png);
+	  background-repeat: no-repeat;
+	  background-position: center 20%;
+	}
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>CSS values and units</h1>
+  <nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">MDN web docs CSS values and units</a></nav><hr>
+</header>
+
+  <h2>Exploring an example</h2>
+  <div class="wrapperOne">
+    <div class="boxOne pxOne">I am 200px wide</div>
+	<div class="boxOne vwOne">I am 10vm wide</div>
+	<div class="boxOne emOne">I am 10em wide</div>
+  </div><hr>
+  
+  <h2>ems and rems</h2>
+  <div class="containerOne">
+    <ul class="ems">
+	  <li>The em unit means "parent elements font size".</li>
+	  <li>These <code>li</code> inside this <code>ul</code> with a <code>class</code> of <code>ems</code> takes its sizing from its parents.</li>
+	  <li>Each successive level of nesting
+	    <ul>
+		  <li>gets progressively larger</li>
+		  <li> as each has its font size set to <code>1.3em</code>
+		    <ul>
+			  <li>-1.3 times its parents font size.</li>
+			</ul>
+		  </li>
+		</ul>
+	  </li>
+	</ul>
+	<ul class="rems">
+	  <li>The rem unit means "The root element's font-size".</li>
+	  <li>Each successive level of nesting does not keep getting larger.</li>
+	  <li>Your mission choices may be limited to:
+	    <ul>
+		  <li>Your First Flight, accomplish a proficiency check in a trainer.</li>
+		  <li>Flight time randomly limited to obsolete aircraft training/missions for,
+		    <ul>
+			  <li>Ground crew moral/joy rides (TF-51D)</li>
+			  <li>SAR missions</li>
+			</ul>
+		  </li>
+		</ul>
+	  </li>
+	</ul>
+  </div><hr>
+  
+  <h2>Percentages</h2>
+  <div class="containerTwo">
+    <div class="boxPercent pxTwo">I am 200px wide</div>
+    <div class="boxPercent percentTwo">I am 60% wide of parent element</div>
+	<div class="wrapperPercent">
+	  <div class="boxPercent pxTwo">I am 200px wide</div>
+	  <div class="boxPercent percentTwo">I am 60% wide...</div>
+	</div>
+	<div>
+	  <ul>
+	    <li>This <code>&lt;ul&gt;</code> example has font sizes set in percentages.</li>
+		<li>Each <code>&lt;li&gt;</code> has a <code>font-size</code> of 80%.</li>
+		<li>The nested list items become progressively smaller.
+		  <ul>
+		    <li>As they inherit,</li>
+			<li>sizing from parents.
+			  <ul>
+			    <li>Your mission choices may be limited to:
+				  <ul>
+				    <li>Your First Flight, accomplish a proficiency check in a trainer
+					  <ul>
+					    <li>Takeoff & land twice, no damage.</li>
+						<li>Afterward, one out of every third mission randomly assigned.</li>
+					  </ul>
+					</li>
+				  </ul>
+				</li>
+			  </ul>
+			</li>
+		  </ul>
+		</li>
+	  </ul>
+	</div>
+  </div><hr>
+  
+  <h2>Numbers</h2>
+  <div class="wrapperNumbers">
+    <div class="boxNumbers">This is a box with opacity</div>
+  </div><hr>
+  
+  <h2>Colors</h2>
+  <div class="containerColors">
+    <div class="keywords">
+	  <h3>Color keywords</h3>
+	  <div class="one">antiquewhite</div>
+	  <div class="two">blueviolet</div>
+	  <div class="three">greenyellow</div>
+	</div>
+	<div class="hexValues">
+	  <h3>Hexadecimal RGB values</h3>
+	  <div class="one">#02798b</div>
+	  <div class="two">#c55da1</div>
+	  <div class="three">#128a7d</div>
+	</div>
+	<div class="rgbValues">
+	  <h3>RGB values</h3>
+	  <div class="one">rgb(2, 121, 139)</div>
+	  <div class="two">rgb(197, 93, 161)</div>
+	  <div class="three">rgb(18, 138, 125)</div>
+	</div>
+	<div class="rgbaValues">
+	  <h3>RGBA values</h3>
+	  <div class="one">rgba(2, 121, 139 .3)</div>
+	  <div class="two">rgba(197, 93, 161, .7)</div>
+	  <div class="three">rgba(18, 138, 125, .9)</div>
+	</div>
+  </div>
+  <div class="containerColors">
+    <div class="hslValues">
+	  <h3>HSL values</h3>
+	  <div class="one">hsl(188, 97%, 28%)</div>
+	  <div class="two">hsl(321, 47%, 57%)</div>
+	  <div class="three">hsl(174, 77%, 31%)</div>
+	</div>
+	<div class="hslaValues">
+	  <h3>HSLA values</h3>
+	  <div class="one">hsla(188, 97%, 28%)</div>
+	  <div class="two">hsla(321, 47%, 57%)</div>
+	  <div class="three">hsla(174, 77%, 31%)</div>
+	</div>
+  </div><hr>
+  
+  <h2>Images</h2>
+  <div class="containerImages">
+    <div class="imageOne"></div>
+	<div class="gradientOne"></div>
+  </div><hr>
+  
+  <h2>Position</h2>
+  <div class="boxPosition"></div><hr>
+  
+  <h2>Strings and identifiers</h2>
+  <div class="boxStrings"></div><hr>
+  
+  <h2>Functions</h2>
+  <div class="functions">This div width is calculated at 20% + 100px</div><hr>
+  
+  <h2>Test your skills: Values and units</h2>
+  <div class="test">
+    <div>
+	  <h3>Task 1</h3>
+	  <ul>
+	    <li class="hex">hex color</li>
+		<li class="rgb">RGB color</li>
+		<li class="hsl">HSL color</li>
+		<li class="transparency">Alpha value 0.6</li>
+	  </ul>
+	</div>
+	<div class="task2">
+	  <h3>Task 2</h3>
+	  <h4>Personas Personnel Gadget (S1)</h4>
+	  <p>Starting from your Personas first day the “Personas Personnel Gadget” is where your Personas records and statistics are created, filed and managed.</p>
+	  <h5>Callsigns</h5>
+	  <p> Unique & protected for each living Rising Thunder Persona. No Duplicate Callsigns. Callsigns are unique & protected, per each living persona. No “living” duplicates. </p>
+	</div>
+	<div>
+	  <h3>Task 3</h3>
+	  <div class="task3box"></div>
+	</div>
+  </div><hr>
+  
+  
+    
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Sizing items in CSS</title>
+  <link rel="shortcut icon" href="../../images/rtfavicon.ico">
+  <style>
+    body {
+	  font-family: Arial, sans-serif;
+	  background-color: whitesmoke;
+	  padding-left: 1em;
+	}
+	hr {
+	  color: darkblue;
+	}
+	.containerOne img {
+	  border:5px solid darkblue;
+	}
+	.boxOne {
+	  border: 5px solid darkblue;
+	}
+	.wrapperOne {
+	  display: flex;
+	  padding-top: 3px;
+	  font-size: 1.2em;	
+	}
+	.boxTwo {
+	  border: 5px solid darkblue;
+	  height: 150px;
+	  width: 200px;
+	  margin-right: 3px;
+	  overflow: auto;
+	}
+	.containerTwo {
+	  border: 1px solid darkblue;
+	  width: 60%;
+	  margin: 3px 0;
+	  padding: 3px;
+	  font-size: 1.2em;
+	}
+	.boxThree {
+	  border: 5px solid darkblue;
+	  width: 60%;
+	}
+	.containerThree {
+	  border: 1px solid darkblue;
+	  width: 600px;
+	}
+	.boxFour {
+	  font-size: 1.2em;
+	  border: 5px solid darkblue;
+	  width: 300px;
+	  margin: 10%;
+	  padding: 10%;
+	}
+	.containerFour {
+	  display: flex;
+	  align-items: flex-start;
+	  font-size: 1.2em;
+	}
+	.boxFive {
+	  margin-right: 3px;
+	  border: 5px solid darkblue;
+	  width: 200px;
+	  min-height: 150px;
+	}
+	.containerFive {
+	  display: flex;
+	  align-items: flex-start;
+	}
+	.containerFive div {
+	  border: 5px solid darkblue;
+	  margin-top: 20px;
+	  margin-right: 3px;
+	}
+	.boxSix {
+	  width: 200px;
+	}
+	.minibox {
+	  width: 50px;
+	}
+	.width {
+	  width: 100%;
+	}
+	.max {
+	  max-width: 100%;
+	}
+	.boxSeven {
+	  border: 5px solid darkblue;
+	  width: 20vw;
+	  height: 20vh;
+	  font-size: 10vh;
+	  padding-left: 1vw;
+	  color: rebeccapurple;
+	}
+	.task1 {
+	  display: flex;
+	  align-items: flex-start;
+	  font-size: 1.2em;
+	}
+	.task1 .box {
+	  border: 5px solid darkblue;
+	  width: 400px;
+	  margin-bottom: 3em;
+	  margin-right: 1em;
+	}
+	.task1 .box1 {
+	  min-height: 100px;
+	}
+	.task1 .box2 {
+	  height: 100px;
+	}
+	.task2box {
+	  box-sizing: border-box;
+	  border: 5px solid darkblue;
+	  font-size: 1.2em;
+	  width: 400px;
+	  border-radius: 10px;
+	  padding: 2px;
+	}
+	.task2box .inner {
+	  box-sizing: border-box;
+	  background-color: rebeccapurple;
+	  color: white;
+	  border-radius: 5px;
+	  width: 70%;
+	  padding: 10%;
+	}
+	.task3 {
+	  display: flex;
+	  align-items: flex-start;
+	}
+	.task3box {
+	  border: 5px solid darkblue;
+	  margin-right: 1em;
+	  width: 400px;
+	}
+	.task3 img {
+	  max-width: 100%;
+	}
+	
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sizing items in CSS</h1>
+	<nav><a href="../code.html">Back to the Code Repository</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS" target="_blank">MDN web docs Sizing items in CSS</a></nav><hr>
+  </header>
+  
+  <h2>The natural of intrinsic size of things</h2>
+  <div class="containerOne" >
+    <img src="../../images/purple-star.png">
+  </div>
+  <div class="boxOne">
+    Rising Thunder server accounts are registered via an email verification.
+  </div><hr>
+  
+  <h2>Setting a specific size</h2>
+  <div class="wrapperOne">
+    <div class="boxTwo"></div>
+	<div class="boxTwo">These boxes both have a height set, this box has content in it which will need more space than the assigned height, and as such it has overflow.</div>
+  </div><hr>
+  
+  <h2>Using percentages</h2>
+  <div class="containerTwo">
+    <div class="boxThree">
+	  This div has a percentage width of 60% of its parent div.
+	</div>
+  </div><hr>
+  
+  <h2>Percentage margins and padding</h2>
+  <div class="containerThree">
+    <div class="boxFour">
+      Margin and padding set to 10% on all sides. The value is calculated from the inline size of the containing block.
+    </div>
+  </div><hr>
+  
+  <h2>min- and max- sizes</h2>
+  <div class="containerFour">
+	<div class="boxFive"></div>
+	<div class="boxFive">These boxes both have a min-height set, this box has content in it which will need more space than the assigned height, and so it grows from the minimum.</div>
+  </div>
+  <div class="containerFive">
+    <div class="boxSix"><img src="../../images/purple-star.png" alt="star" class="width"></div>
+	<div class="boxSix"><img src="../../images/purple-star.png" alt="star" class="max"></div>
+	<div class="minibox"><img src="../../images/purple-star.png" alt="star" class="max"></div>
+  </div><hr>
+  
+  <h2>Viewport units</h2>
+  <div class="boxSeven">RT</div><hr>
+  
+  <h2>Test your skills: Sizing</h2>
+  <h2>Task 1</h2>
+  <div class="task1">
+    <div class="box box1">
+	  <p>The souls of the Rising Thunder DCS World experience are your Personas.</p>
+    </div>
+	<div class="box box2">
+	  <p>By default, each Rising Thunder account will have only two living personas. However, official Rising Thunder Supporters will get one extra persona per account, for a maximum of three living personas at any one time, for the next twenty four months after your last donation.</p>
+    </div>
+  </div>
+  
+  <h2>Task 2</h2>
+  <div class="task2box">
+    <div class="inner">Launch a Target Drone Gadget 60%</div>
+  </div>
+  
+  <h2>Task 3</h2>
+  <div class="task3">
+    <div class="task3box">
+	  <img src="../../images/purple-star.png" alt="star">
+	</div>
+	<div class="task3box">
+	  <img src="../../images/f14-480.jpg" alt="F-14">
+	</div>
+  </div><hr>
+  
+</body>
+</html>

@@ -8,12 +8,9 @@ aside {
     font-style: italic;
     color: #29627e;
 }
- aside p { 
+aside p { 
 	width: 100%;
 	margin: .5rem;
-}
- article img {
-	width: 100%;
 }
 span {
 	background-color: yellow;

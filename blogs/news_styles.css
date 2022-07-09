@@ -15,6 +15,9 @@ aside p {
 span {
 	background-color: yellow;
 }
+img {
+  max-width: 100%;
+}
 #blueBackground {
 	background-color: lightblue;
 }
